@@ -17,7 +17,7 @@ class Post(models.Model):
 
     
     class Meta:  # dditional information about the model/order of the post (descending if - at the front)
-        ordering = ["created_on"]
+        ordering = ["-created_on"]
 
     def __str__(self):  # displays posts title f
         return f"The title of this post is {self.title}"
@@ -33,5 +33,10 @@ class Comment(models.Model):
     body = models.TextField()
     approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
+  
 
+    class Meta:  # dditional information about the model/order of the post (descending if - at the front)
+        ordering = ["created_on"]
 
+    def __str__(self):  # displays posts title f
+        return f"Comment: {self.body} by {self.author}"
