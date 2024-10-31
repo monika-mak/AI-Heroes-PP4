@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
+from django.contrib import messages
 from .models import Post
 from .forms import CommentForm
 
@@ -10,7 +11,6 @@ class PostList(generic.ListView):
         paginate_by = 6
 
 def post_detail(request, slug):
-
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
     comments = post.comments.all().order_by("-created_on")
@@ -22,7 +22,11 @@ def post_detail(request, slug):
             comment.author = request.user
             comment.post = post
             comment.save()
-            
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Comment submitted and awaiting approval'
+            )
+
     comment_form = CommentForm()
 
     return render(
