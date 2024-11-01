@@ -33,7 +33,6 @@ class Comment(models.Model):
     body = models.TextField()
     approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
-  
 
     class Meta:  # dditional information about the model/order of the post (descending if - at the front)
         ordering = ["created_on"]
