@@ -5,7 +5,6 @@ from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import CommentForm
 
-
 class PostList(generic.ListView):
         queryset = Post.objects.filter(status=1)
         template_name = "blog/index.html"
@@ -33,8 +32,7 @@ def post_detail(request, slug):
     print("About to render template")
 
     return render(
-        request,
-        "blog/post_detail.html",
+        request, "blog/post_detail.html",
         {
             "post": post,
             "comments": comments,
