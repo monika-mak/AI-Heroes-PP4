@@ -8,7 +8,7 @@ class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="blog_posts"
+        User, on_delete=models.CASCADE, related_name='blog_posts'
 )
     featured_image = CloudinaryField('image', default='placeholder')
     content = models.TextField()
@@ -16,8 +16,8 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     excerpt = models.TextField(blank=True)
     updated_on=models.DateTimeField(auto_now=True)
-    
 
+    
     class Meta:  # additional information about the model/order of the post (descending if - at the front)
         ordering = ["-created_on"]
 
@@ -26,54 +26,36 @@ class Post(models.Model):
 
     # count votes for each blog uesd for display
     def vote_count(self):
-        return self.post_votes.count()
+        return self.votes.count()
 
 
 class Comment(models.Model):
     post = models.ForeignKey(
-        Post, on_delete=models.CASCADE, related_name="comments")
+        Post, on_delete=models.CASCADE, related_name='comments')
     author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="commenter")
+        User, on_delete=models.CASCADE, related_name='commenter')
     body = models.TextField()
     approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:  # dditional information about the model/order of the post (descending if '-' at the front)
-        ordering = ["created_on"]
+        ordering = ['created_on']
 
     def __str__(self):  # displays posts title
         return f"Comment: {self.body} by {self.author}"
 
 
-    #https://www.geeksforgeeks.org/how-to-filter-foreignkey-choices-in-a-django-modelform/
+#https://www.geeksforgeeks.org/how-to-filter-foreignkey-choices-in-a-django-modelform/
 
 class Vote(models.Model):
-        post = models.ForeignKey(
-        Post, on_delete=models.CASCADE, related_name="post_votes")
-        author = models.ForeignKey(
-            User, on_delete=models.CASCADE, related_name="user_votes")
-        created_on = models.DateTimeField(auto_now_add=True)
-
-        # https://www.geeksforgeeks.org/how-to-define-two-fields-unique-as-couple-in-django/
-        # ensure one user can vote only once on the particular vote
-        class Meta:
-            unique_together = ('post' , 'author')
-
-
-
-
-
-        
+    post = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name='post_votes')
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='user_votes')
+    created_on = models.DateTimeField(auto_now_add=True)
+    # https://www.geeksforgeeks.org/how-to-define-two-fields-unique-as-couple-in-django/
+    # ensure one user can vote only once on the particular vote
     
-
-
-    ''' leaderboard have a list of top 5 of all blogposts 
-     get all posts , the ones with most votes is the top one in the leaderboard. 
-
-    '''
-
-
-
-    
-
+    class Meta:
+        unique_together = ('post', 'author')
 

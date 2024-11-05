@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .models import Post, Comment
+from .models import Post, Comment, Vote
 from .forms import CommentForm
 from django.db.models import Count
 
@@ -83,5 +83,17 @@ def comment_delete(request, slug, comment_id):
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))   
 
 
+class PostVote(View):
+    """vote/unvote"""
+    def post(self, request, slug):
+        """What happens for a POST request"""
+        post = get_object_or_404(Post, slug=slug)
+        if post.vote.filter(id=request.user.id).exists():
+            post.votes.remove(request.user)
+        else:
+            post.votes.add(request.user)
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+        
+
 def leaderboard():
-    return Post.objects.annotate(vote_count = Count('post_votes')).order_by('-vote_count')[:5]
+    return Post.objects.annotate(vote_count = Count('post_votes')).order_by('vote_count')[:5]
