@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import CommentForm
+from django.db.models import Count
 
 class PostList(generic.ListView):
         queryset = Post.objects.filter(status=1)
@@ -82,4 +83,5 @@ def comment_delete(request, slug, comment_id):
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))   
 
 
-#def leaderboard ()
+def leaderboard():
+    return Post.objects.annotate(vote_count = Count('post_votes')).order_by('-vote_count')[:5]

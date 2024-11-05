@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.db.models import Count
 
 STATUS = ((0, "Draft"), (1, "Published"))
 class Post(models.Model):
@@ -15,8 +16,7 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     excerpt = models.TextField(blank=True)
     updated_on=models.DateTimeField(auto_now=True)
-    votes = models.OneToOneField(User, on_delete=models.CASCADE, related_name="blog_votes")
-
+    
 
     class Meta:  # additional information about the model/order of the post (descending if - at the front)
         ordering = ["-created_on"]
@@ -24,9 +24,10 @@ class Post(models.Model):
     def __str__(self):
         return f"{self.title} | written by {self.author}"
 
-    def number_of_votes(self):
-        #returning number of votes
-        return self.votes.count()
+    # count votes for each blog uesd for display
+    def vote_count(self):
+        return self.post_votes.count()
+
 
 class Comment(models.Model):
     post = models.ForeignKey(
@@ -43,11 +44,27 @@ class Comment(models.Model):
     def __str__(self):  # displays posts title
         return f"Comment: {self.body} by {self.author}"
 
-# class Leaderboard(models.Model):
-    #title = models.CharField(max_length=200, unique=True)
-    #author = models.ForeignKey(
-       # User, on_delete=models.CASCADE, related_name="commenter")
 
+    #https://www.geeksforgeeks.org/how-to-filter-foreignkey-choices-in-a-django-modelform/
+
+class Vote(models.Model):
+        post = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name="post_votes")
+        author = models.ForeignKey(
+            User, on_delete=models.CASCADE, related_name="user_votes")
+        created_on = models.DateTimeField(auto_now_add=True)
+
+        # https://www.geeksforgeeks.org/how-to-define-two-fields-unique-as-couple-in-django/
+        # ensure one user can vote only once on the particular vote
+        class Meta:
+            unique_together = ('post' , 'author')
+
+
+
+
+
+        
+    
 
 
     ''' leaderboard have a list of top 5 of all blogposts 
