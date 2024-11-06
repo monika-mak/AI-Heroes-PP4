@@ -12,7 +12,6 @@ class PostAdmin(SummernoteModelAdmin):
     summernote_fields = ('content',)
 
 
-# Register your models here.
+# Register your models here to allow you to create, update and delete blog posts from the admin panel
 admin.site.register(Comment)
-
 

@@ -1,4 +1,5 @@
-from django.shortcuts import render, get_object_or_404, reverse
+
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
@@ -7,9 +8,9 @@ from .forms import CommentForm
 from django.db.models import Count
 
 class PostList(generic.ListView):
-        queryset = Post.objects.filter(status=1)
-        template_name = "blog/index.html"
-        paginate_by = 6
+    queryset = Post.objects.filter(status=1)
+    template_name = "blog/index.html"
+    paginate_by = 6
 
 
 def post_detail(request, slug):
@@ -82,18 +83,15 @@ def comment_delete(request, slug, comment_id):
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))   
 
+# Leaderboard view to display posts ordered by the number of votes     
+class Leaderboard(generic.ListView):
+    model = Post
+    template_name = 'blog/leaderboard.html'
+    context_object_name = 'posts'
 
-class PostVote(View):
-    """vote/unvote"""
-    def post(self, request, slug):
-        """What happens for a POST request"""
-        post = get_object_or_404(Post, slug=slug)
-        if post.vote.filter(id=request.user.id).exists():
-            post.votes.remove(request.user)
-        else:
-            post.votes.add(request.user)
-        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-        
-
-def leaderboard():
-    return Post.objects.annotate(vote_count = Count('post_votes')).order_by('vote_count')[:5]
+    def get_queryset(self):
+        '''Returns posts ordered by the number of votes in descanding order.
+        Uses anoatate() to count votes for each post.
+        '''
+        # annotate adds 'num_votes' field that counts votes for each post
+        return Post.objects.filter(status=1).annotate(num_votes=Count('post_votes')).order_by('-num_votes')[:5]

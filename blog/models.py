@@ -17,16 +17,16 @@ class Post(models.Model):
     excerpt = models.TextField(blank=True)
     updated_on=models.DateTimeField(auto_now=True)
 
-    
+
     class Meta:  # additional information about the model/order of the post (descending if - at the front)
         ordering = ["-created_on"]
 
     def __str__(self):
         return f"{self.title} | written by {self.author}"
 
-    # count votes for each blog uesd for display
+    # count votes for each post
     def vote_count(self):
-        return self.votes.count()
+        return self.post_votes.count()
 
 
 class Comment(models.Model):
@@ -53,9 +53,10 @@ class Vote(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='user_votes')
     created_on = models.DateTimeField(auto_now_add=True)
+
     # https://www.geeksforgeeks.org/how-to-define-two-fields-unique-as-couple-in-django/
     # ensure one user can vote only once on the particular vote
-    
     class Meta:
         unique_together = ('post', 'author')
+        
 
