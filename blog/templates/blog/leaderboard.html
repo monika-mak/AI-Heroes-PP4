@@ -5,26 +5,20 @@
 
 <!-- index.html content starts here -->
 <div class="container-fluid">
-    <div class="row">
         <h2>LEADERBOARD</h2>
         <!-- Blog Entries Column -->
-        <!-- <div class="col-12 mt-3 right"> -->
-            <div class="col">
                 {% for post in posts %}
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                <!-- <li>
-                                    <a href = "{% url 'post_detail' post.slug %}"> {{ post.title}}</a> - {{ post.num_votes}} Votes
-                                </li> -->
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top" src="{% static 'images/default.png' %}" alt="placeholder image">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}"alt="{{ post.title }}">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <p class="author">vote icon: {{ post.num_votes }}</p>
+                                    <p class="author">Total Votes: {{ post.vote_count }}</p>
                                 </div>
                             </div>
                             <a href="{% url 'post_detail' post.slug %}" class="post-link">

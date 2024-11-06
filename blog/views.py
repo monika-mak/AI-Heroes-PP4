@@ -95,14 +95,10 @@ def comment_delete(request, slug, comment_id):
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))   
 
 # Leaderboard view to display posts ordered by the number of votes     
-class Leaderboard(generic.ListView):
-    model = Post
-    template_name = 'blog/leaderboard.html'
-    context_object_name = 'posts'
-
-    def get_queryset(self):
-        '''Returns posts ordered by the number of votes in descanding order.
-        Uses anoatate() to count votes for each post.
-        '''
-        # annotate adds 'num_votes' field that counts votes for each post
-        return Post.objects.filter(status=1).annotate(num_votes=Count('post_votes')).order_by('-num_votes')[:5]
+def leaderboard(request):
+    post = ( 
+        Post.objects.filter(status=1)
+        .annotate(vote_count=Count('post_votes'))
+        .order_by('-vote_count')[:5]
+        )
+    return render(request, 'blog/leaderboard.html', {'posts': post})

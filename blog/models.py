@@ -17,8 +17,8 @@ class Post(models.Model):
     excerpt = models.TextField(blank=True)
     updated_on=models.DateTimeField(auto_now=True)
 
-
-    class Meta:  # additional information about the model/order of the post (descending if - at the front)
+    # additional information about the model/order of the post (descending if - at the front)
+    class Meta:
         ordering = ["-created_on"]
 
     def __str__(self):
@@ -58,5 +58,5 @@ class Vote(models.Model):
     # ensure one user can vote only once on the particular vote
     class Meta:
         unique_together = ('post', 'author')
-        
+
 
