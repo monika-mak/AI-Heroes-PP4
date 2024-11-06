@@ -1,0 +1,305 @@
+[33mcommit bd3efdc28d9173f3179e37705178fe0fc3b6fe76[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Wed Nov 6 02:17:39 2024 +0000
+
+    add posts to the leaderboard, fix issue with url paths
+
+[33mcommit a16d7694f50a2b3529b5719db93abe15f4ac1446[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Wed Nov 6 01:13:21 2024 +0000
+
+    add leaderboard url path
+
+[33mcommit 0457573d4056e46363a3524a95aeab351cbf19b4[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Wed Nov 6 01:04:50 2024 +0000
+
+     add leaderboard view
+
+[33mcommit 6e39fec4a309cf810811a0f1564709bd44ee0934[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Tue Nov 5 22:34:37 2024 +0000
+
+    add vote models, and its settings
+
+[33mcommit 563a72655663d0544e58ec00c5b73fced8dd109a[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Tue Nov 5 12:01:17 2024 +0000
+
+    vote model integration
+
+[33mcommit c0dff501c4533bea6a97d33095369ca2ed5e0e5d[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Tue Nov 5 02:18:46 2024 +0000
+
+    voting settings part 1
+
+[33mcommit e9a853754ccbd85292fa96bc404af7b6e3b01e9a[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Mon Nov 4 21:41:13 2024 +0000
+
+    add data attribiute for the validator
+
+[33mcommit a32cd1c6d5d4c1ce14196a0a8e1d332f13e840b2[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Mon Nov 4 21:33:08 2024 +0000
+
+    upload profile picture via admin site
+
+[33mcommit 99c77985bd2789d2ee40db5e5c7da59e9c34478c[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Mon Nov 4 17:03:44 2024 +0000
+
+    change images to posts
+
+[33mcommit a3561fe6f9988f0e3588bbcc175771b97263897b[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Mon Nov 4 15:03:00 2024 +0000
+
+    image settings for blog
+
+[33mcommit 5c1b2b9d42e9d6115359a16fd016e932a07d1d46[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Sat Nov 2 03:04:13 2024 +0000
+
+    enable serving of image files
+
+[33mcommit ab79ae68ae74f4e072a7f980d1b572bb4fe1f980[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Sat Nov 2 02:00:05 2024 +0000
+
+    create functional delete button
+
+[33mcommit d7ae6aef21784569e9d90769632f343931d855da[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Fri Nov 1 15:34:25 2024 +0000
+
+    create an edit button for user to edit their commment
+
+[33mcommit 0a904094a55896ed6e8f079c3390906fba339efb[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Fri Nov 1 14:10:05 2024 +0000
+
+    create functional communication request form sent to the admin
+
+[33mcommit 23c9f022d61c2880eacfd9b0394874eba06a3187[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Fri Nov 1 00:15:31 2024 +0000
+
+    Display Communication form in about page
+
+[33mcommit 20e601320d9d831eea65d271fb24659db1ff5784[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Thu Oct 31 15:21:51 2024 +0000
+
+    display approval message once the comment is being made
+
+[33mcommit 864c9ef6c6b87730f9355721c43a695e64a4c4ad[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Thu Oct 31 15:15:19 2024 +0000
+
+    display comment to the user, submit a comment
+
+[33mcommit b83fffceac52f4642aede9e8001a44f654d53b8c[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Wed Oct 30 15:05:08 2024 +0000
+
+    set up and style sign in form
+
+[33mcommit c6550e508172682f2e81d4ba6fd4bd4a254fd6f3[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Wed Oct 30 14:33:27 2024 +0000
+
+     settings for deployment, issue with img not displaying
+
+[33mcommit fd6d6278d1d0dfa91846feeb707b617331e7f04d[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Wed Oct 30 13:58:26 2024 +0000
+
+    about section update
+
+[33mcommit 2cbc53ff5941ea82e3d3db12a32dccbd67eaaa04[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Wed Oct 30 13:38:20 2024 +0000
+
+    display login feedback to the user
+
+[33mcommit 2791f3b250a9f94e6de7ca58ac86cd9da50b2c61[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Wed Oct 30 12:11:50 2024 +0000
+
+    create authorisation options
+
+[33mcommit bd4b8cd138915e4bb4650027155168c2c732c96a[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Wed Oct 30 00:16:22 2024 +0000
+
+    settings for deployment
+
+[33mcommit c161ee84656c66d4ea9f163e92a8e892deeaecd8[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Tue Oct 29 23:45:09 2024 +0000
+
+    settings for deployment
+
+[33mcommit 8d69974378e270a1863308027935d7da8079794b[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Tue Oct 29 23:26:30 2024 +0000
+
+    create about page
+
+[33mcommit ba3713e5cefb3d683c95a77b6b2344808697fe47[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Tue Oct 29 20:47:04 2024 +0000
+
+    add image and post detailed view
+
+[33mcommit dcb8af16b7463f46c2afb141d3b92a6947af4adb[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Sat Oct 26 23:26:01 2024 +0000
+
+    add js scripts
+
+[33mcommit 99ff2f799dc212f68bf1ac5082a6e74dba63590f[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Sat Oct 26 22:31:16 2024 +0000
+
+    enable serving of static files
+
+[33mcommit 8ac84a4f5d132095056ead01e88f9e43cec8a713[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Sat Oct 26 22:15:23 2024 +0000
+
+    enable serving of static files
+
+[33mcommit 46eb5bf8b0bfcb0188c1eb554e48db4081b678a8[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Sat Oct 26 22:09:05 2024 +0000
+
+    enable serving of static files
+
+[33mcommit f97c9a83c9e2d384e37f49a67ccc4ad40d98e08a[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Sat Oct 26 22:00:13 2024 +0000
+
+    add pagination
+
+[33mcommit 2792f7e0aa384aba7b27b920157e2d0b37b0cf1e[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Fri Oct 25 16:04:57 2024 +0000
+
+    add variables and tags
+
+[33mcommit 449b4bc3281ce6052acc4ce37f25bf0a38f8f8f5[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Fri Oct 25 14:42:20 2024 +0000
+
+    copyright inheritage
+
+[33mcommit 81aea2740237a356b0e974e2ebf654277e4485f8[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Fri Oct 25 14:16:23 2024 +0000
+
+    style blog
+
+[33mcommit 46733e00d57864182c2df4ddc6f93551888d6835[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Thu Oct 24 21:19:37 2024 +0000
+
+    add fixtures
+
+[33mcommit 848f9a787bb9515dfec89291fc0f68ed37226eee[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Thu Oct 24 13:01:12 2024 +0000
+
+    admin page customisation
+
+[33mcommit 84284187e39c7b548f51a5fa3dd37f99e1a62e58[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Wed Oct 23 15:55:03 2024 +0000
+
+    :add views filters
+
+[33mcommit 1a7b1bf69be5b9f119d423f32ce92dccf31f9cf2[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Wed Oct 23 15:42:43 2024 +0000
+
+    settings for deployment
+
+[33mcommit 4a252605d2e76790dede3512a434408700b20dec[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Wed Oct 23 15:28:58 2024 +0000
+
+    add views settings issue
+
+[33mcommit f5a2bb3ef99479602ce275c50ada09e4e4164cd4[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Tue Oct 22 16:22:30 2024 +0000
+
+    create views
+
+[33mcommit 906f852908390e599c4bf35d86866fef1aacf187[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Tue Oct 22 13:49:32 2024 +0000
+
+    add models and methods
+
+[33mcommit a583a766c74ce70c259220fd72628dfb1a9b1110[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Mon Oct 21 15:47:42 2024 +0000
+
+    user settings
+
+[33mcommit 41d4db849ac590dbbae78275e35039b5b1b5207c[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Fri Oct 18 14:33:00 2024 +0000
+
+    odels update
+
+[33mcommit 58e0acec285d6cbec1517f82d0684b40f0b3f756[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Fri Oct 18 14:29:12 2024 +0000
+
+    add models
+
+[33mcommit 135dac5ccd77d290630b4901eac1e69996559160[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Thu Oct 17 15:06:32 2024 +0000
+
+    set secret key
+
+[33mcommit 6d11c5a3941db1db8de353a11880e80518c47f5a[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Thu Oct 17 14:53:31 2024 +0000
+
+    create superuser
+
+[33mcommit bc754afcf0b0a4bcdf9d6599a2084e1347cfde30[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Thu Oct 17 13:56:41 2024 +0000
+
+    readies code for deploy
+
+[33mcommit 25a13fe359ddebd9ce509f3a91c96be0d0a8eb56[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Thu Oct 17 13:47:00 2024 +0000
+
+    readies code for deploy
+
+[33mcommit 3d6d5acb3377249a621e0ee59c8c3689dd0e5370[m
+Author: Monika Mak <monika1986mak@gmail.com>
+Date:   Thu Oct 17 13:29:23 2024 +0000
+
+    initial commit set up
+
+[33mcommit 44f0d78232c76cc73ed59719c02477246a7a49de[m
+Author: Monika Mak <141211860+monika-mak@users.noreply.github.com>
+Date:   Thu Oct 17 00:04:42 2024 +0100
+
+    Update issue templates
+
+[33mcommit d13ba711f36c7de4cc6bccce12b098838f117404[m
+Author: Monika Mak <141211860+monika-mak@users.noreply.github.com>
+Date:   Wed Oct 16 23:52:23 2024 +0100
+
+    Initial commit
