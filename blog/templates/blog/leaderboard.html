@@ -1,20 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- blog/leaderboard.html-->
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Views Part 1</title>
-</head>
+{% block title %}Leaderboard{% endblock %}
 
-<body>
-    <h1>Posts list</h1>
-    {% for post in object_list %}
-    <h2>{{post.title}}</h2>
-    <p>{{post.excerpt}}</p>
-    <p>Author: {{post.author}}</p>
-    {% endfor %}
-</body>
-
-</html>
+{% block content %}
+    <h2>Top 5 most voted AI Heroes </h2>
+    <ul>
+        {% for post in posts %}
+        <li>
+            <a href = "{% url 'post_detail' post.slug %}"> {{ post.title}}</a> - {{ post.num_votes}} Votes
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
