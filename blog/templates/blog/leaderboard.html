@@ -19,6 +19,7 @@
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Total Votes: {{ post.vote_count }}</p>
+                                    <a href="{% url 'vote_on_a_post' post.id %}" class="author">Vote now</a>
                                 </div>
                             </div>
                             <a href="{% url 'post_detail' post.slug %}" class="post-link">

@@ -6,9 +6,10 @@ from django.http import HttpResponseRedirect
 from .models import Post, Comment, Vote
 from .forms import CommentForm
 from django.db.models import Count
+from django.contrib.auth.decorators import login_required
 
 class PostList(generic.ListView):
-    queryset = Post.objects.filter(status=1)
+    queryset = Post.objects.filter(status=1).annotate(comment_count=Count('comments'))
     template_name = "blog/index.html"
     paginate_by = 6
 
@@ -102,3 +103,20 @@ def leaderboard(request):
         .order_by('-vote_count')[:5]
         )
     return render(request, 'blog/leaderboard.html', {'posts': post})
+
+
+@login_required 
+def vote_on_a_post(request, post_id):
+    '''
+    view to handle all the votes given to individual posts
+    no one post can recieve more than one vote from the same user
+    '''
+    post = get_object_or_404(Post, id=post_id)
+
+    # Check if user already voted for this post
+    if not Vote.objects.filter(post=post, author=request.user).exists():
+        Vote.objects.create(post=post, author=request.user)
+        messages.success(request, "Thank you for your vote")
+    else:
+        messages.info(request, "You have already voted for this Hero")
+    return redirect(reverse('leaderboard'))

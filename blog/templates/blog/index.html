@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
-{% block content %}
+{% load crispy_forms_tags %}
 
+
+{% block content %}
 <!-- index.html content starts here -->
 <div class="container-fluid">
     <div class="row">
-
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
@@ -20,7 +21,9 @@
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}"alt="{{ post.title }}">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}</p>
+                                    <div class="col-12">  
+                                        <p class="author">Total Votes: {{ post.vote_count }}</p>
+                                    </div>
                                 </div>
                             </div>
                             <a href="{% url 'post_detail' post.slug %}" class="post-link">
