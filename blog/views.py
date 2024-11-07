@@ -1,4 +1,3 @@
-
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic
 from django.contrib import messages
@@ -95,28 +94,43 @@ def comment_delete(request, slug, comment_id):
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))   
 
+
 # Leaderboard view to display posts ordered by the number of votes     
 def leaderboard(request):
     post = ( 
         Post.objects.filter(status=1)
         .annotate(vote_count=Count('post_votes'))
-        .order_by('-vote_count')[:5]
+        .order_by('-vote_count') # [:5]
         )
     return render(request, 'blog/leaderboard.html', {'posts': post})
 
 
 @login_required 
-def vote_on_a_post(request, post_id):
+def vote_on_a_post(request, post):
     '''
     view to handle all the votes given to individual posts
     no one post can recieve more than one vote from the same user
     '''
-    post = get_object_or_404(Post, id=post_id)
+    post = get_object_or_404(Post, id=pk)
 
+    create instance for user to vote on a blog
     # Check if user already voted for this post
+    if user exists and they click on a post 
+        the post is noted
+    elif they dont exist they have to login to vote
+        message "you need to log in"
+    else the vote is deleted and they can vote again
+    
+
+
     if not Vote.objects.filter(post=post, author=request.user).exists():
         Vote.objects.create(post=post, author=request.user)
         messages.success(request, "Thank you for your vote")
     else:
         messages.info(request, "You have already voted for this Hero")
-    return redirect(reverse('leaderboard'))
+    return redirect(reverse('home'))
+
+    def already_voted(user):
+        if user.vote ==True:
+            messages.info(request, "You have already voted")
+
