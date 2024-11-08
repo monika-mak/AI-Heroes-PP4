@@ -14,4 +14,5 @@ class PostAdmin(SummernoteModelAdmin):
 
 # Register your models here to allow you to create, update and delete blog posts from the admin panel
 admin.site.register(Comment)
+admin.site.register(Vote)
 
