@@ -112,21 +112,22 @@ def vote_on_a_post(request, post_id):
 
     post = get_object_or_404(Post, id=post_id)
     
-    # Check if user is logged in
+    # Check if user is logged in 
     if not request.user.is_authenticated:
         messages.info(request, "You need to log in to cast a vote")
         return redirect('login')
-
+    # if user already voted on this blog, remove vote
     if Vote.objects.filter(post=post, author=request.user).exists():
         Vote.objects.filter(post=post, author=request.user).delete()
         messages.info(request, 'Unvoted, change colors of vote icon')
         return redirect('leaderboard')
     else:
-        # get the total amount of votes per user
+        # get the total amount of votes per user and check if not exceeding 3
         if request.user.user_votes.count() >= 3:
             messages.info(request, "You 've reached max 3 votes limit ")
             return redirect('leaderboard')
         else:
+            # create vote if no previous restrictions are valid
             Vote.objects.create(post=post, author=request.user)
             messages.success(request, "Thank you for your vote")
             return redirect('leaderboard')
