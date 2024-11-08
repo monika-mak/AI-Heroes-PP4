@@ -96,12 +96,12 @@ def comment_delete(request, slug, comment_id):
 
 # Leaderboard view to display posts ordered by the number of votes     
 def leaderboard(request):
-    post = ( 
+    posts = ( 
         Post.objects.filter(status=1)
         .annotate(vote_count=Count('post_votes'))
-        .order_by('-vote_count') # [:5]
+        .order_by('-vote_count')[:5]
         )
-    return render(request, 'blog/leaderboard.html', {'posts': post})
+    return render(request, 'blog/leaderboard.html', {'posts': posts})
 
 
 def vote_on_a_post(request, post_id):
@@ -109,24 +109,30 @@ def vote_on_a_post(request, post_id):
     view to handle all the votes given to individual posts
     no one post can recieve more than one vote from the same user
     '''
-    # 
-    post = get_object_or_404(Post, id=post_id)
 
-    user_voted = Vote.objects.filter(post=post,author=request.user)
-    # Check if user already voted for this post
+    post = get_object_or_404(Post, id=post_id)
+    
+    # Check if user is logged in
     if not request.user.is_authenticated:
         messages.info(request, "You need to log in to cast a vote")
-        return
-    # get the total amount of votes per user
-    if request.user.user_votes.count() >=3:
-        messages.info(request, "You 've reached max 3 votes limit ")
-        return
+        return redirect('login')
 
-    if not user_voted.exists():
-        Vote.objects.create(post=post,author=request.user)
-        messages.success(request, "Thank you for your vote")
+    if Vote.objects.filter(post=post, author=request.user).exists():
+        Vote.objects.filter(post=post, author=request.user).delete()
+        messages.info(request, 'Unvoted, change colors of vote icon')
+        return redirect('leaderboard')
     else:
-        user_voted.delete()
-        messages.info(request, "unvoted - making colors change")
-    return redirect(reverse('home'))
+        # get the total amount of votes per user
+        if request.user.user_votes.count() >= 3:
+            messages.info(request, "You 've reached max 3 votes limit ")
+            return redirect('leaderboard')
+        else:
+            Vote.objects.create(post=post, author=request.user)
+            messages.success(request, "Thank you for your vote")
+            return redirect('leaderboard')
 
+
+
+
+
+ 
