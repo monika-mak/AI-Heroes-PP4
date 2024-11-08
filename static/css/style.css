@@ -2,6 +2,11 @@ body {
     background-color: #F9FAFC;
 }
 
+.icon {
+    margin : 0 10px;
+    color: white;
+    }
+
 .brand {
     font-family: Audiowide, sans-serif;
     font-size: 1.4rem;

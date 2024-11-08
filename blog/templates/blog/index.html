@@ -21,10 +21,12 @@
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}"alt="{{ post.title }}">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <div class="col-12">  
-                                        <i class="far fa-comments"></i> {{ post.comment_count }}
-                                        <p class="author">Total Votes: {{ post.vote_count }}</p>
-                                        <a href="{% url 'vote_on_a_post' post.id %}" class="author">Vote now !</a>
+                                    <div class="col-12 icon">  
+                                        <!-- <i class="far fa-comments "></i> {{ post.comment_count }} | -->
+                                        <a href="{% url 'post_detail' post.slug%}"><i class="far fa-comments icon"></i></a> {{ post.comment_count }}
+                                        <!-- <i class="fa-solid fa-check-to-slot"></i></i>{{ post.vote_count }}
+                                        <a href="{% url 'vote_on_a_post' post.id %}" class="icon">Vote now </a> -->
+                                        <a href="{% url 'vote_on_a_post' post.id %}"><i class="fa-solid fa-check-to-slot icon"></i></a>{{ post.vote_count }}
                                     </div>
                                 </div>
                             </div>
@@ -36,7 +38,7 @@
                             <p class="card-text text-muted h6">{{ post.created_on}}
                             </p>
                         </div>
-                    </div>
+                    </div> 
                 </div>
                 {% if forloop.counter|divisibleby:3 %}
             </div>
