@@ -47,6 +47,18 @@ body {
     width: 100%;
     height: auto;
 }
+.callout-container {
+    height: 100vh;
+    background: no-repeat bottom right fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
 
 .author {
     color: white;
