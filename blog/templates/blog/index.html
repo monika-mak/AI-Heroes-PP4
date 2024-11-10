@@ -16,11 +16,9 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top" src="{% static 'images/default.jpg' %}"
-                                  alt="placeholder image">
+                                <img class="card-img-top" src="{% static 'images/default.png' %}" alt="placeholder image">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}"
-                                  alt="{{ post.title }}">
+                                <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
                                 {% endif %}
                                 <div class="image-flash">
                                     <div class="col-12 icon">  
@@ -40,7 +38,7 @@
                             <p class="card-text text-muted h6">Last Updated : {{ post.created_on}}
                             </p>
                         </div>
-                    </div> 
+                    </div>
                 </div>
                 {% if forloop.counter|divisibleby:3 %}
             </div>
