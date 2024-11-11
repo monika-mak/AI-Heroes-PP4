@@ -27,6 +27,7 @@ body {
 }
 
 .card {
+
     border: none;
     background-color: transparent;
 }
@@ -47,8 +48,31 @@ body {
     width: 100%;
     height: auto;
 }
+
+#hero {
+    max-height: 400px;
+    display: flex;
+    flex-direction: row;
+}
+
+.hero-text {
+    flex-grow: 2;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    margin: 10px 0;
+    width: 66.6%;
+    height:auto
+}
+
+
+.hero-image {
+    width: 33.3%;
+    /* Responsive and scales with its container */
+    height: auto;
+
+}
 .callout-container {
-    min-height: 400px;
+    /* max-height: 400px; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -58,6 +82,12 @@ body {
     justify-content: center;
     position: relative;
 }
+/* .hero-image img {
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 14em -5em, right 0em bottom 0em;
+ } */
 
 .author {
     color: white;

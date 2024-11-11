@@ -7,21 +7,16 @@
 <!-- index.html content starts here -->
 <!--Hero section -->
 
-<section>
-    <div class="container-fluid callout-container"
-    style=' background-image: url("static/images/hero_logo.png"),
-    url("static/images/background_blue.jpg");'>
-            <div >
-                <div class="text-center">
-                    <h1 class="text-center logo-hero">Welcome !</h1>
-                    <h2 class="display-6 text-light">A place to get your favourite AI Tools.test</h2>
-                </div>
-                <div class= "hero-image" >
-                    <h1 class="text-center logo-hero">Welcome !</h1>
-                </div>
-            </div>
-            </div>
+
+<section  id ="hero" class="container-fluid callout-container"
+style='background-image: url("static/images/background_blue.jpg")'>
+        <div class="hero-text">
+            <h1 class="text-center logo-hero">Welcome !</h1>
+            <h2 class="display-6 text-light">A place to get your favourite AI Tools.test</h2>
         </div>
+        <div class="hero-image">
+            <img src="/static/images/hero_logo.png"
+                alt="Blue background matrix style">
     </div>
 </section>
 
@@ -34,7 +29,6 @@
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
-                            
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top" src="{% static 'images/default.png' %}" alt="placeholder image">
