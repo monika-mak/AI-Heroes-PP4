@@ -8,15 +8,18 @@
 <!--Hero section -->
 
 <section>
-    <div id="hero-image" class="container-fluid callout-container"
-    style="background-image: url(https://res.cloudinary.com/dutjcas0m/image/upload/c_fill,g_auto,h_250,w_970/b_rgb:000000,e_gradient_fade,y_-0.50/c_scale,co_rgb:ffffff,fl_relative,l_text:montserrat_25_style_light_align_center:Shop%20Now,w_0.5,y_0.18/v1731205290/Screenshot_2024-10-29_203336_yoakla.png)">
-        <div class="row">
-            <div class = "col-12">
-                <div class ="text-center">
-                    <h1 class="text-center welcome-text">Hello!</h1>
-                    <h2 class = "display-6 text-light">More text about the AI Blog and its function</h2>
-                    <hr>
+    <div class="container-fluid callout-container"
+    style=' background-image: url("static/images/hero_logo.png"),
+    url("static/images/background_blue.jpg");'>
+            <div >
+                <div class="text-center">
+                    <h1 class="text-center logo-hero">Welcome !</h1>
+                    <h2 class="display-6 text-light">A place to get your favourite AI Tools.test</h2>
                 </div>
+                <div class= "hero-image" >
+                    <h1 class="text-center logo-hero">Welcome !</h1>
+                </div>
+            </div>
             </div>
         </div>
     </div>
@@ -31,6 +34,7 @@
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
+                            
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top" src="{% static 'images/default.png' %}" alt="placeholder image">

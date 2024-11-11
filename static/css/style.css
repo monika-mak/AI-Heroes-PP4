@@ -48,8 +48,7 @@ body {
     height: auto;
 }
 .callout-container {
-    height: 100vh;
-    background: no-repeat bottom right fixed;
+    min-height: 400px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
