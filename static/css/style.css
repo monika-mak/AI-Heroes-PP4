@@ -70,12 +70,8 @@ body {
 
 
 .hero-image {
-    width: 33.3%;
+    display:none;
     /* Responsive and scales with its container */
-    height: auto;
-    margin-right: 4em;
-    
-
 }
 .callout-container {
     /* max-height: 400px; */
@@ -206,8 +202,21 @@ body {
 
 /* code takenn from https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
 /* Media query: tablets and larger (768px and up) */
+
+/*Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) { 
+    .hero-image {
+        width: 33.3%;
+        height: auto;
+        margin-right: 4em;    
+    }
+ }
+
+
+/* @include media-breakpoint-down(md) { ... }
 @media only screen and (max-width: 768px) {
     .hero-image {
         display: none;
     }
-  }
+  } */

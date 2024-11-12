@@ -4,34 +4,39 @@
 {% block content %}
 
 <!-- index.html content starts here -->
-<div class="container-fluid">
-        <h2>LEADERBOARD</h2>
-        <!-- Blog Entries Column -->
-                {% for post in posts %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="image-container">
-                                {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top" src="{% static 'images/default.png' %}" alt="placeholder image">
-                                {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}"alt="{{ post.title }}">
-                                {% endif %}
-                                <div class="image-flash icon" >
-                                    <a href="{% url 'vote_on_a_post' post.id %}"><i class="fa-solid fa-check-to-slot icon"></i></a>{{ post.vote_count }}
-                                </div>
+<div class="container-fluid" ></div>
+    <h2>LEADERBOARD</h2>
+    <!-- Blog Entries Column -->
+    <section class ="row">
+        <div clas ="col">
+            {% for post in posts %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="image-container">
+                            {% if "placeholder" in post.featured_image.url %}
+                            <img class="card-img-top" src="{% static 'images/default.png' %}" alt="placeholder image">
+                            {% else %}
+                            <img class="card-img-top" src=" {{ post.featured_image.url }}"alt="{{ post.title }}">
+                            {% endif %}
+                            <div class="image-flash icon" >
+                                <a href="{% url 'vote_on_a_post' post.id %}"><i class="fa-solid fa-check-to-slot icon"></i></a>{{ post.vote_count }}
                             </div>
-                            <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                                <h2 class="card-title">{{ post.title }}</h2>
-                            </a>
-                            <hr />
                         </div>
+                        <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                            <h2 class="card-title">{{ post.title }}</h2>
+                        </a>
+                        <hr />
                     </div>
                 </div>
-                {% endfor %}
             </div>
+            {% endfor %}
         </div>
-    </div>
+        <div class="hero-image">
+            <img src="/static/images/canva_heroes/trophy_robot.png"
+                alt="futuristic cute robot with a red cape flying in a superhero style">
+        </div>
+    </section>
 </div>
 
 <!-- index.html content ends here -->

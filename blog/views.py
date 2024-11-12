@@ -99,7 +99,7 @@ def leaderboard(request):
     posts = ( 
         Post.objects.filter(status=1)
         .annotate(vote_count=Count('post_votes'))
-        .order_by('-vote_count')# [:5]
+        .order_by('-vote_count')[:5] # ensure only top 5 positions are displayed
         )
     return render(request, 'blog/leaderboard.html', {'posts': posts})
 
