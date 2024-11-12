@@ -6,8 +6,6 @@
 {% block content %}
 <!-- index.html content starts here -->
 <!--Hero section -->
-
-
 <section  id ="hero" class="container-fluid callout-container"
 style='background-image: url("static/images/background_blue.jpg")'>
         <div class="hero-text">
@@ -50,7 +48,9 @@ style='background-image: url("static/images/background_blue.jpg")'>
                                 <p class ="card-text">{{ post.excerpt }}</p>
                             </a>
                             <hr />
-                            <p class="card-text text-muted h6">Last Updated : {{ post.created_on}}
+                            <!-- date format inspired from tutorial: https://www.youtube.com/watch?v=aHC3uTkT9r8&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=5-->
+                            <!--date format: https://docs.djangoproject.com/en/5.1/ref/templates/builtins/#date-->
+                            <p class="card-text text-muted h6">Last Updated : {{ post.created_on|date:"d F Y" }}
                             </p>
                         </div>
                     </div>
