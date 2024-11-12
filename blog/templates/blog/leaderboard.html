@@ -4,16 +4,19 @@
 {% block content %}
 
 <!-- index.html content starts here -->
-<div class="container-fluid" ></div>
-    <h2>LEADERBOARD</h2>
-    <!-- Blog Entries Column -->
-    <section class ="row">
-        <div clas ="col">
+<div class="container-fluid" >
+    <section class="text-center">
+        <div class ="row justify-content-center">
+            <h2>LEADERBOARD</h2>
+            <div class="col-md-8 mb-4">
+                <img src="/static/images/canva_heroes/trophy_robot.png"
+                    alt="futuristic cute robot with a red cape flying in a superhero style">
+            </div>
+            <div class="col-md-8">
             {% for post in posts %}
-            <div class="col-md-4">
                 <div class="card mb-4">
                     <div class="card-body">
-                        <div class="image-container">
+                        <div class="image-container text-center">
                             {% if "placeholder" in post.featured_image.url %}
                             <img class="card-img-top " src="{% static 'images/default.png' %}" alt="placeholder image">
                             {% else %}
@@ -29,12 +32,8 @@
                         <hr />
                     </div>
                 </div>
-            </div>
             {% endfor %}
-        </div>
-        <div class="hero-image">
-            <img src="/static/images/canva_heroes/trophy_robot.png"
-                alt="futuristic cute robot with a red cape flying in a superhero style">
+            </div> 
         </div>
     </section>
 </div>
