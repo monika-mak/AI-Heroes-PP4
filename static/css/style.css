@@ -1,11 +1,15 @@
 body {
     background-color: #F9FAFC;
 }
+ a {
+    text-decoration: none;
+ }
 
 .icon {
     margin : 0 10px;
     color: white;
     }
+
 
 .brand {
     font-family: Audiowide, sans-serif;
@@ -69,6 +73,8 @@ body {
     width: 33.3%;
     /* Responsive and scales with its container */
     height: auto;
+    margin-right: 4em;
+    
 
 }
 .callout-container {
@@ -197,3 +203,11 @@ body {
 .approval {
     color: rgb(222, 146, 168);
 }
+
+/* code takenn from https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+/* Media query: tablets and larger (768px and up) */
+@media only screen and (max-width: 768px) {
+    .hero-image {
+        display: none;
+    }
+  }
