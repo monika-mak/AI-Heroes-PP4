@@ -1,6 +1,15 @@
 body {
     background-color: #F9FAFC;
 }
+
+h1 {
+    color: white;
+    margin-bottom:10px;
+}
+/* .text-light {
+    font-weight: 300;
+} */
+
  a {
     text-decoration: none;
  }
@@ -16,6 +25,10 @@ body {
     font-size: 1.4rem;
     font-weight: 700;
     color: #4A4A4F;
+}
+
+.text-end {
+    margin-right:5px;
 }
 
 .light-bg {
@@ -61,13 +74,12 @@ body {
 
 .hero-text {
     flex-grow: 2;
-    padding-left: 20px;
-    padding-bottom: 10px;
+    padding: 10px 0px 10px 20px ;
     margin: 10px 0;
     width: 66.6%;
-    height:auto
+    height:auto;
+    color: white;
 }
-
 
 .hero-image {
     display:none;
@@ -84,12 +96,6 @@ body {
     justify-content: center;
     position: relative;
 }
-/* .hero-image img {
-    position: relative;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 14em -5em, right 0em bottom 0em;
- } */
 
 .author {
     color: white;
@@ -98,12 +104,11 @@ body {
 }
 
 .masthead {
-    margin-top: 10px;
+    padding: 1rem 1rem;
     overflow: hidden;
     position: relative;
     display: inline-block;
-    height: 20vh;
-    width: 100%;
+
 }
 
 .masthead-text {
@@ -118,7 +123,8 @@ body {
 }
 
 .masthead-image:after {
-    content: "";
+    display: none;
+    /* content: "";
     position: absolute;
     top: 0;
     right: 90%;
@@ -128,7 +134,7 @@ body {
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
-    z-index: 100;
+    z-index: 100; */
 }
 
 .post-link {
@@ -142,12 +148,13 @@ body {
 }
 
 .post-title {
-    margin-top: 10%;
     margin-left: 5%;
 }
 
 .post-subtitle {
+    margin-top: 1em;
     margin-left: 5%;
+
     color: lightgray;
 }
 
@@ -200,6 +207,8 @@ body {
     color: rgb(222, 146, 168);
 }
 
+
+
 /* code inspired from https://getbootstrap.com/docs/5.3/layout/breakpoints/ */
 /*Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
@@ -207,6 +216,21 @@ body {
         display: contents;
         width: 33.3%;
         height: auto;
-        margin-right: 4em;    
+        margin-right: 4em;
+
+    }
+    .masthead-image:after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 90%;
+        height: 100%;
+        width: 150%;
+        background: #445261;
+        -webkit-transform: skew(15deg);
+        -moz-transform: skew(15deg);
+        transform: skew(15deg);
+        z-index: 100;
     }
  }
