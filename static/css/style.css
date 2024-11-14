@@ -6,9 +6,6 @@ h1 {
     color: white;
     margin-bottom:10px;
 }
-/* .text-light {
-    font-weight: 300;
-} */
 
  a {
     text-decoration: none;
@@ -19,6 +16,10 @@ h1 {
     color: white;
     }
 
+.alert {
+    border: 2px solid #FF9800;
+    background-color: #ffa50052;
+}
 
 .brand {
     font-family: Audiowide, sans-serif;
@@ -83,8 +84,8 @@ h1 {
 
 .hero-image {
     display:none;
-    /* Responsive and scales with its container */
 }
+
 .callout-container {
     /* max-height: 400px; */
     -webkit-background-size: cover;
@@ -122,19 +123,9 @@ h1 {
     overflow: hidden;
 }
 
+/*hide image strap for small screens */
 .masthead-image:after {
     display: none;
-    /* content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100; */
 }
 
 .post-link {
@@ -144,6 +135,7 @@ h1 {
 
 .post-link:hover,
 .page-link {
+    margin: 5px 0;
     color: #E84610;
 }
 
@@ -152,9 +144,9 @@ h1 {
 }
 
 .post-subtitle {
+    /* reversing margin top to 1em */
     margin-top: 1em;
     margin-left: 5%;
-
     color: lightgray;
 }
 

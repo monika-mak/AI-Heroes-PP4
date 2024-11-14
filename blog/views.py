@@ -115,7 +115,7 @@ def vote_on_a_post(request, post_id):
     # Check if user is logged in 
     if not request.user.is_authenticated:
         messages.info(request, "You need to log in to cast a vote")
-        return redirect('login')
+        return redirect('account_login')
     # if user already voted on this blog, remove vote
     if Vote.objects.filter(post=post, author=request.user).exists():
         Vote.objects.filter(post=post, author=request.user).delete()

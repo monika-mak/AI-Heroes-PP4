@@ -137,8 +137,8 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
+# set correct time zone
+TIME_ZONE = 'Europe/Dublin'
 
 USE_I18N = True
 
