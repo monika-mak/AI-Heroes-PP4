@@ -32,22 +32,22 @@
                     <div class="card mb-4">
                         <div class="card-body post-card">
                             <div class="image-container">
-                                {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top" src="{% static 'images/default.png' %}" alt="placeholder image">
-                                {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
-                                {% endif %}
-                            </div>
-                            <div >
-                                <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                                    <h2 class="card-title">{{ post.title }}</h2>
-                                    <p class ="card-text">{{ post.excerpt }}</p>
+                                <a href="{% url 'post_detail' post.slug %}" class="post-link ">
+                                    {% if "placeholder" in post.featured_image.url %}
+                                    <img class="card-img-top" src="{% static 'images/default.png' %}" alt="placeholder image">
+                                    {% else %}
+                                    <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
+                                    {% endif %}
                                 </a>
+                            </div>
+                            <div>
+                                <h2 class="card-title">{{ post.title }}</h2>
+                                <p class ="card-text">{{ post.excerpt }}</p>
                                 <hr>
                             </div>
                             <div class="d-flex justify-content-between align-items-center">
                                 <!--date format: https://docs.djangoproject.com/en/5.1/ref/templates/builtins/#date-->
-                                <p class="card-text text-muted h6">Created on: {{ post.created_on|date:"d F Y" }}</p>
+                                <p class="card-text post-subtitle h6">Created on: {{ post.created_on|date:"d F Y" }}</p>
                                 <a class="btn btn-warning" href="{% url 'vote_on_a_post' post.id %}" role="button">
                                     <i class="fa-solid fa-check-to-slot icon"></i> VOTE HERE</a>
                             </div>
