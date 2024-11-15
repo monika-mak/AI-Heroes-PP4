@@ -198,14 +198,15 @@ h2 {
 
 /* code inspired from https://getbootstrap.com/docs/5.3/layout/breakpoints/ */
 /*Medium devices (tablets, 768px and up) */
-/* @media (min-width: 768px) { 
+@media (min-width: 768px) { 
     .hero-image {
         display: contents;
         width: 33.3%;
         height: auto;
         margin-right: 4em;
+    }
+}
 
-    } */
     /* .masthead-image:after {
         display: block;
         content: "";
@@ -220,4 +221,3 @@ h2 {
         transform: skew(15deg);
         z-index: 100;
     } */
- 
