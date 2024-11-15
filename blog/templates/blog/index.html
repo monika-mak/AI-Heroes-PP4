@@ -18,6 +18,11 @@
         </div>
 </section>
 <div class="container-fluid">
+    <div>
+        <h2 class=" card-text text-center">Pick Your Vafourite Hero & 
+            Check Out The Leaderboard To See If They Made It !<br>
+            Pssst... You Get Up To 3 Votes!</h2>
+    </div>
     <div class="row">
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
@@ -32,13 +37,14 @@
                                 {% else %}
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
                                 {% endif %}
-                                <div class="image-flash">
+                                <div>
                                     <div class="col-12 icon">  
                                         <!-- <i class="far fa-comments "></i> {{ post.comment_count }} |
                                         <a href="{% url 'post_detail' post.slug%}"><i class="far fa-comments icon"></i></a> {{ post.comment_count }}
                                         <i class="fa-solid fa-check-to-slot"></i></i>{{ post.vote_count }}
                                         <a href="{% url 'vote_on_a_post' post.id %}" class="icon">Vote now </a> -->
-                                        <a href="{% url 'vote_on_a_post' post.id %}"><p class = "icon">Vote For Your Hero Here<i class="fa-solid fa-check-to-slot icon"></i></p></a>
+                                        <!-- <a href="{% url 'vote_on_a_post' post.id %}"><p class = "icon">Vote For Your Hero Here<i class="fa-solid fa-check-to-slot icon"></i></p></a> -->
+                                        <a class="btn btn-outline-info vote-button" href="{% url 'vote_on_a_post' post.id %}" role="button"><i class="fa-solid fa-check-to-slot icon"></i> VOTE HERE</a>
                                     </div>
                                 </div>
                             </div>
