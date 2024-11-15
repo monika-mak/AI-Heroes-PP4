@@ -64,17 +64,25 @@ h2 {
 }
 
 .vote-button {
-    padding: 0rem .4rem;
+    padding: 0rem .2rem;
     position: absolute;
     color:white;
-    bottom: 5%;
+    bottom: 2%;
     min-width: 30%;
     background-color: #188181;
+    border-radius:0.2em;
 }
+
 .btn-outline-info:hover {
-    color: #000;
-    background-color: #045458f1;
-    border-color: #0dcaf0;
+    color: #117d83;
+    background-color: #ffffff;
+    border-color: #117d83;
+}
+
+.btn-outline-info:active {
+    color: #117d83;
+    background-color: #ffffff;
+    border-color: #117d83;
 }
 
 #hero {
@@ -114,6 +122,9 @@ h2 {
     align-items: center;
     justify-content: center;
     position: relative;
+}
+.vote-info {
+    padding:0% 0.2em;
 }
 
 .author {

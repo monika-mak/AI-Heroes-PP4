@@ -119,19 +119,20 @@ def vote_on_a_post(request, post_id):
     # if user already voted on this blog, remove vote
     if Vote.objects.filter(post=post, author=request.user).exists():
         Vote.objects.filter(post=post, author=request.user).delete()
-        messages.info(request, 'Unvoted, change colors of vote icon')
-        return redirect('leaderboard')
+        messages.info(request, 'Vote cancelled')
     else:
         # get the total amount of votes per user and check if not exceeding 3
         if request.user.user_votes.count() >= 3:
             messages.info(request, "You 've reached max 3 votes limit ")
-            return redirect('leaderboard')
         else:
             # create vote if no previous restrictions are valid
             Vote.objects.create(post=post, author=request.user)
             messages.success(request, "Thank you for your vote")
-            return redirect('leaderboard')
-
+            return redirect('home')
+    # Redirect back to the referring page
+    # https://docs.djangoproject.com/en/5.1/ref/request-response/#django.http.HttpRequest.META
+    referrer = request.META.get('HTTP_REFERER', '/')
+    return HttpResponseRedirect(referrer)
 
 
 
