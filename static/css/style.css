@@ -6,6 +6,10 @@ h1 {
     color: white;
     margin-bottom:10px;
 }
+h2 {
+    font-weight: 300;
+    line-height: 1.2;
+}
 
  a {
     text-decoration: none;
@@ -49,6 +53,11 @@ h1 {
     border: none;
     background-color: transparent;
 }
+.card-title {
+    margin-top: 5px;
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
 
 .image-container {
     position: relative;
@@ -60,11 +69,6 @@ h1 {
     min-width: 30%;
     left: -2px;
     background-color: #188181;
-}
-
-.scale {
-    width: 100%;
-    height: auto;
 }
 
 #hero {
@@ -86,6 +90,14 @@ h1 {
     display:none;
 }
 
+.custom-width {
+    max-width:500px;
+}
+.scale {
+    width: 100%;
+    height: auto;
+}
+
 .callout-container {
     /* max-height: 400px; */
     -webkit-background-size: cover;
@@ -104,29 +116,12 @@ h1 {
     text-transform: uppercase;
 }
 
-.masthead {
-    padding: 1rem 1rem;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-
-}
-
-.masthead-text {
+.tool-name {
     background-color: #445261;
     color: white;
     position: relative;
 }
 
-.masthead-image {
-    position: relative;
-    overflow: hidden;
-}
-
-/*hide image strap for small screens */
-.masthead-image:after {
-    display: none;
-}
 
 .post-link {
     text-decoration: none;
@@ -141,12 +136,12 @@ h1 {
 
 .post-title {
     margin-left: 5%;
+    color: white;
+    padding:10px;
 }
 
 .post-subtitle {
     /* reversing margin top to 1em */
-    margin-top: 1em;
-    margin-left: 5%;
     color: lightgray;
 }
 
@@ -203,15 +198,15 @@ h1 {
 
 /* code inspired from https://getbootstrap.com/docs/5.3/layout/breakpoints/ */
 /*Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
+/* @media (min-width: 768px) { 
     .hero-image {
         display: contents;
         width: 33.3%;
         height: auto;
         margin-right: 4em;
 
-    }
-    .masthead-image:after {
+    } */
+    /* .masthead-image:after {
         display: block;
         content: "";
         position: absolute;
@@ -224,5 +219,5 @@ h1 {
         -moz-transform: skew(15deg);
         transform: skew(15deg);
         z-index: 100;
-    }
- }
+    } */
+ 

@@ -9,7 +9,7 @@
 <section  id ="hero" class="container-fluid callout-container" style='background-image: url("static/images/background_blue.jpg")'>
         <div class="hero-text">
             <h1 class="text-center">WELCOME TO AI HEROES!</h1>
-            <h2 class="display-6 text-light text-center">A place where we demystify artificial intelligence and showcase easy-to-use, 
+            <h2 class="text-light text-center">A place where we demystify artificial intelligence and showcase easy-to-use, 
                 game-changing AI tools that can boost productivity and enhance your everyday life. </h2>
         </div>
         <div class="hero-image">
@@ -34,22 +34,23 @@
                                 {% endif %}
                                 <div class="image-flash">
                                     <div class="col-12 icon">  
-                                        <!-- <i class="far fa-comments "></i> {{ post.comment_count }} | -->
-                                        <!-- <a href="{% url 'post_detail' post.slug%}"><i class="far fa-comments icon"></i></a> {{ post.comment_count }} -->
-                                        <!-- <i class="fa-solid fa-check-to-slot"></i></i>{{ post.vote_count }}
+                                        <!-- <i class="far fa-comments "></i> {{ post.comment_count }} |
+                                        <a href="{% url 'post_detail' post.slug%}"><i class="far fa-comments icon"></i></a> {{ post.comment_count }}
+                                        <i class="fa-solid fa-check-to-slot"></i></i>{{ post.vote_count }}
                                         <a href="{% url 'vote_on_a_post' post.id %}" class="icon">Vote now </a> -->
                                         <a href="{% url 'vote_on_a_post' post.id %}"><p class = "icon">Vote For Your Hero Here<i class="fa-solid fa-check-to-slot icon"></i></p></a>
                                     </div>
                                 </div>
                             </div>
-                            <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                                <h2 class="card-title">{{ post.title }}</h2>
-                                <p class ="card-text">{{ post.excerpt }}</p>
-                            </a>
-                            <hr />
-                            <!--date format: https://docs.djangoproject.com/en/5.1/ref/templates/builtins/#date-->
-                            <p class="card-text text-muted h6">Last updated: {{ post.created_on|date:"d F Y" }}
-                            </p>
+                            <div>
+                                <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                                    <h2 class="card-title">{{ post.title }}</h2>
+                                    <p class ="card-text">{{ post.excerpt }}</p>
+                                </a>
+                                <hr>
+                                <!--date format: https://docs.djangoproject.com/en/5.1/ref/templates/builtins/#date-->
+                                <p class="card-text text-muted h6">Created on: {{ post.created_on|date:"d F Y" }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>

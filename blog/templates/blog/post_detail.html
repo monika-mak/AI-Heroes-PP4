@@ -4,24 +4,25 @@
 
 
 <div class="container">
-    <div class="masthead">
-        <div class="row g-0">
-            <div class="col-md-6 d-flex align-items-center masthead-text">
-                <!-- Post title goes in these h1 tags -->
-                <h1 class="post-title d-flex align-items-center">{{ post.title }}</h1>
-                <!-- Post author goes before the | the post's created date goes after -->
-                <p class="post-subtitle d-flex align-items-center">{{ post.author }} | {{ post.created_on }}</p>
-            </div>
-            <div class="masthead-image order-first order-md-0 d-md-block col-md-6 ">
-                {% if "placeholder" in post.featured_image.url %}
-                <img src="{% static 'images/robot_flying.png' %}" class="scale" alt="placeholder">
-                {% else %}
-                <img src="{{ post.featured_image.url }}" class="scale"alt="{{ post.title }}">
-                {% endif %}
-            </div>
+    <div class="g-0 ">
+        <div class ="d-flex">
+            {% if "placeholder" in post.featured_image.url %}
+            <img src="{% static 'images/robot_flying.png' %}" class="scale img-fluid custom-width" alt="placeholder">
+            {% else %}
+            <img src="{{ post.featured_image.url }}" class="scale img-fluid custom-width"alt="{{ post.title }}">
+            {% endif %}
+        </div>
+        <div class="align-items-center dark-bg custom-width">
+            <!-- Post title goes in these h1 tags -->
+            <h2 class="post-title d-flex align-items-center">{{ post.title }}</h2>
+        </div>
+        <div class="col-12 custom-width">
+            <hr>
         </div>
     </div>
+    <p class="post-subtitle d-flex align-items-center"> Created on: {{ post.created_on|date:"d F Y" }}</p>
 </div>
+
 <div class="container">
     <div class="row">
         <div class="col card mb-4  mt-3 left top">
@@ -89,7 +90,7 @@
                 class="btn btn-signup btn-lg">Submit</button>
             </form>
             {% else %}
-            <p>Log in to leave a comment</p>
+            <p>Please log in to leave a comment</p>
             {% endif %}
             </div>
         </div>
