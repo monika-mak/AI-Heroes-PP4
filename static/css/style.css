@@ -59,6 +59,10 @@ h2 {
     color: #445261;
 }
 
+.post-card {
+    box-shadow: 2px 5px 12px rgba(0, 0, 0, 0.5);
+}
+
 .image-container {
     position: relative;
 }
@@ -185,7 +189,6 @@ h2 {
 
     font-weight: 500;
     padding: 0rem .4rem;
-    position: absolute;
     color: #121212;
     bottom: 2%;
     min-width: 30%;
