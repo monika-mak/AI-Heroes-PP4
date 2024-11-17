@@ -103,6 +103,15 @@ h2 {
     width: 50%;
     height: auto;
 }
+
+.image-block {
+        max-height:50vh;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
 .callout-container {
     /* max-height: 400px; */
     -webkit-background-size: cover;
