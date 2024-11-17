@@ -65,7 +65,7 @@ h2 {
 }
 
 .post-card {
-    box-shadow: 2px 5px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.428);
 }
 
 .image-container {
@@ -99,6 +99,10 @@ h2 {
     height: auto;
 }
 
+.scale-half img{ 
+    width: 50%;
+    height: auto;
+}
 .callout-container {
     /* max-height: 400px; */
     -webkit-background-size: cover;
