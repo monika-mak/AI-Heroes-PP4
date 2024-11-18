@@ -36,7 +36,7 @@ h2 {
 }
 
 .text-end {
-    margin-right:5px;
+    margin-right:1em;
 }
 
 .light-bg {
@@ -105,7 +105,7 @@ h2 {
 }
 
 .image-block {
-        max-height:50vh;
+        max-height:43vh;
         max-width: 100%;
         height: auto;
         display: block;
@@ -113,7 +113,7 @@ h2 {
     }
 
 .callout-container {
-    /* max-height: 400px; */
+    max-height: 400px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -123,6 +123,7 @@ h2 {
     justify-content: center;
     position: relative;
 }
+
 .vote-info {
     padding: 0.3em 0.2em;
 }
@@ -139,18 +140,23 @@ h2 {
     position: relative;
 }
 
+.leaderboard-title {
+    margin-top: 1.7em;
+    margin-bottom: 5%;
+    font-size: 1.7em;
+    font-weight: 400;
+}
+
 .post-link {
     text-decoration: none;
     color: #445261;
 }
-
 
 .post-title {
     margin-left: 5%;
     color: white;
     padding:10px;
 }
-
 
 .post-subtitle {
     color: #607D8B;
