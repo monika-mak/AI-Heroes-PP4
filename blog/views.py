@@ -136,7 +136,7 @@ def vote_on_a_post(request, post_id):
             # create vote if no previous restrictions are valid
             Vote.objects.create(post=post, author=request.user)
             messages.success(request, "Thank you for your vote")
-            return redirect('home')      
+   
     # Redirect back to the referring page
     # https://docs.djangoproject.com/en/5.1/ref/request-response/#django.http.HttpRequest.META
     referrer = request.META.get('HTTP_REFERER', '/')
