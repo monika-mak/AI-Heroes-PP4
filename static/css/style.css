@@ -36,7 +36,7 @@ h2 {
 }
 
 .text-end {
-    margin-right:1em;
+    margin-right: 2%;
 }
 
 .light-bg {
@@ -244,7 +244,7 @@ h2 {
 .image-container img:hover {
     transform: translateY(-2px); /* Slight lift */
     box-shadow: 0 6px 12px rgba(35, 33, 33, 0.181); /* Emphasized shadow */
-    background-color: #f6f4f1; /* Lighter orange on hover */
+    background-color: #f6f4f1;
 }
 
 
@@ -252,8 +252,15 @@ h2 {
 .image-container img:active {
     transform: translateY(2px); /* Pressed effect */
     box-shadow: 0 2px 4px rgba(96, 92, 92, 0.23); /* Reduced shadow */
-    background-color: #a09e9c; /* Darker orange for click */
+    background-color: #a09e9c; 
 }
+
+/*isable hover effecrt*/ 
+.hover-active-disable {
+    transform: none;
+    pointer-events: none;
+}
+
 
 .faded {
     color: rgb(172, 175, 175);

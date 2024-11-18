@@ -134,7 +134,3 @@ def vote_on_a_post(request, post_id):
     referrer = request.META.get('HTTP_REFERER', '/')
     return HttpResponseRedirect(referrer)
 
-
-
-
- 
