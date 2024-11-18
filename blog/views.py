@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Post, Comment, Vote
 from .forms import CommentForm
-from django.db.models import Count, Q
+from django.db.models import Count, Q, Value, BooleanField
 
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).annotate(comment_count=Count('comments'))
@@ -142,7 +142,6 @@ def vote_on_a_post(request, post_id):
         return redirect('account_login')
     # if user already voted on this blog, remove vote
     if Vote.objects.filter(post=post, author=request.user).exists():
-        voted = True
         Vote.objects.filter(post=post, author=request.user).delete()
         messages.info(request, 'Vote cancelled')
     else:

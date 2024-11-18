@@ -49,12 +49,12 @@
                                 <!--date format: https://docs.djangoproject.com/en/5.1/ref/templates/builtins/#date-->
                                 <p class="card-text post-subtitle h6">Created on: {{ post.created_on|date:"d F Y" }}</p>
                                 <!--Vote Button-->
-                                {% if voted %}
-                                <a class="btn btn-voted" role="button">
+                                {% if post.voted %}
+                                <a class="btn btn-voted" href="{% url 'vote_on_a_post' post.id %}">
                                     <i class="fa-solid fa-check-to-slot icon"></i> Voted
                                 </a>
                                 {% else %}
-                                <a class="btn btn-warning" href="{% url 'vote_on_a_post' post.id %}" role="button">
+                                <a class="btn btn-warning" href="{% url 'vote_on_a_post' post.id %}">
                                     <i class="fa-solid fa-check-to-slot icon"></i> Vote
                                 </a>
                                 {% endif %}
