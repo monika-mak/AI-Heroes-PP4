@@ -12,10 +12,22 @@
             <img src="{{ post.featured_image.url }}" class="scale img-fluid custom-width"alt="{{ post.title }}">
             {% endif %}
         </div>
-        <div class="align-items-center dark-bg custom-width">
-            <!-- Post title goes in these h1 tags -->
-            <h2 class="post-title d-flex align-items-center">{{ post.title }}</h2>
-        </div>
+        <div class=" col-12 align-items-center dark-bg custom-width">
+            <div>
+                <div>
+                    <!-- Post title goes in these h1 tags -->
+                    <h2 class="post-title d-flex align-items-center">{{ post.title }}</h2>
+                </div>
+                <!-- Displaying count of comments -->
+                <div>
+                    <strong class ="icon">
+                        <i class="far fa-comments"></i> {{ comment_count }}
+                    </strong>
+                    <strong class ="icon">
+                        <i class="fa-solid fa-check-to-slot"></i> {{ post.vote_count }}
+                    </strong>
+                </div>
+            </div>
         <div class="col-12 custom-width">
             <hr>
         </div>
@@ -34,18 +46,18 @@
             </div>
         </div>
     </div>
-    <!-- Displaying count of comments -->
+    <!-- Displaying count of comments
     <div class="row">
         <div class="col-12">
         <strong class="text-secondary" >
             <i class="far fa-comments"></i> {{ comment_count }}
         </strong>
-        </div>
-        <div class="col-12">
-        <hr>
-        </div>
-    </div>
+        </div> -->
+
     <!-- Displaying Comments -->
+    <div class="col-12">
+        <hr>
+    </div>
     <div class="row">
         <div class="col-md-6 card mb-4  mt-3 ">
         <h3>Comments:</h3>
