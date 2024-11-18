@@ -58,7 +58,7 @@ h2 {
 }
 
 .card-title {
-    margin-top: 5px;
+    margin-top: 10px;
     font-weight: 600;
     margin-bottom: .5rem;
     color: #445261;
@@ -104,12 +104,20 @@ h2 {
     height: auto;
 }
 
+.gap {
+    gap: 10px;
+}
+
+.margin {
+    margin:0;
+}
+
 .image-block {
-        max-height:33vh;
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
+    max-height:33vh;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
     }
 
 .callout-container {
@@ -134,11 +142,11 @@ h2 {
     text-transform: uppercase;
 }
 
-.tool-name {
+/* .tool-name {
     background-color: #445261;
     color: white;
     position: relative;
-}
+} */
 
 .leaderboard-title {
     margin-top: 1.7em;
@@ -204,11 +212,11 @@ h2 {
 }
 
 .btn-warning {
-    font-weight: 500;
-    padding: 0rem .4rem;
+
+    font-weight: 400;
     color: #121212;
     bottom: 2%;
-    min-width: 30%;
+    min-width: 49%;
     background-color: orange;
     border-color: #714709d1;
     border-radius: 0;

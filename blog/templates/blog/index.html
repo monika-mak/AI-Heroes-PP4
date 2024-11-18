@@ -45,7 +45,7 @@
                                 <p class ="card-text">{{ post.excerpt }}</p>
                                 <hr>
                             </div>
-                            <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex justify-content-between align-items-center gap">
                                 <!--date format: https://docs.djangoproject.com/en/5.1/ref/templates/builtins/#date-->
                                 <p class="card-text post-subtitle h6">Created on: {{ post.created_on|date:"d F Y" }}</p>
                                 <a class="btn btn-warning" href="{% url 'vote_on_a_post' post.id %}" role="button">
