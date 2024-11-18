@@ -51,13 +51,13 @@
 
                                 <!--Vote Button-->
                                 {% if post.user_voted %}
-                                    <a class="btn-voted" role="button">
-                                        <i class="fa-solid fa-check-to-slot icon"></i> Voted
-                                    </a>
+                                <a class="btn btn-voted" role="button">
+                                    <i class="fa-solid fa-check-to-slot icon"></i> Voted
+                                </a>
                                 {% else %}
-                                    <a class="btn btn-warning" href="{% url 'vote_on_a_post' post.id %}" role="button">
-                                        <i class="fa-solid fa-check-to-slot icon"></i> Vote
-                                    </a>
+                                <a class="btn btn-warning" href="{% url 'vote_on_a_post' post.id %}" role="button">
+                                    <i class="fa-solid fa-check-to-slot icon"></i> Vote
+                                </a>
                                 {% endif %}
                             </div>
                         </div>

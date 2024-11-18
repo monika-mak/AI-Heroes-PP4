@@ -4,12 +4,24 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Post, Comment, Vote
 from .forms import CommentForm
-from django.db.models import Count
+from django.db.models import Count, Q
 
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1).annotate(comment_count=Count('comments'))
     template_name = "blog/index.html"
     paginate_by = 6
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        if self.request.user.is_authenticated:
+            # Annotate whether the user has voted on the post
+            queryset = queryset.annotate(
+                user_voted=Count('post_votes', filter=Q(post_votes__author=self.request.user))
+            )
+        else:
+            # Add a default value for non-authenticated users
+            queryset = queryset.annotate(user_voted=Value(False, output_field=BooleanField()))
+        return queryset
 
 
 def post_detail(request, slug):
