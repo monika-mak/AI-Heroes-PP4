@@ -16,11 +16,11 @@ class PostList(generic.ListView):
         if self.request.user.is_authenticated:
             # Annotate whether the user has voted on the post
             queryset = queryset.annotate(
-                user_voted=Count('post_votes', filter=Q(post_votes__author=self.request.user))
+                voted=Count('post_votes', filter=Q(post_votes__author=self.request.user))
             )
         else:
             # Add a default value for non-authenticated users
-            queryset = queryset.annotate(user_voted=Value(False, output_field=BooleanField()))
+            queryset = queryset.annotate(voted=Value(False, output_field=BooleanField()))
         return queryset
 
 
@@ -43,9 +43,9 @@ def post_detail(request, slug):
     comment_count = post.comments.filter(approved=True).count()
 
     #check if user has already voted on a post
-    user_voted = False
+    voted = False
     if request.user.is_authenticated:
-        user_voted = Vote.objects.filter(post=post, author=request.user).exists()
+        voted = Vote.objects.filter(post=post, author=request.user).exists()
 
     #handle comment form submission 
     if request.method == "POST":
@@ -70,7 +70,7 @@ def post_detail(request, slug):
             "comments": comments,
             "comment_count": comment_count,
             "comment_form": comment_form,
-            "user_voted": user_voted, 
+            "voted": voted, 
         },
     )
 
@@ -131,6 +131,10 @@ def vote_on_a_post(request, post_id):
     '''
 
     post = get_object_or_404(Post, id=post_id)
+    voted = False
+    if request.user.is_authenticated:
+        voted = Vote.objects.filter(post=post, author=request.user).exists()
+
     
     # Check if user is logged in 
     if not request.user.is_authenticated:
@@ -138,6 +142,7 @@ def vote_on_a_post(request, post_id):
         return redirect('account_login')
     # if user already voted on this blog, remove vote
     if Vote.objects.filter(post=post, author=request.user).exists():
+        voted = True
         Vote.objects.filter(post=post, author=request.user).delete()
         messages.info(request, 'Vote cancelled')
     else:
