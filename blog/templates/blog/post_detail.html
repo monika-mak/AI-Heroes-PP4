@@ -4,7 +4,7 @@
 
 
 <div class="container image-container hover-active-disable">
-    <div class="g-0 ">
+    <div class=" g-0 ">
         <div class ="d-flex">
             {% if "placeholder" in post.featured_image.url %}
             <img src="{% static 'images/robot_flying.png' %}" class="scale img-fluid custom-width" alt="placeholder">
@@ -12,22 +12,21 @@
             <img src="{{ post.featured_image.url }}" class="scale img-fluid custom-width"alt="{{ post.title }}">
             {% endif %}
         </div>
-        <div class=" col-12 align-items-center dark-bg custom-width">
-            <div>
-                <div>
-                    <!-- Post title goes in these h1 tags -->
-                    <h2 class="post-title d-flex align-items-center">{{ post.title }}</h2>
-                </div>
-                <!-- Displaying count of comments -->
-                <div>
-                    <strong class ="icon">
-                        <i class="far fa-comments"></i> {{ comment_count }}
-                    </strong>
-                    <strong class ="icon">
-                        <i class="fa-solid fa-check-to-slot"></i> {{ post.vote_count }}
-                    </strong>
-                </div>
+        <div class=" col-12 row align-items-center dark-bg custom-width py-3">
+            <div class= "col-md-7">
+                <!-- Post title goes in these h1 tags -->
+                <h2 class="post-title d-flex align-items-center">{{ post.title }}</h2>
             </div>
+            <!-- Displaying count of comments and votes -->
+            <div class="col-md-5" >
+                <strong class ="icon me-3">
+                    <i class="far fa-comments"></i> {{ comment_count }}
+                </strong>
+                <strong class ="icon">
+                    <i class="fa-solid fa-check-to-slot"></i> {{ post.vote_count }}
+                </strong>
+            </div>
+        </div>
         <div class="col-12 custom-width">
             <hr>
         </div>
