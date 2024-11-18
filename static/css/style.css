@@ -238,6 +238,18 @@ h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 }
 
+.btn-voted {
+    font-weight: 400;
+    color: #121212;
+    bottom: 2%;
+    min-width: 49%;
+    background-color: orange;
+    border: solid 2px #1e1d1cd1;
+    border-radius: 0;
+    transition: none;
+    box-shadow: inset 3px 2px 4px 1px rgb(0 0 0 / 54%);
+}
+
 .image-container img {
     border: 2px solid #3d383859;
     padding: 3px;

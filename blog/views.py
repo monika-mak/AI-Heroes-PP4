@@ -29,6 +29,13 @@ def post_detail(request, slug):
     post = get_object_or_404(queryset, slug=slug)
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
+
+    #check if user has already voted on a post
+    user_voted = False
+    if request.user.is_authenticated:
+        user_voted = Vote.objects.filter(post=post, author=request.user).exists()
+
+    #handle comment form submission 
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
@@ -50,7 +57,8 @@ def post_detail(request, slug):
             "post": post,
             "comments": comments,
             "comment_count": comment_count,
-            "comment_form": comment_form
+            "comment_form": comment_form,
+            "user_voted": user_voted, 
         },
     )
 
@@ -123,12 +131,12 @@ def vote_on_a_post(request, post_id):
     else:
         # get the total amount of votes per user and check if not exceeding 3
         if request.user.user_votes.count() >= 3:
-            messages.info(request, "You 've reached max 3 votes limit ")
+            messages.info(request, "You've reached the maximum votes limit")
         else:
             # create vote if no previous restrictions are valid
             Vote.objects.create(post=post, author=request.user)
             messages.success(request, "Thank you for your vote")
-            return redirect('home')
+            return redirect('home')      
     # Redirect back to the referring page
     # https://docs.djangoproject.com/en/5.1/ref/request-response/#django.http.HttpRequest.META
     referrer = request.META.get('HTTP_REFERER', '/')
