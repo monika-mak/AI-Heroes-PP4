@@ -22,6 +22,8 @@ h2 {
  
 .icon {
     color: white;
+    font-size: 20px;
+    margin:0
     }
 
 .alert {
@@ -50,6 +52,12 @@ h2 {
 .main-bg {
     background-color: #F9FAFC;
 }
+
+.cards-row {
+    margin:0 0.3em;
+} 
+
+
 
 .card {
 
@@ -142,12 +150,6 @@ h2 {
     text-transform: uppercase;
 }
 
-/* .tool-name {
-    background-color: #445261;
-    color: white;
-    position: relative;
-} */
-
 .leaderboard-title {
     margin-top: 1.7em;
     margin-bottom: 5%;
@@ -211,43 +213,44 @@ h2 {
     border: none;
 }
 
-.btn-warning {
-
-    font-weight: 400;
-    color: #121212;
+.vote-btn {
+    font-weight: 500;
+    color: #000000;
     bottom: 2%;
-    min-width: 49%;
-    background-color: orange;
-    border-color: #714709d1;
+    min-width: 50%;
+    background-color: #FF9800;
+    border: solid 1px #f8f8f8;
     border-radius: 0;
-    transition: box-shadow 0.3s ease;
-    box-shadow: 1px 2px 4px 1px rgb(0 0 0 / 54%);
+    transition: none;
+    box-shadow: inset -1px -1px 1px 2px rgb(92 85 85 / 44%);
 }
 
-.btn-warning:active{
-    color: white;
-    background-color: orange;
-    border-color: white;
-}
-
-.btn-warning:hover {
+.vote-btn:hover {
     transform: translateY(-2px);
     color: #121212;
     background-color: #FF9800;
-    border: 1px solid #ffffff;
+    border: 2px solid #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 }
 
-.btn-voted {
-    font-weight: 400;
+.vote-btn:active{
+    transform: translateY(-2px);
+    color: white;
+    background-color:  #c67906;
+    border-color: white;
+}
+
+
+.voted-btn {
+    font-weight: 500;
     color: #121212;
     bottom: 2%;
-    min-width: 49%;
-    background-color: rgb(226, 54, 212);
-    border: solid 2px #1e1d1cd1;
+    min-width: 50%;
+    background-color: rgb(212 29 228);
+    border: solid 1px #131212;
     border-radius: 0;
     transition: none;
-    box-shadow: inset 3px 2px 4px 1px rgb(0 0 0 / 54%);
+    box-shadow: inset 3px 2px 3px 1px rgb(0 0 0 / 54%);
 }
 
 .image-container img {

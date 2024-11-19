@@ -23,14 +23,13 @@
             Check Out The Leaderboard To See If They Made It Through!<br>
             Pssst... You Get Up To 3 Votes!</h2>
     </div>
-    <div class="row ">
+    <div class="row cards-row">
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for post in post_list %}
-            
                 <div class="col-md-4 card-group">
-                    <div class="card mb-4 ">
+                    <div class="card mb-4">
                         <div class="card-body post-card">
                             <div class="image-container">
                                 <a href="{% url 'post_detail' post.slug %}" class="post-link">
@@ -52,11 +51,11 @@
                                     <p class="card-text post-subtitle h6">Created on: {{ post.created_on|date:"d F Y" }}</p>
                                     <!--Vote Button-->
                                     {% if post.voted %}
-                                    <a class="btn btn-voted" href="{% url 'vote_on_a_post' post.id %}">
+                                    <a class="btn voted-btn" href="{% url 'vote_on_a_post' post.id %}">
                                         <i class="fa-solid fa-check-to-slot icon"></i> Voted
                                     </a>
                                     {% else %}
-                                    <a class="btn btn-warning" href="{% url 'vote_on_a_post' post.id %}">
+                                    <a class="btn vote-btn" href="{% url 'vote_on_a_post' post.id %}">
                                         <i class="fa-solid fa-check-to-slot icon"></i> Vote
                                     </a>
                                     {% endif %}
