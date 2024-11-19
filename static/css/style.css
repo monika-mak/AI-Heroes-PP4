@@ -35,6 +35,12 @@ h2 {
     color:rgb(119, 54, 232);
 }
 
+.page-link:focus {
+    color: #673AB7;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 .1rem rgb(156 39 176 / 56%);
+}
+
 .brand {
     font-family: Audiowide, sans-serif;
     font-size: 1.4rem;
@@ -119,7 +125,7 @@ h2 {
 }
 
 .cards-row {
-    margin:0 0.3em;
+    margin:0 2em;
 } 
 
 .card {
