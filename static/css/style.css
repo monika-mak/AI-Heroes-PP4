@@ -23,12 +23,16 @@ h2 {
 .icon {
     color: white;
     font-size: 20px;
-    margin:0
+    margin-right: 2px;
     }
 
 .alert {
-    border: 1px solid orange;
-    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.428);
+    border: 2px solid #3a303c9c;
+    box-shadow: 4px 5px 7px rgba(0, 0, 0, 0.428);
+}
+
+.page-link{ 
+    color:rgb(119, 54, 232);
 }
 
 .brand {
@@ -53,32 +57,6 @@ h2 {
     background-color: #F9FAFC;
 }
 
-.cards-row {
-    margin:0 0.3em;
-} 
-
-
-
-.card {
-
-    border: none;
-    background-color: transparent;
-}
-
-.card-title {
-    margin-top: 10px;
-    font-weight: 600;
-    margin-bottom: .5rem;
-    color: #445261;
-}
-
-.post-card {
-    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.428);
-}
-
-.image-container {
-    position: relative;
-}
 
 #hero {
     max-height: 400px;
@@ -113,7 +91,7 @@ h2 {
 }
 
 .title-gap {
-    gap: 10px;
+    gap:10px;
 }
 
 .title-margin {
@@ -139,6 +117,32 @@ h2 {
     justify-content: center;
     position: relative;
 }
+
+.cards-row {
+    margin:0 0.3em;
+} 
+
+.card {
+
+    border: none;
+    background-color: transparent;
+}
+
+.card-title {
+    margin-top: 10px;
+    font-weight: 600;
+    margin-bottom: .5rem;
+    color: #445261;
+}
+
+.post-card {
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.428);
+}
+
+.image-container {
+    position: relative;
+}
+
 
 .vote-info {
     padding: 0.3em 0.2em;
@@ -170,6 +174,10 @@ h2 {
 
 .post-subtitle {
     color: #607D8B;
+}
+
+.card-footer {
+    margin-top: 20px;
 }
 
 .btn-signup,
@@ -217,7 +225,7 @@ h2 {
     font-weight: 500;
     color: #000000;
     bottom: 2%;
-    min-width: 50%;
+    min-width: 53%;
     background-color: #FF9800;
     border: solid 1px #f8f8f8;
     border-radius: 0;
@@ -236,16 +244,15 @@ h2 {
 .vote-btn:active{
     transform: translateY(-2px);
     color: white;
-    background-color:  #c67906;
+    background-color:  #e68e0c;
     border-color: white;
 }
 
 
 .voted-btn {
     font-weight: 500;
-    color: #121212;
     bottom: 2%;
-    min-width: 50%;
+    min-width: 53%;
     background-color: rgb(212 29 228);
     border: solid 1px #131212;
     border-radius: 0;
@@ -293,7 +300,8 @@ h2 {
     color: rgb(222, 146, 168);
 }
 
-/* code inspired from https://getbootstrap.com/docs/5.3/layout/breakpoints/ */
+/* code inspired from https://getbootstrap.com/docs/5.3/layout/breakpoints/ 
+show hero image only on larger screens widht */
 /*Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
     .hero-image {
@@ -302,4 +310,13 @@ h2 {
         height: auto;
         margin-right: 4em;
     }
+}
+/*stack vote button on devices with small width*/
+@media (max-width: 410px) {
+
+    .title-gap {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
 }
