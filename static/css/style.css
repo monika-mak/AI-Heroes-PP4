@@ -19,12 +19,13 @@ h2 {
  a:hover {
     color: #1c5ea4;
  }
- 
+
 .icon {
     color: white;
     font-size: 20px;
     margin-right: 2px;
     }
+
 
 .alert {
     border: 2px solid #3a303c9c;
@@ -97,13 +98,13 @@ h2 {
 }
 
 .title-gap {
-    gap:10px;
+    gap: 5px;
 }
 
 .title-margin {
     margin:10px 0;
-
 }
+
 .image-block {
     max-height:33vh;
     max-width: 100%;
@@ -125,20 +126,26 @@ h2 {
 }
 
 .cards-row {
-    margin:0 2em;
+    margin:0 0.3em;
 } 
 
 .card {
-
     border: none;
     background-color: transparent;
 }
 
-.card-title {
+/* .card-title {
     margin-top: 10px;
     font-weight: 600;
     margin-bottom: .5rem;
     color: #445261;
+} */
+
+.card-title {
+    margin-top: 10px;
+    font-weight: 400;
+    margin-bottom: .5rem;
+    color: #1f102a;
 }
 
 .post-card {
@@ -160,13 +167,6 @@ h2 {
     text-transform: uppercase;
 }
 
-.leaderboard-title {
-    margin-top: 1.7em;
-    margin-bottom: 5%;
-    font-size: 1.7em;
-    font-weight: 400;
-}
-
 .post-link {
     text-decoration: none;
     color: #445261;
@@ -182,8 +182,46 @@ h2 {
     color: #607D8B;
 }
 
+.leaderboard-section {
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+}
+
+
+.leaderboard-title {
+    text-align: center;
+    color: #000000;
+    transition: none;
+    box-shadow: inset -1px -1px 1px 2px rgb(182 161 161 / 44%);
+    background-color: orange;
+    padding: 5px 0;
+}
+
+.leaderboard-img {
+    border: 2px solid white;
+    padding: 3px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    box-shadow: 13px 8px 3px 2px rgb(0 0 0 / 38%);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.leaderboard-post-card {
+
+    margin: 10px;
+    /* padding: 0; */
+    /* background-color: #c2a8f2; */
+    border: 4px solid #FF9800;
+    box-shadow: 8px 9px 10px 4px rgba(0, 0, 0, 0.428);
+}
+
 .card-footer {
     margin-top: 20px;
+    padding: 0.2rem 0;
 }
 
 .btn-signup,
@@ -266,7 +304,7 @@ h2 {
     box-shadow: inset 3px 2px 3px 1px rgb(0 0 0 / 54%);
 }
 
-.image-container img {
+/* .image-container img {
     border: 2px solid #3d383859;
     padding: 3px;
     border-radius: 2px;
@@ -274,8 +312,17 @@ h2 {
     box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
     cursor: pointer;
-}
+} */
 
+.image-container img {
+    border: 2px solid #ffffff;
+    padding: 3px;
+    border-radius: 2px;
+    background-color: #efeeeb5c;
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+}
 /* Hover effect */
 .image-container img:hover {
     transform: translateY(-2px); /* Slight lift */
@@ -324,5 +371,4 @@ show hero image only on larger screens widht */
         flex-direction: column;
         align-items: flex-start;
     }
-
 }
