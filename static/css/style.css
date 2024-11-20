@@ -268,7 +268,7 @@ h2 {
     color: #000000;
     bottom: 2%;
     min-width: 53%;
-    background-color: #FF9800;
+    background-color: #ff9800c2;
     border: solid 1px #f8f8f8;
     border-radius: 0;
     transition: none;
@@ -278,7 +278,7 @@ h2 {
 .vote-btn:hover {
     transform: translateY(-2px);
     color: #121212;
-    background-color: #FF9800;
+    background-color: #df8b0eb6;
     border: 2px solid #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 }
@@ -286,7 +286,7 @@ h2 {
 .vote-btn:active{
     transform: translateY(-2px);
     color: white;
-    background-color:  #e68e0c;
+    background-color:  #df8b0eb6;
     border-color: white;
 }
 
@@ -295,7 +295,7 @@ h2 {
     font-weight: 500;
     bottom: 2%;
     min-width: 53%;
-    background-color: rgb(212 29 228);
+    background-color: rgb(156 39 176 / 67%);
     border: solid 1px #131212;
     border-radius: 0;
     transition: none;

@@ -1,8 +1,8 @@
-# Eat Me!
+# AI HEROES
 
 Here is a link to the live project. (https://dashboard.heroku.com/apps/ai-heroes-blog)
 
-Eat me! is a website where users come together to share their favourite created recipes. It is built using the Django Framework in python.
+AI HEROES is a website where users come together to share their favourite created recipes. It is built using the Django Framework in python.
 
 ![responsive](assets/images/responsive.png)
 
@@ -48,42 +48,54 @@ Eat me! is a website where users come together to share their favourite created 
 
 ## User Experience (UX)
 
-A visitor to Eat Me! would be someone who is most likely an adult who is looking to either find new recipes or to share their own creations. 
+AI HEROES visitor is a person that is familiar wiht the term "AI" but doesn't really ubnderstand it .This person is curious and would like to explore the field and looking for sometjhing that can explain with examples the use of the best AI tools available.
 
-## User Stories 
+## User Stories
 
-A list of my user stories and their tasks can be found [here](https://github.com/delboy/eatme/issues).
+A list of user stories grouped into epics for better structure and clarity.
 
-### EPIC | Navigation
-- As a User I can immediately understand the website's purpose so that I know if it's what I'm looking for.
-- As a User I can navigate around the site so that I can easily view desired content.
-- As a User I can view a list of recipes so that I can choose one to read.
-- As a User I can click on a recipe so that I can read the recipe details.
-- As a User I can search recipes so that I can find specific recipes I'm looking for.
+### EPIC | User Experience and Interface
+- As a visitor, I want the website to be visually appealing and easy to navigate so that I have an enjoyable experience while exploring AI tools.
+- As a visitor, I want to view the homepage so that I can learn about the website and the AI tools it features.
+- As a visitor, I can navigate the website with ease so that I have an enjoyable experience exploring AI tools.
+- As a user, I want to see tools in paginated format so that I don’t have to scroll through a long list of tools.
+- As a visitor, I want to receive feedback (success/error messages) after completing actions so that I understand the outcome of my interaction.
+- As a visitor, I want to access an error page with an option to navigate back to the homepage.
+- As a visitor, I want to see social media links to follow and contact the project online.
 
-### EPIC | User's Recipes
-- As a User I can create recipes so that other users can view them
-- As a User I can view my recipes so that I can see and manage all recipes I have created.
-- As a User I can edit recipes so that I can update any changes or mistakes to my recipes.
-- As a User I can delete recipes so that I can remove any unwanted recipes I have made.
-- As a User I can view all my liked recipes so that I can return to them with ease.
+### EPIC | Content Management
+- As an admin, I want to create, read, update, and delete posts so that I can easily manage my page content.
+- As a Site Admin, I can approve or disapprove comments so that I can only display relevant topics.
+- As a Site User, I can modify or delete my comment on a post so that I can be involved in the conversation.
+- As a Site Admin, I can create draft posts so that I can finish writing the content later.
+- As a Site Admin, I can create, update, or delete the about page content so that it is available on the site.
 
-### EPIC | User Interaction
-- As a User I can like/unlike recipes so that I can mark which recipes I enjoyed.
-- As a User I can comment on recipes so that I can give my feedback to others.
-- As a User I can view the number of likes on a recipe so that I can see which is most popular.
-- As a User I can view comments on recipes so that I can read other user's feedback.
+### EPIC | User Interaction and Engagement
+- As a Site User, I am able to leave comments on a post so that I can share my opinion on the topic.
+- As a user, I can view the comments so that I can be up to date with the recent engagement.
+- As a Site User, I am able to click on the About link so that I can read the content of the site.
+- As a user, I want to be able to send a message to the site owner so that I can address my query to the relevant people.
+- As an admin, I can read the message sent by the user so that I can have a better understanding of their inquiries, needs, or feedback.
 
-### EPIC | Sign in
-- As a User I can register for an account so that I can begin to use the services afforded to members.
-- As a User I can log in/out so that I can like recipes, comment on recipes and manage my recipes.
-- As a User I can see my login status so that I know if I'm logged in or out.
+### EPIC | Voting and AI Tools Ranking
+- As a visitor, I want to see the AI tools ranked by popularity based on votes so that I can easily identify the top-rated tools.
+- As a user, I want to vote for an AI tool so that I can express my fascination and interest.
+- As an admin, I want to monitor votes to prevent misuse and ensure fair voting.
+- As a user, I want to see tools in a paginated format so that I don’t have to scroll through a long list of tools.
 
-### EPIC | Admin
-- As an Admin I can view, create, edit and delete all recipes and comments so that I can control the website's content.
-- As an Admin I can feature recipes so that I can highlight them on the home page.
+### EPIC | User Accounts and Authentication
+- As a user, I want to log in using my email and password so that I can access personalized features.
+- As a user, I want to register an account using my email and password so that I can interact more deeply with the website.
 
-[Back to top ⇧](#eat-me)
+### EPIC | Deployment and Testing
+- As an admin, I want to deploy the website successfully so that it is accessible to users and can be included in my portfolio.
+
+[Back to top ⇧](#AI-Heroes-PP4)
+
+
+
+
+ #DONE UP TO HERE 
 
 ## Design
 
