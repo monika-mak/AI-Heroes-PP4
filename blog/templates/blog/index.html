@@ -9,8 +9,8 @@
 <section  id ="hero" class="container-fluid callout-container" style='background-image: url("static/images/background_blue.jpg")'>
         <div class="hero-text">
             <h1 class="text-center">WELCOME TO AI HEROES!</h1>
-            <h2 class="text-light text-center">A place where we demystify artificial intelligence and showcase easy-to-use, 
-                game-changing AI tools that can boost productivity and enhance your everyday life. </h2>
+            <h3 class="text-light text-center">A place where we demystify artificial intelligence and showcase easy-to-use, 
+                game-changing AI tools that can boost productivity and enhance your everyday life. </h3>
         </div>
         <div class="hero-image">
             <img class = "scale-half" src="/static/images/canva_heroes/hero_main.png"
@@ -18,9 +18,9 @@
         </div>
 </section>
 <div class="container-fluid">
-    <h2 class=" card-text text-center vote-info">Pick Your Favourite Hero & 
+    <h3 class=" card-text text-center vote-info">Pick Your Favourite Hero & 
         Check Out The Leaderboard To See If They Made It Through!<br>
-        Pssst... You Get Up To 3 Votes!</h2>
+        Pssst... You Get Up To 3 Votes!</h3>
     <div class="row cards-row">
         <div class="col-12 mt-3 left">
             <div class="row">
@@ -37,7 +37,7 @@
                                     {% endif %}
                                 </a>
                             </div>
-                            <h3 class="card-title">{{ post.title }}</h3>
+                            <h2 class="card-title">{{ post.title }}</h2>
                             <p class ="card-text">{{ post.excerpt }}</p>
                             <!--card footer at the bottom-->
                             <div class="card-footer mt-auto">
@@ -72,11 +72,14 @@
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link"> &laquo; PREVIOUS </a></li>
+            <li>
+                <a href="?page={{ page_obj.previous_page_number }}" class="page-link"> &laquo; PREVIOUS </a></li>
             </li>
             {% endif %}
             {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+            <li>
+                <a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a>
+            </li>
             {% endif %}
         </ul>
     </nav>
