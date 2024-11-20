@@ -29,7 +29,6 @@ h2 {
     margin-right: 2px;
     }
 
-
 .alert {
     border: 2px solid #3a303c9c;
     box-shadow: 4px 5px 7px rgba(0, 0, 0, 0.428);
@@ -63,10 +62,6 @@ h2 {
     background-color: #445261;
 }
 
-.main-bg {
-    background-color: #F9FAFC;
-}
-
 
 #hero {
     max-height: 400px;
@@ -94,11 +89,11 @@ h2 {
     width: 100%;
     height: auto;
 }
-
+/* 
 .scale-half img{ 
     width: 50%;
     height: auto;
-}
+} */
 
 .title-gap {
     gap: 5px;
@@ -178,15 +173,16 @@ h2 {
 
 .post-subtitle {
     color: #607D8B;
+    
 }
-
+/* 
 .leaderboard-section {
     background-size: cover;
     background-position: center;
     min-height: 100vh;
     width: 100%;
     padding: 20px;
-}
+} */
 
 .leaderboard-title {
     font-family: Audiowide, sans-serif;
@@ -201,7 +197,7 @@ h2 {
 }
 
 
-.leaderboard-img {
+/* .leaderboard-img {
     border: 2px solid white;
     padding: 3px;
     border-radius: 2px;
@@ -209,7 +205,7 @@ h2 {
     box-shadow: 13px 8px 3px 2px rgb(0 0 0 / 38%);
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
     cursor: pointer;
-}
+} */
 
 .leaderboard-post-card {
 
@@ -305,16 +301,6 @@ h2 {
     box-shadow: inset 3px 2px 3px 1px rgb(0 0 0 / 54%);
 }
 
-/* .image-container img {
-    border: 2px solid #3d383859;
-    padding: 3px;
-    border-radius: 2px;
-    background-color: #efeeeb5c;
-    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-    cursor: pointer;
-} */
-
 .image-container img {
     border: 2px solid #ffffff;
     padding: 3px;
@@ -324,6 +310,7 @@ h2 {
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
     cursor: pointer;
 }
+
 /* Hover effect */
 .image-container img:hover {
     transform: translateY(-2px); /* Slight lift */
@@ -331,20 +318,12 @@ h2 {
     background-color: #f6f4f1;
 }
 
-
 /* Active (clicked) effect */
 .image-container img:active {
     transform: translateY(2px); /* Pressed effect */
     box-shadow: 0 2px 4px rgba(96, 92, 92, 0.23); /* Reduced shadow */
     background-color: #a09e9c; 
 }
-
-/*isable hover effecrt*/ 
-.hover-active-disable {
-    transform: none;
-    pointer-events: none;
-}
-
 
 .faded {
     color: rgb(172, 175, 175);
@@ -367,7 +346,6 @@ show hero image only on larger screens widht */
 }
 /*stack vote button on devices with small width*/
 @media (max-width: 410px) {
-
     .title-gap {
         flex-direction: column;
         align-items: flex-start;
