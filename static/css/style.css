@@ -30,7 +30,8 @@ h2 {
     }
 
 .alert {
-    border: 2px solid #3a303c9c;
+    color: #4c0d57;
+    border: 2px solid #9c27b0;
     box-shadow: 4px 5px 7px rgba(0, 0, 0, 0.428);
 }
 
