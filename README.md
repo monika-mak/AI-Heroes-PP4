@@ -91,34 +91,38 @@ A list of user stories grouped into epics for better structure and clarity.
 [Back to top ⇧](#ai-heroes)
 
 
- # *DONE UP TO HERE*
-
-
 ## Design
 
 The look of this website was based loosely around The Code Institute's 'Codestar' wlakthorguh project as well as [EatME](https://eatme-production.up.railway.app/), project that cought my attention due to it's classy and clean looking style, felt very inspired. 
 
-### Colour Scheme
+### Color Scheme
 
-- # *PLACEHOLDER*
+![Color Scheme](assets/images/colors.png)
+- **Primary Colors**:  
+  The website uses a futuristic combination of deep blues, red and whites, and blacks to create a clean and modern aesthetic. These colors reflect the technological theme while maintaining readability and simplicity.
+
+- **Accent Colors**:  
+  Bright accents like orange and purple are used to draw attention to interactive elements, such as buttons and links, enhancing the user experience and reinforcing the AI theme.
+
 
 ### Typography
+![Fonts](assets/images/fonts.png)
 - The **Audiowide** font is used as the primary typeface, chosen for its retro style that complements the futuristic and technological concept of AI Heroes. It gives the site a unique personality while remaining readable and visually appealing
 
 ### Imagery
-
 - The **main image** features a matrix-style blue background with a superhero robot flying across, representing the fusion of futuristic ideas and AI technology.
+![Main Image](assets/images/main-hero-image.png)
 
 - **Illustrative Elements**:  
   Additional robot-themed images are used throughout the site to emphasize the blog's core theme. For example:
-  - A robot holding a trophy symbolizes the leaderboard and the ranking of AI tools, highlighting hierarchy and competition.
+  - A robot holding a trophy symbolizes the leaderboard and the ranking of AI tools, highlighting hierarchy and competition. 
+    -![Robot with Trophy](assets/images/robot-trophy.png)
   - Futuristic visuals and icons help maintain consistency with the blog's modern AI narrative.
   
 These design choices work together to immerse visitors in the world of AI while keeping the interface clean and engaging.
 
 ### Wireframes
 - # *PLACEHOLDER*
-
 Wireframes for each page are linked here:
 <!-- 
 * [Home Page](assets/documents/home_page.pdf)
@@ -132,6 +136,7 @@ Wireframes for each page are linked here:
 
 
 ### Database Schema 
+- # *PLACEHOLDER*
 
 ![Database Schemas can be found here](assets/images/ai-heroes-schema.png)
 
@@ -140,27 +145,39 @@ Wireframes for each page are linked here:
 ## Features
 
 ### Home Page
-- **Hero Section**:  
-  A visually striking hero section welcomes users with a title and a brief explanation of the website's purpose. This section draws attention to AI Heroes' mission of making AI accessible and practical for everyday use.
 
 - **Navigation Bar**:  
   A responsive navigation bar is present across all pages, providing easy access to key sections such as Home, Leaderboard, About, and Contact. The navigation bar includes links to login and register for imediate action and engagement.
+  ![Navbar](assets/images/navbar.png)
+
+- **Welcome Back message**
+  A short message welcoming user back once they had logged in, to add personal touch and friendly manner.
+  ![Welcome Back](assets/images/welcome-back.png)
+
+
+- **Hero Section**:  
+  A visually striking hero section welcomes users with a title and a brief explanation of the website's purpose. This section draws attention to AI Heroes' mission of making AI accessible and practical for everyday use.
+  ![Hero Intro](assets/images/hero-intro.png)
 
 - **Introductory Content**:  
-  A concise introduction explains the website's goals, targeting users who are curious about AI and its practical applications.
-
-- **Call-to-Action Buttons**:  
-  Buttons encourage users to explore tools, learn more about the site, or connect with the team.
-
-### AI Tools Page
+  A dedicated section introduces users to the voting feature and invites them to explore the leaderboard. This section explains the purpose of voting and encourages users to participate by casting votes for their favorite AI tools.
+  ![Vote Introduction](assets/images/vote-intro.png)
 
 - **Card Display Format**:  
   AI tools are presented in a card format, each card featuring:
   - Tool Name
   - A brief description
-  - Voting buttons to express user preference
+  - Created date
+  - Voting buttons to express user preference.![Cards Home](assets/images/home-cards.png)
+
 - **Pagination**:  
-  Tools are paginated, with a manageable number of tools displayed per page, ensuring optimal readability and navigation.
+  Tools are paginated, with six tools on each page displayed making it a manageable isplayed , ensuring optimal readability and navigation.
+  ![Pagination](assets/images/pagination.png)
+
+
+- **Footer**:
+  The footer rests at the bottom of each page and has links to all social media accounts.Clicking the links in the footer opens a separate browser to avoid pulling the user away from the site.
+![Footer](assets/images/footer.png)
 
 ### Voting and Ranking
 
@@ -172,6 +189,46 @@ Wireframes for each page are linked here:
 
 - **Vote Monitoring**:  
   Admin can monitor and manage votes to ensure fair play and prevent misuse.
+
+--- 
+
+# *PLACEHOLDER--- done uptil here *
+---
+
+### Tools Details Page
+
+The **Tools Details Page** provides users with in-depth information about each AI tool, showcasing its unique features, capabilities, and impact. This page is designed to engage users by presenting a clean and intuitive interface, encouraging interaction through comments and voting.
+
+- **Card Layout**:  
+  Each tool is displayed in a well-organized card format, including the following details:
+  - **Tool Logo Card**: Highlighted prominently at the top for easy identification.
+  - **Displayed Voting Count**: Allows users to upvote their favorite tools, with the total votes displayed clearly.
+  - **Displayed Comment Count**
+  - **Creation Date**: Provides transparency about when the tool was added to the platform.
+  - **Description**: Includes a detailed overview of the tool’s capabilities, focusing on its unique impact and use cases.
+  - **Key Features**:
+  - **Revolutionary Impact**
+  - **What Makes It Special**
+    - A dedicated section explains what makes the tool stand out from its competitors, emphasizing strengths such as performance, usability, or innovation.
+  - **Why You Should Try It**: A short, user-friendly summary outlining the tool's ideal use cases, target audience, and ease of use. Key points include:
+    - Star rating for ease of use.
+    - Notable advantages, such as professional-grade outputs, intuitive interfaces, and context understanding.
+
+- **Interactive Elements**:
+  - **Comments Section**: Enables users to leave feedback or insights about their experience with the tool. 
+    - Users can post comments after logging in, fostering community engagement and discussions.
+    - Comments include success/error messages for transparency.
+  - **Voting Feature**: Allows logged-in users to vote directly for their favorite tools, influencing the leaderboard rankings.
+
+- **Footer**:
+  - Credits the creator, ensuring recognition for development efforts.
+  - Includes social media links to encourage further engagement and connection.
+
+This page emphasizes user interaction and engagement by combining informative content with intuitive, user-friendly features.
+
+
+
+### Leaderboard
 
 ### About & Contact Page
 The **About & Contact page** is designed to foster meaningful connections and encourage user engagement by combining two essential sections: the introduction of the blog owner and an easy way to reach out. By merging these sections, users who visit to learn more about the blog are naturally presented with the opportunity to communicate, and those seeking to contact the owner are more likely to read the "About" section, creating a stronger sense of connection.
