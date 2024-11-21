@@ -29,11 +29,10 @@ h2 {
     margin-right: 2px;
     }
 
-.alert {
-    color: #4c0d57;
-    border: 2px solid #9c27b0;
+/* .alert {
+    background-color: rgba(255, 166, 0, 0.205);
     box-shadow: 4px 5px 7px rgba(0, 0, 0, 0.428);
-}
+} */
 
 .page-link{ 
     color:rgb(119, 54, 232);
@@ -278,15 +277,16 @@ h2 {
 .vote-btn:hover {
     transform: translateY(-2px);
     color: #121212;
-    background-color: #df8b0eb6;
+    background-color: #FFC107;
     border: 2px solid #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    border-radius: 2px;
+    box-shadow: 6px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
 .vote-btn:active{
     transform: translateY(-2px);
     color: white;
-    background-color:  #df8b0eb6;
+    background-color: #ff9900e3;
     border-color: white;
 }
 
@@ -324,6 +324,11 @@ h2 {
     transform: translateY(2px); /* Pressed effect */
     box-shadow: 0 2px 4px rgba(96, 92, 92, 0.23); /* Reduced shadow */
     background-color: #a09e9c; 
+}
+
+.alert {
+    border-color: #4d5060;
+    box-shadow: 4px 5px 7px rgba(0, 0, 0, 0.428);
 }
 
 .faded {
