@@ -1,16 +1,17 @@
-# AI HEROES
 
-Here is a link to the live project. (https://dashboard.heroku.com/apps/ai-heroes-blog)
+# AI Heroes
 
-AI HEROES is a website where users come together to share their favourite created recipes. It is built using the Django Framework in python.
+Here is a link to the live project: [AI Heroes](https://8000-monikamak-aiheroespp4-y4ys4ixf98g.ws.codeinstitute-ide.net/)
+
+AI Heroes is a platform designed to demystify AI by showcasing powerful, user-friendly AI tools that improve daily life efficiency and productivity. The website aims to bridge the gap for users familiar with the term "AI" but seeking practical, accessible examples of its use.
 
 ![responsive](assets/images/responsive.png)
 
-## Contents 
+## Contents
 
 - [User Experience (UX)](#user-experience-ux)
    * [User Stories](#user-stories)
-   
+
 - [Design](#design)
    * [Colour Scheme](#colour-scheme)
    * [Typography](#typography)
@@ -19,26 +20,21 @@ AI HEROES is a website where users come together to share their favourite create
    * [Database Schema](#database-schema)
 
 - [Features](#features)
-   * [Home page](#home-page)
-   * [Accounts](#accounts)
-   * [All Recipes page](#all-recipes-page)
-   * [Favourite Recipes](#favourite-recipes)
-   * [Your Recipes](#your-recipes)
-   * [Searched Recipes](#searched-recipes)
-   * [Recipe Detail page](#recipe-detail-page)
-   * [Add Recipe page](#add-recipe-page)
-   * [Edit Recipe page](#edit-recipe-page)
-   * [Features to add](#features-to-add)
+   * [Home Page](#home-page)
+   * [AI Tools Page](#ai-tools-page)
+   * [Voting and Ranking](#voting-and-ranking)
+   * [About Page](#about-page)
+   * [Contact Page](#contact-page)
+   * [Features to Add](#features-to-add)
 
 - [Technologies](#technologies)
-   * [Languages used](#languages-used)
+   * [Languages Used](#languages-used)
    * [Libraries & Programs Used](#libraries-and-programs-used)
 
-- [Testing](#eat-me)
-  
+- [Testing](#testing)
+
 - [Deployment](#deployment)
-   * [Github pages](#github)
-   * [Django and Heroku](#django-and-heroku)
+   * [Deployment Process](#deployment-process)
    * [Forking](#forking)
    * [Clone](#clone)
 
@@ -46,9 +42,11 @@ AI HEROES is a website where users come together to share their favourite create
    * [Code](#code)
    * [Media](#media)
 
+---
+
 ## User Experience (UX)
 
-AI HEROES visitor is a person that is familiar wiht the term "AI" but doesn't really ubnderstand it .This person is curious and would like to explore the field and looking for sometjhing that can explain with examples the use of the best AI tools available.
+AI Heroes visitors are individuals curious about AI, eager to explore its applications through straightforward examples and easy-to-understand explanations. They are looking for insights and guidance into the best AI tools available.
 
 ## User Stories
 
@@ -61,7 +59,7 @@ A list of user stories grouped into epics for better structure and clarity.
 - As a user, I want to see tools in paginated format so that I don’t have to scroll through a long list of tools.
 - As a visitor, I want to receive feedback (success/error messages) after completing actions so that I understand the outcome of my interaction.
 - As a visitor, I want to access an error page with an option to navigate back to the homepage.
-- As a visitor, I want to see social media links to follow and contact the project online.
+- As a visitor, I want to see social media links to follow the project and its author online. 
 
 ### EPIC | Content Management
 - As an admin, I want to create, read, update, and delete posts so that I can easily manage my page content.
@@ -90,30 +88,32 @@ A list of user stories grouped into epics for better structure and clarity.
 ### EPIC | Deployment and Testing
 - As an admin, I want to deploy the website successfully so that it is accessible to users and can be included in my portfolio.
 
-[Back to top ⇧](#AI-Heroes-PP4)
+[Back to top ⇧](#ai-heroes)
 
 
+ # *DONE UP TO HERE*
 
-
- #DONE UP TO HERE 
 
 ## Design
 
-The look of this website was based loosely around The Code Institute's 'I think therefore I Blog' project.  
+The look of this website was based loosely around The Code Institute's 'Codestar' wlakthorguh project as well as [EatME](https://eatme-production.up.railway.app/)  Project that cought my attention due to it's classy and clean looking style, felt very inspired. 
 
 ### Colour Scheme
-- I wanted to keep the colour scheme simple so I stuck with black, white and different shades of grey. This is because the uploaded pictures from users could be any host of colours, so by keeping the colour scheme neutral the site minimises the risk of clashing with any images, keeping them the main focus of the user.
+
+- # *PLACEHOLDER*
+
 
 ### Typography
-- On the site I will be using the default bootstrap fonts as I find them clean, elegant and easy to read so I feel they will fit in with the site's theme nicely. The only font used on the site will be Imbue which is solely used to style the logo.
+- I had used Audiowide as a main font due to its reto style that will match perfectly with AI and technology concept. 
 
 ### Imagery
-- All the imagery will be food related with only 4 images being static. The rest will be uploaded by various users.
+- The main Image is a matrix-style blue background aith an robot superhero flying across to represent an futuristic feel combined with AI. There will be also other robot images to emphesise the feel of the Blog as well as relevant subject, eg. leaderboard robot holdinga trophy  highlighting hierarhy.
 
 ### Wireframes
+- # *PLACEHOLDER*
 
 Wireframes for each page are linked here:
-
+<!-- 
 * [Home Page](assets/documents/home_page.pdf)
 * [All Recipes](assets/documents/all_recipes.pdf)
 * [Detailed Recipe](assets/documents/detailed_recipe.pdf)
@@ -121,191 +121,78 @@ Wireframes for each page are linked here:
 * [Favourite Recipes](assets/documents/favourite_recipes.pdf)
 * [Searched Recipes](assets/documents/searched_recipes.pdf)
 * [Add Recipe](assets/documents/add_recipe.pdf)
-* [Register, log in/out](assets/documents/register_log_in_out.pdf)
+* [Register, log in/out](assets/documents/register_log_in_out.pdf) -->
 
 
 ### Database Schema 
 
-![Database Schemas can be found here](assets/images/eat-me-schema.png)
-*<i>note</i> - I forgot to add a Body section to the Comment table when designing. By the time I realised that I left it out my trial period for the schema creator website had expired so I could not rectify the mistake.
+![Database Schemas can be found here](assets/images/ai-heroes-schema.png)
 
-I ended up removing the email field from the comment model in the final build of the site, as I didn't like the overall look of the comment box when it featured the user's email.
-
-[Back to top ⇧](#eat-me)
+[Back to top ⇧](#ai-heroes)
 
 ## Features
 
 ### Home Page
+- **Hero Section**:  
+  A visually striking hero section welcomes users with a title and a brief explanation of the website's purpose. This section draws attention to AI Heroes' mission of making AI accessible and practical for everyday use.
 
-- #### Navigation bar
-    - The navigation bar is present at the top of every page and houses all links to the various other pages.
-    - The active page will be shown to have a bolder font helping users understand what page they're on.
-    - Hovering over the links will darken the font.
-    - The options to Register or Log in will change to the option to log out once a user has logged in. 
-    - Once a user has signed in, more options such as 'Your Recipes' and 'Favourite Recipes' become available.
-    - Text will also appear in the bar stating which user is signed in if any.
-    - A search bar is nested in the navbar to find recipes quickly.
-    - The navbar is fully responsive, collapsing into a hamburger menu when the screen size becomes too small. 
+- **Navigation Bar**:  
+  A responsive navigation bar is present across all pages, providing easy access to key sections such as Home, Leaderboard, About, and Contact. The navigation bar includes links to login and register for imediate action and engagement.
+- **Introductory Content**:  
+  A concise introduction explains the website's goals, targeting users who are curious about AI and its practical applications.
+- **Call-to-Action Buttons**:  
+  Buttons encourage users to explore tools, learn more about the site, or connect with the team.
 
-    ![Navbar](assets/images/navbar.png)
+### AI Tools Page
+
+- **Card Display Format**:  
+  AI tools are presented in a card format, each card featuring:
+  - Tool Name
+  - A brief description
+  - Voting buttons to express user preference
+- **Pagination**:  
+  Tools are paginated, with a manageable number of tools displayed per page, ensuring optimal readability and navigation.
+
+### Voting and Ranking
+
+- **Voting Mechanism**:  
+  Users can vote on their favourite tools by clicking a vote button on each tool card.
+- **Dynamic Ranking**:  
+  Tools are ranked based on the number of votes they receive, helping users identify the most popular and impactful tools.
+- **Vote Monitoring**:  
+  Admin can monitor and manage votes to ensure fair play and prevent misuse.
+
+### About & Contact Page
+The **About & Contact page** is designed to foster meaningful connections and encourage user engagement by combining two essential sections: the introduction of the blog owner and an easy way to reach out. By merging these sections, users who visit to learn more about the blog are naturally presented with the opportunity to communicate, and those seeking to contact the owner are more likely to read the "About" section, creating a stronger sense of connection.
+- **Purpose Highlight**: 
+  The page introduces the blog owner and outlines the mission and vision of AI Heroes, highlighting the importance of making AI tools accessible and useful to everyone. Immediately below the "About" section, users can find the contact form, simplifying the process of reaching out.
+
+- **Visuals**:
+  A profile image of the blog owner is prominently displayed, adding a personal touch and helping to establish trust and rapport with the audience. 
+- **Contact Form**:  
+  The contact form is straightforward, allowing users to easily send queries or feedback. The form includes:
+  - Name
+  - Email
+  - Message
+
+- **Feedback Messages**:  
+  After submitting the form, users receive clear feedback with success or error messages, ensuring they understand the outcome of their inquiry and feel reassured their communication has been handled properly.
 
 
-- #### Hero Image
-    - The hero image welcomes the user with a short message advertising what the website is about.
-    - A button to sign up and a short message is present in the image. Clicking this takes you to the register page.
-    - If a user is already signed in the message changes to 'welcome back' and the sign up button changes to a 'view recipes' button, which takes you to the all recipes page.
+### Features to Add
+- **Tool Recommendations**:  
+  A recommendation engine to suggest AI tools based on user preferences or browsing history.
+- **User Profiles**:  
+  Allow users to create accounts, save their favorite tools, and manage their interactions on the site.
+- **Search and Filtering**:  
+  Enhanced search functionality with filtering options to sort tools by categories, popularity, or user ratings.
+- **Tool Reviews and Ratings**:  
+  Enable users to leave reviews and rate tools for more detailed feedback.
+- **Social Media Integration**:  
+  Options to share AI tools directly on social media platforms.
 
-    ![Hero image](assets/images/hero.png)
+[Back to top ⇧](#ai-heroes)
 
-- #### Carousel
-    - The carousel displays any recipes that the admin has selected to be featured.
-    - Clicking the image will take you to that recipe's detail page.
-    - Buttons on the edge of the carousel scroll through all the featured recipes.
-
-    ![carousel](assets/images/carousel.png)
-
-- #### Most Loved Recipes
-    - The most loved recipes section displays the top 5 recipes with the most likes.
-    - Clicking each recipe takes you to its detail page.
-    - A link to all recipes can be found at the bottom of the list.
-
-    ![most loved](assets/images/most-loved.png)
-
-- #### Features
-    - This section displays a couple short messages with images to showcase the site's basic features.
-
-    ![features](assets/images/features.png)
-
-- #### Footer
-    - The footer rests at the bottom of each page and has links to all social media accounts.
-    - Clicking the links in the footer opens a separate browser to avoid pulling the user away from the site.
-
-    ![footer](assets/images/footer.png)
-
-[Back to top ⇧](#eat-me)
-
-### Accounts
-- #### Register Page
-    - The register page is used to create an account.
-
-    ![sign up page](assets/images/sign-up-page.png)
-
-- #### Login Page
-    - The login page is used to log in users with an existing account.
-    - A success message will appear once a user successfully logs in.
-
-    ![sign in page](assets/images/sign-in-page.png)
-
-- #### Log out Page
-    - The log out page is used to log out users who are signed in.
-    - A success message will appear once a user successfully logs out.
-
-    ![log out page](assets/images/sign-out-page.png)
-
-[Back to top ⇧](#eat-me)
-
-### All Recipes Page
-
-- #### Recipe Cards
-    - The site will paginate all recipe cards to display 6 to a page.
-    - Each card will display the recipe's image, Title, Author, Description, Published date and how many likes it has received.
-    - If the recipe is vegetarian or vegan a small green corresponding label will be present in the bottom left corner.
-    - Clicking anywhere inside the recipes card will take you directly to that recipes detail page.
-
-    ![all recipes page](assets/images/all-recipes.png)
-
-### Favourite Recipes Page
-
-- #### Favourite Recipes
-    - This page shows only recipes that the user has liked.
-    - If a user tries to access this page without being signed in they will receive a not logged in error.
-
-    ![favourite recipes](assets/images/fav-recipes.png)
-
-### Your Recipes Page
-
-- #### Your Recipes
-    - This page displays only the recipes that the user has created. 
-    - At the top of the page is an 'Add Recipe' button which takes the user to the add recipe page.
-    - Each recipe will have two buttons, an edit and a delete button.
-    - The edit button will take users to the edit recipe page for that particular recipe.
-    - Clicking the delete button will bring up a modal which asks the user if they are sure they want to delete that particular recipe.
-    - A success message appears if a recipe is deleted successfully. 
-    - If a user tries to access this page without being signed in they will receive a not logged in error. 
-
-    ![your recipes](assets/images/your-recipes.png)
-
-### Searched Recipes Page
-
-- #### Searched Recipes
-    - Anything entered into the search bar in the navigation bar displays results here.
-    - If the word vegetarian or vegan is entered into the search bar, it will result in all vegetarian or vegan recipes, not just ones with those words in the title. 
-
-    ![search page](assets/images/searched-page.png)
-
-[Back to top ⇧](#eat-me)
-
-### Recipe Detail Page
-
-- #### Recipe Card
-    - At the top of the page the recipe card will show the image, title, author, published date and any dietary information.
-
-    ![recipe card top](assets/images/recipe-card-top.png)
-
-- #### Main Section
-    - The main body of the page consists of the description, ingredients, and method. These combined is what creates the whole recipe.
-    - At the bottom of the section is an icon and counter for both likes and comments.
-    - Clicking the outlined heart renders the recipe 'liked' by the user which will then fill in the heart, add 1 to the counter, and add the recipe to the users favourite recipes page.
-    - Alternatively, clicking a filled in heart renders the recipe 'unliked' which will then change the heart back to an outline, reduce the counter by 1 and remove the recipe from the user's favourite recipe page.
-
-    ![recipe main section](assets/images/recipe-main-section.png)
-
-- #### Comments
-    - At the bottom of the page is the comment section. Here you can view all comments left by users.
-    - Only signed in users can leave a comment.
-    - Comments with profanity automatically fail and will not upload.
-    - Any comments left by the user that is currently signed in can be edited or deleted.
-    - A success message appears once comments are left.
-    - A success message appears once comments are deleted.
-    - If a user tries to edit a comment without being signed in they receive a not logged in error.
-    - If a user tries to edit a comment that does not belong to them they receive a forbidden access error. 
-
-    ![comment section](assets/images/comment.png)
-
-### Add Recipe Page
-
-- #### Adding Recipes
-    - The adding recipe page is where users upload their creations.
-    - Each recipe is uploaded by filling out a form.
-    - Failing to fill out either the recipes Title, Description, Ingredients, or Method, results in the form failing and rendering a message stating which fields you have missed.
-    - Using profanity will result in the form failing and the relevant section will be flagged with a message.
-    - The form has two checkbox's that toggle whether the recipe is suitable for vegetarians or vegans. 
-    - Clicking the vegan checkbox automatically checks the vegetarian checkbox and subsequently unchecking the vegetarian box unchecks the vegan box.
-    - The user has two options to upload an image of their recipe. They can either choose a file to upload or simply put in the URL address of the image. 
-    - If neither of the image options are used a default image will be generated.
-    - An add Recipe button is present at the bottom of the page once the form is ready to send.
-    - If a user tries to access this page without being signed in they will receive a not logged in error.
-    - A success message appears once a recipe is added successfully.  
-
-    ![add recipe page](assets/images/add-recipe-page.png)
-
-### Edit Recipe Page
-
-- #### Editing Recipes
-    - Editing a recipe brings up the form that was filled in when the recipe was created and has all the fields filled out with the original content.
-    - Changing the content and hitting save at the bottom of the page saves the recipe.
-    - A success message appears once a recipe is edited successfully.
-    - If a user tries to access this page without being signed in they will receive a not logged in error.
-    - If a user tries to edit a recipe that does not belong to them they receive a forbidden access error.
-
-    ![edit recipe page](assets/images/edit-recipe-page.png)
-
-- #### Features to add
-    - A star rating system to replace the like button. Users would score each recipe out of 5 with the average reflected as filled stars.
-    - Submenus for All Recipes. Sections such as breakfast, lunch, dinner, dessert, or cultural sections such as mediterranean, asian, spanish etc.
-    - Option to share recipes on social media.
-
-[Back to top ⇧](#eat-me)
 
 ## Technologies
 
@@ -319,7 +206,7 @@ I ended up removing the email field from the comment model in the final build of
 ### Libraries and Programs Used
 
 - [Git](https://git-scm.com/)
-    - Version control.
+- Version control.
 - [GitHub](https://github.com/)
     - For storing code and deploying the site.
 - [Gitpod](https://www.gitpod.io/)
@@ -342,8 +229,8 @@ I ended up removing the email field from the comment model in the final build of
     - Used when performing unit tests.
 - [PostgreSQL](https://www.postgresql.org/)
     - Database used through heroku.
-- [SmartDraw](https://cloud.smartdraw.com/)
-    - To draw out the database schema.
+<!-- - [SmartDraw](https://cloud.smartdraw.com/)
+    - To draw out the database schema. -->
 - [Balsamiq](https://balsamiq.com/)
     - To create the wireframes.
 - [W3C Markup Validation Service](https://validator.w3.org/) 
@@ -356,16 +243,20 @@ I ended up removing the email field from the comment model in the final build of
     - Used to validate JS code.
 - [Summernote](https://summernote.org/)
     - Used to add a WYSIWYG text box to the add recipe page.
-- [Profanity Filter](https://github.com/ReconCubed/django-profanity-filter)
-    - App used to remove profanity from recipes and comments.
+<!-- - [Profanity Filter](https://github.com/ReconCubed/django-profanity-filter)
+    - App used to remove profanity from recipes and comments. -->
 - [Tinyjpg](https://tinyjpg.com/)
     - Used to compress images.
 - [Screen to Gif](https://www.screentogif.com/)
     - Used to create gifs for my readme.
 - [Heroku](https://www.heroku.com/)
     - To deploy the project.
+- [Canva](https://www.canva.com/)
+    - Used for robot and  background images as well as inspiration.
+- [ChatGPT](https://chatgpt.com/)
+    - Used for general queries and quick help.
 
-[Back to top ⇧](#eat-me)
+[Back to top ⇧](#ai-heroes)
 
 ## Testing 
 
@@ -394,7 +285,7 @@ This project was deployed using Github and Heroku.
 - ### Forking
 
     To fork my project you must;
-    1. Sign in to Github and go to my [repository](https://github.com/Delboy/Colour-Type)
+    1. Sign in to Github and go to my [repository](https://github.com/monika-mak/AI-Heroes-PP4)
     2. Locate the Fork button at the top right of the page.
     3. Select this. 
     4. The fork is now in your repositories.
@@ -402,7 +293,7 @@ This project was deployed using Github and Heroku.
 - ### Clone
     To clone my project you must;
 
-    1. Sign in to Github and go to my [repository](https://github.com/Delboy/eatme)
+    1. Sign in to Github and go to my [repository](https://github.com/monika-mak/AI-Heroes-PP4)
     2. Above the list of files click the green ‘code’ button.
     3. This will bring up a few options as to how you would like to clone. You can select HTTPS, SSH or Github CLI, then click the clipboard icon to copy the URL.
     4. Open git bash
@@ -412,18 +303,18 @@ This project was deployed using Github and Heroku.
 
 ## Credits
 
+
 ### Code
 
- -  I learnt how to change the form's field's label in this thread [stackoverflow.com](https://stackoverflow.com/questions/636905/django-form-set-label).
-
- - I learnt how to reflect the active page in the navbar here on [tekshinobi.com](https://tekshinobi.com/setting-active-navbar-link-in-django-template/).
-
- - I used this page to help me write unit tests for my admin functions [Google Groups](https://groups.google.com/g/django-users/c/2zN3BlFLIFE).
+ -  I learnt how to ..... [youtube](link).
 
  ### Media
 
- - The hero image was taken from [coop.co.uk](https://www.coop.co.uk/recipes/earl-grey-poached-pears-with-ice-cream).
- - All other food images were taken from [bbc.co.uk/food](https://www.bbc.co.uk/food).
+ - All images were taken from [canva](https://www.canva.com/).
+
+ ### README 
+
+ - readme was modeled from [Eat-Me](https://github.com/Delboy/EatMe/blob/main/README.md)
 
  ### Other
 
