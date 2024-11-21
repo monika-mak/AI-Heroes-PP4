@@ -96,18 +96,25 @@ A list of user stories grouped into epics for better structure and clarity.
 
 ## Design
 
-The look of this website was based loosely around The Code Institute's 'Codestar' wlakthorguh project as well as [EatME](https://eatme-production.up.railway.app/)  Project that cought my attention due to it's classy and clean looking style, felt very inspired. 
+The look of this website was based loosely around The Code Institute's 'Codestar' wlakthorguh project as well as [EatME](https://eatme-production.up.railway.app/), project that cought my attention due to it's classy and clean looking style, felt very inspired. 
 
 ### Colour Scheme
 
 - # *PLACEHOLDER*
 
-
 ### Typography
-- I had used Audiowide as a main font due to its reto style that will match perfectly with AI and technology concept. 
+- The **Audiowide** font is used as the primary typeface, chosen for its retro style that complements the futuristic and technological concept of AI Heroes. It gives the site a unique personality while remaining readable and visually appealing
 
 ### Imagery
-- The main Image is a matrix-style blue background aith an robot superhero flying across to represent an futuristic feel combined with AI. There will be also other robot images to emphesise the feel of the Blog as well as relevant subject, eg. leaderboard robot holdinga trophy  highlighting hierarhy.
+
+- The **main image** features a matrix-style blue background with a superhero robot flying across, representing the fusion of futuristic ideas and AI technology.
+
+- **Illustrative Elements**:  
+  Additional robot-themed images are used throughout the site to emphasize the blog's core theme. For example:
+  - A robot holding a trophy symbolizes the leaderboard and the ranking of AI tools, highlighting hierarchy and competition.
+  - Futuristic visuals and icons help maintain consistency with the blog's modern AI narrative.
+  
+These design choices work together to immerse visitors in the world of AI while keeping the interface clean and engaging.
 
 ### Wireframes
 - # *PLACEHOLDER*
@@ -138,8 +145,10 @@ Wireframes for each page are linked here:
 
 - **Navigation Bar**:  
   A responsive navigation bar is present across all pages, providing easy access to key sections such as Home, Leaderboard, About, and Contact. The navigation bar includes links to login and register for imediate action and engagement.
+
 - **Introductory Content**:  
   A concise introduction explains the website's goals, targeting users who are curious about AI and its practical applications.
+
 - **Call-to-Action Buttons**:  
   Buttons encourage users to explore tools, learn more about the site, or connect with the team.
 
@@ -157,8 +166,10 @@ Wireframes for each page are linked here:
 
 - **Voting Mechanism**:  
   Users can vote on their favourite tools by clicking a vote button on each tool card.
+
 - **Dynamic Ranking**:  
   Tools are ranked based on the number of votes they receive, helping users identify the most popular and impactful tools.
+
 - **Vote Monitoring**:  
   Admin can monitor and manage votes to ensure fair play and prevent misuse.
 
@@ -182,12 +193,16 @@ The **About & Contact page** is designed to foster meaningful connections and en
 ### Features to Add
 - **Tool Recommendations**:  
   A recommendation engine to suggest AI tools based on user preferences or browsing history.
+
 - **User Profiles**:  
   Allow users to create accounts, save their favorite tools, and manage their interactions on the site.
+
 - **Search and Filtering**:  
   Enhanced search functionality with filtering options to sort tools by categories, popularity, or user ratings.
+
 - **Tool Reviews and Ratings**:  
   Enable users to leave reviews and rate tools for more detailed feedback.
+
 - **Social Media Integration**:  
   Options to share AI tools directly on social media platforms.
 
