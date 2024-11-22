@@ -320,16 +320,18 @@ h2 {
 
 
 .voted-btn {
-    /* font-weight: 500;
+    color: white;
+    font-weight: 500;
     bottom: 2%;
     min-width: 53%;
-    background-color: rgb(#d57ef8);
+    background-color: rgb(156 39 176 / 67%);
     border: solid 1px #131212;
     border-radius: 0;
     transition: none;
-    box-shadow: inset 3px 2px 3px 1px rgb(0 0 0 / 54%); */
+    box-shadow: inset 3px 2px 3px 1px rgb(0 0 0 / 54%);
+}
 
-    font-weight: 500;
+    /* font-weight: 500;
     color: #000000;
     bottom: 2%;
     min-width: 53%;
@@ -338,8 +340,7 @@ h2 {
     border-radius: 2px;
     border-color: #09090938; 
     transition: none;
-    box-shadow: inset 1px 1px 2px 2px rgb(23 22 20 / 66%); 
-}
+    box-shadow: inset 1px 1px 2px 2px rgb(23 22 20 / 66%);  */
 
 
 .image-container img {
