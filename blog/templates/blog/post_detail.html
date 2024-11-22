@@ -46,8 +46,7 @@
             <div class="card-body">
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text">
-                    {{ post.content | safe }} </p>
+                <p class="card-text"> {{ post.content | safe }} </p>
             </div>
         </div>
     </div>
@@ -88,17 +87,17 @@
         <div class="col-md-6 card mb-4 mt-3">
             <div class="card-body">
             {% if user.is_authenticated %}
-            <h3>Leave a comment:</h3>
-            <p>Posting as: {{ user.username }}</p>
-            <form id="commentForm" method="post"
-                style="margin-top: 1.3em;">
-                {{ comment_form | crispy }}
-                {% csrf_token %}
-                <button id="submitButton" type="submit"
-                class="btn btn-signup btn-lg">Submit</button>
-            </form>
-            {% else %}
-            <p>Please log in to leave a comment</p>
+                <h3>Leave a comment:</h3>
+                <p>Posting as: {{ user.username }}</p>
+                <form id="commentForm" method="post"
+                    style="margin-top: 1.3em;">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button id="submitButton" type="submit"
+                    class="btn btn-signup btn-lg">Submit</button>
+                </form>
+                {% else %}
+                <p>Please log in to leave a comment</p>
             {% endif %}
             </div>
         </div>
@@ -110,26 +109,23 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title"
-          id="deleteModalLabel">Delete comment?</h5>
+        <h5 class="modal-title" id="deleteModalLabel">Delete comment?</h5>
         <button type="button" class="btn-close"
-          data-bs-dismiss="modal" aria-label="Close"></button>
+          data-bs-dismiss="modal" aria-label="Close">
+        </button>
       </div>
       <div class="modal-body">
         Are you sure you want to delete your comment?
         This action cannot be undone.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary"
-          data-bs-dismiss="modal">Close</button>
-        <a id="deleteConfirm" href="#" class="btn
-          btn-danger">Delete</a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
       </div>
     </div>
   </div>
 </div>
 {% endblock content %}
-
 {% block extras %}
 <script src="{% static 'js/comments.js' %}"></script>
 {% endblock %}
