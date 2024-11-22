@@ -17,14 +17,14 @@
                 alt="futuristic cute robot with a red cape flying in a superhero style">
         </div>
 </section>
+
 <div class="container-fluid">
     <h3 class=" card-text text-center vote-info">Pick Your Favourite Hero & 
         Check Out The Leaderboard To See If They Made It Through!<br>
-        Pssst... You Get Up To 3 Votes!
-    </h3>
+        Pssst... You Get Up To 3 Votes!</h3>
     <div class="row cards-row">
         <div class="col-12 mt-3 left">
-            <div class="row">
+            <div class="row cards-row">
                 {% for post in post_list %}
                 <!-- Blog post card -->
                 <div class="col-md-4 card-group">
@@ -34,23 +34,24 @@
                                 <a href="{% url 'post_detail' post.slug %}" class="post-link post-card">
                                     <!-- Show placeholder image if no featured image -->
                                     {% if "placeholder" in post.featured_image.url %}
-                                    <img class="card-img-top" src="{% static 'images/default.png' %}" alt="placeholder image">
+                                    <img class="card-img-top " src="{% static 'images/default.png' %}" alt="placeholder image">
                                     {% else %}
-                                    <img class="card-img-top" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
+                                    <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
                                     {% endif %}
                                 </a>
                             </div>
                             <div class="p-2">
                                 <h2 class="card-title">{{ post.title }}</h2>
-                                <p class="card-text">{{ post.excerpt }}</p>
+                                <p class ="card-text">{{ post.excerpt }}</p>
                             </div>
-                            <!-- Push card footer to the bottom -->
+                            <!--Push card footer to the bottom-->
                             <div class="card-footer mt-auto">
                                 <div class="d-flex justify-content-between align-items-center title-gap">
+                                    <!--date format: https://docs.djangoproject.com/en/5.1/ref/templates/builtins/#date-->
                                     <p class="card-text post-subtitle h6">Created on: {{ post.created_on|date:"d F Y" }}</p>
-                                    <!-- Vote Button -->
+                                    <!--Vote Button-->
                                     {% if post.voted %}
-                                    <a id="vote-section" class="btn voted-btn" href="{% url 'vote_on_a_post' post.id %}">
+                                    <a id= "vote-section" class="btn voted-btn" href="{% url 'vote_on_a_post' post.id %}">
                                         <i class="fa-solid fa-check-to-slot icon"></i> Voted
                                     </a>
                                     {% else %}
@@ -65,12 +66,11 @@
                 </div>
                 <!-- Start a new row after every three posts -->
                 {% if forloop.counter|divisibleby:3 %}
-                    </div> <!-- Close current row -->
-                    </div> <!-- Close col-12 -->
-                    <div class="row cards-row"> <!-- Start a new row -->
-                {% endif %}
-                {% endfor %}
-            </div> <!-- Close last row -->
+            </div>
+        </div>
+        <div class="row cards-row">
+            {% endif %}
+            {% endfor %}
         </div>
     </div>
     <!-- Pagination -->
@@ -79,7 +79,7 @@
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
             <li>
-                <a href="?page={{ page_obj.previous_page_number }}" class="page-link"> &laquo; PREVIOUS </a></li>
+                <a href="?page={{ page_obj.previous_page_number }}" class="page-link"> &laquo; PREVIOUS</a>
             </li>
             {% endif %}
             {% if page_obj.has_next %}
