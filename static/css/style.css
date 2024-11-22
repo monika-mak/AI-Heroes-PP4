@@ -56,6 +56,7 @@ h1 {
 }
 
 .dark-bg {
+    border-top: 1px solid white;
     background-color: #445261;
 }
 
@@ -183,14 +184,14 @@ h1 {
 } */
 
 .leaderboard-title {
-    /* border: 1px solid rgb(255, 255, 255); */
+    border: 1px solid rgb(255, 255, 255);
     text-align: center;
     color: #f6f5f5;
     transition: none;
     box-shadow: inset -1px -1px 1px 2px rgb(182 161 161 / 44%);
     background-color: #ffa500;
-    padding: 5px 0;
-    text-shadow: 2px 2px 2px black;
+    padding: 5px 2px;
+    text-shadow: 2px 1px 1px black;
 }
 
 .leaderboard-background {
