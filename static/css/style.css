@@ -7,13 +7,14 @@ h1 {
     margin-bottom:10px;
     font-family: Audiowide, sans-serif;
 }
-/* h2 {
+
+h2 {
     font-family: Audiowide, sans-serif;
-    color: #1f102ad1;
+    /* color: #1f102ad1;
     font-weight: 300;
     line-height: 1.2;
-    letter-spacing: 2px;
-} */
+    letter-spacing: 2px; */
+}
 
  a {
     text-decoration: none;
@@ -139,7 +140,7 @@ h1 {
     color: #1f102ad1;
     font-weight: 300;
     line-height: 1.2;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
     margin-top: 5px;
 }
 
@@ -319,15 +320,27 @@ h1 {
 
 
 .voted-btn {
-    font-weight: 500;
+    /* font-weight: 500;
     bottom: 2%;
     min-width: 53%;
-    background-color: rgb(156 39 176 / 67%);
+    background-color: rgb(#d57ef8);
     border: solid 1px #131212;
     border-radius: 0;
     transition: none;
-    box-shadow: inset 3px 2px 3px 1px rgb(0 0 0 / 54%);
+    box-shadow: inset 3px 2px 3px 1px rgb(0 0 0 / 54%); */
+
+    font-weight: 500;
+    color: #000000;
+    bottom: 2%;
+    min-width: 53%;
+    background-color: #ff9900ed;
+    border: solid 1px #f8f8f8;
+    border-radius: 2px;
+    border-color: #09090938; 
+    transition: none;
+    box-shadow: inset 1px 1px 2px 2px rgb(23 22 20 / 66%); 
 }
+
 
 .image-container img {
     border: 2px solid #ffffff;
