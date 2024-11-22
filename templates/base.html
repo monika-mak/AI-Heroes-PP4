@@ -10,7 +10,7 @@
 <html class="h-100" lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Meta tags-->
     <meta name="description" content="Blog about the most desired AI tools today!">
     <meta name="keywords" content= "blog, AI, artificial inteligence, productivity, efficiency , technology">
@@ -81,16 +81,16 @@
     <!-- displaying Django messages -->
     <div class="container">
         <div class="row">
-        <div class="col-md-8 offset-md-2">
-            {% for message in messages %}
-            <div class="alert {{ message.tags }} alert-dismissible
-            fade show" id="msg" role="alert">
-            {{ message | safe }}
-            <button type="button" class="btn-close"
-                data-bs-dismiss="alert" aria-label="Close"></button>
+            <div class="col-md-8 offset-md-2">
+                {% for message in messages %}
+                <div class="alert {{ message.tags }} alert-dismissible
+                fade show" id="msg" role="alert">
+                {{ message | safe }}
+                <button type="button" class="btn-close"
+                    data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
         </div>
     </div>
     <main class="flex-shrink-0 main-bg">
