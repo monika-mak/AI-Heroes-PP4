@@ -17,7 +17,7 @@
                 alt="futuristic cute robot with a red cape flying in a superhero style">
         </div>
 </section>
-<div class="container-fluid">
+<section class="container-fluid">
     <h3 class=" card-text text-center vote-info">Pick Your Favourite Hero & 
         Check Out The Leaderboard To See If They Made It Through!<br>
         Pssst... You Get Up To 3 Votes!</h3>
@@ -66,9 +66,10 @@
                 <!-- Start a new row after every three posts -->
                 {% if forloop.counter|divisibleby:3 %}
             </div>
-        <div class="row cards-row">
+            <div class="row cards-row">
             {% endif %}
             {% endfor %}
+            </div>
         </div>
     </div>
     <!-- Pagination -->
@@ -88,6 +89,6 @@
         </ul>
     </nav>
     {% endif %}
-</div>
+</section>
 <!-- index.html content ends here -->
 {% endblock %}
