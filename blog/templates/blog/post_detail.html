@@ -16,16 +16,16 @@
             <div class="row align-items-center dark-bg custom-width title-margin">
                 <div class= "col">
                     <!-- Post title goes in these h1 tags -->
-                    <h2 class="post-title d-flex align-items-center">{{ post.title }}</h2>
+                    <h2 class="card-title detail-post-title d-flex align-items-center">{{ post.title }}</h2>
                 </div>
                 <!-- Displaying count of comments and votes -->
                 <div class="col text-end" >
-                    <strong class ="icon me-3">
+                    <light class ="icon me-3">
                         <i class="far fa-comments"></i> {{ comment_count }}
-                    </strong>
-                    <strong class ="icon">
+                    </light>
+                    <light class ="icon">
                         <i class="fa-solid fa-check-to-slot"></i> {{ post.vote_count }}
-                    </strong>
+                    </light>
                 </div>
             </div>
         </div>
