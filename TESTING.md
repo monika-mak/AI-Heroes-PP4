@@ -44,16 +44,16 @@ All HTML pages were validated and received a 'No errors or warning to show' resu
 Initially my Profile and Article Page HTML were receiving [validator errors](documentation/testing/artview_p_error.png), [error code generated from Summernote code](documentation/testing/extra_p_tag.png) of having an extra p tag due to Summernotes rendering. I fixed this issue by replacing the p tags with divs, redeployed and checked for any styling issues. All clear on re-validation thankfully.
 
 
-| HTML Source Code/Page | Errors | Warnings |
+| HTML Source Code/Page | NO Errors | Warnings |
 | ---- | ------ | -------- | 
-| Home | 0 | 0 |
-| Sign In | 0 | 0 |
-| Sign Up | 0 | 0 |
-| Profile | 0 | 0 |
-| Edit Profile Modal | 0 | 0 |
-| Articles | 0 | 0 |
-| Add Article | 0 | 0 |
-| View Article | 0 | 0 |
+| Home | Yes | 0 |
+| Post Detail only text | Yes | 0 |
+| Post Detail with emojis| ERRORS | 0 |
+| Leaderboard | Yes | 0 |
+| About & Contact| Yes | 0 |
+| Log In | Yes| 0 |
+| Sign out | Yes | 0 |
+| Register | ERRORS | 0 |
 | Edit Article | 0 | 0 |
 | Delete Article | 0 | 0 |
 | Delete Comment | 0 | 0 |
@@ -64,8 +64,7 @@ Initially my Profile and Article Page HTML were receiving [validator errors](doc
 | Gallery | 0 | 0 |
 | Add Photo | 0 | 0 |
 | Delete Photo Modal | 0 | 0 |
-| Visit Us | 0 | 0 |
-| Forgot Password | 0 | 0 |
+
 | Error 403 | 0 | 0 |
 | Error 404 | 0 | 0 |
 | Error 500 | 0  | 0 |
@@ -152,11 +151,11 @@ Testing was carried out on desktop using a Chrome browser to ensure all forms ta
 | Sign In | Yes | Username/Email and Password | Username/Email/Password must be exactly as registered originally in either lowercase/uppercase or mixture | Pass | - |
 | Edit Profile (Registered User) | Yes | User may replace the placeholder image for Profile Image. All other fields are optional. | No feedback needed as placeholder profile picture is provided as default, user may change it they wish, other fields optional. | Pass | - |
 | Search Field | Yes | Any input accepted | User will be presented with the results of their search, if their search input matches an article then they will receive the applicable articles, otherwise 'No article found' will display | Pass | - |
-| Add Article (Registered User) | Yes | Mixture of required image/text fields | 'Please fill out this field' is displayed to user, article receives placeholder image if no image provided if RichTextField is left blank then user receives [this](documentation/testing/art_required.png) feedback | Pass | - |
+| Add Post (Admin) | Yes | Mixture of required image/text fields | 'Please fill out this field' is displayed to user, article receives placeholder image if no image provided if RichTextField is left blank then user receives [this](documentation/testing/art_required.png) feedback | Pass | - |
 | Comment Box (Registered User) | Yes | Text input accepted | User is informed that their comment is awaiting approval | Pass | - |
-| Like/Unlike button (Registered User) | Yes | Click | Button changes from empty heart to full heart and number of likes changes | Pass | - |
-| Edit Article (Registered, Author) | Yes | Image/Text fields | Changes made to Article are saved and displayed | Pass | - |
-| Delete Article (Registered, Author) | Yes | Click button to choose 'Confirm' or 'Return to Articles' | Article is deleted or user returns to main article page | Pass | - |
+| Vote/Unvote button (Registered User) | Yes | Click | Button changes from empty heart to full heart and number of likes changes | Pass | - |
+| Edit Post (Admin) | Yes | Image/Text fields | Changes made to Article are saved and displayed | Pass | - |
+| Delete Post (Post) | Yes | Click button to choose 'Confirm' or 'Return to Articles' | Article is deleted or user returns to main article page | Pass | - |
 | Delete Comment (Registered, Author) | Yes | Click button to choose 'Delete' or 'Return to Articles' | Comment is deleted or user returns to main article page | Pass | - |
 | Create Booking (Registered User only) | Yes | Test input and selection from date/time widget/dropdown selection | User is prompted to 'Fill out this Field' for required fields, if date/time is unavailable they are informed by message to pick another date/time | Pass | - |
 | Edit Booking (Registered User)| Yes | Text fields | User may make changes to be saved, prompted to 'Fill out this field' is anything is left blank,  if date/time is unavailable they are informed by message to pick another date/time | Pass | - |

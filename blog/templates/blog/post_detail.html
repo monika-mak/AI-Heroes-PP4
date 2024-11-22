@@ -20,16 +20,16 @@
                 </div>
                 <!-- Displaying count of comments and votes -->
                 <div class="col text-end" >
-                    <light class ="icon me-3 ">
+                    <span class ="icon me-3 ">
                         <a href="#comment-section" class="text-decoration-none">
                             <i class="far fa-comments"></i> {{ comment_count }}
                         </a>
-                    </light>
-                    <light class ="icon">
+                    </span>
+                    <span class ="icon">
                         <a href="{% url 'home' %}#vote-section" class="text-decoration-none">
                             <i class="fa-solid fa-check-to-slot"></i> {{ post.vote_count }}
                         </a>
-                    </light>
+                    </span>
                 </div>
             </div>
         </div>
@@ -37,7 +37,7 @@
             <hr>
         </div>
     </div>
-    <p class="post-subtitle d-flex align-items-center"> Created on: {{ post.created_on|date:"d F Y" }}</p>
+    <p class="post-subtitle d-flex align-items-center">Created on: {{ post.created_on|date:"d F Y" }}</p>
 </div>
 
 <div class="container">
@@ -46,7 +46,7 @@
             <div class="card-body">
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text"> {{ post.content | safe }} </p>
+                <div class="card-text">{{ post.content | safe }}</div>
             </div>
         </div>
     </div>
@@ -75,8 +75,8 @@
                     <p class="approval">This comment is awaiting approval</p>
                     {% endif %}
                     {% if user.is_authenticated and comment.author == user %}
-                    <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
-                    <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+                    <button class="btn btn-delete" data-comment_id="{{ comment.id }}">Delete</button>
+                    <button class="btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
                     {% endif %}
                 </div>
                 <!-- Our for loop ends here -->
