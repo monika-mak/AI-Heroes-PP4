@@ -386,11 +386,18 @@ This project was deployed using Github and Heroku.
 
  ### README 
 
- - readme was modeled from [Eat-Me](https://github.com/Delboy/EatMe/blob/main/README.md)
+ - README was modeled from [Eat-Me](https://github.com/Delboy/EatMe/blob/main/README.md)
+ - README testing mogdeled from [FreeFido](https://github.com/amylour/FreeFido_v2/blob/main/TESTING.md)
 
  ### Other
 
  - [The code insitutes](https://codeinstitute.net/) 'I think therefore I blog' project which inspired the overall feel of the paginated and recipe detail pages.
  - The [Django documentation](https://docs.djangoproject.com/en/4.0/) which was instrumental in helping me solve problems.
+
+### Acknowledgments:
+Since I wanted to make this for the users, I made a social post on linked in asking people for opinion on their best AI tool. I got some amazing tool ideas which I had included in my project. Thank you : 
+Linked-in users [ a] [b] [c] for support and involvement in my project.
+Peter ... 
+My mentor... 
 
 [Back to top ⇧](#eat-me)
