@@ -20,11 +20,15 @@
                 </div>
                 <!-- Displaying count of comments and votes -->
                 <div class="col text-end" >
-                    <light class ="icon me-3">
-                        <i class="far fa-comments"></i> {{ comment_count }}
+                    <light class ="icon me-3 ">
+                        <a href="#comment-section" class="text-decoration-none">
+                            <i class="far fa-comments"></i> {{ comment_count }}
+                        </a>
                     </light>
                     <light class ="icon">
-                        <i class="fa-solid fa-check-to-slot"></i> {{ post.vote_count }}
+                        <a href="{% url 'home' %}#vote-section" class="text-decoration-none">
+                            <i class="fa-solid fa-check-to-slot"></i> {{ post.vote_count }}
+                        </a>
                     </light>
                 </div>
             </div>
@@ -51,8 +55,8 @@
         <hr>
     </div>
     <div class="row">
-        <div class="col-md-6 card mb-4  mt-3 ">
-        <h3>Comments:</h3>
+        <div id="comment-section" class="col-md-6 card mb-4  mt-3 ">
+            <h3>Comments:</h3>
             <div class="card-body card-comments">
                 <!-- We want a for loop inside the empty control tags
                 to iterate through each comment in comments -->
