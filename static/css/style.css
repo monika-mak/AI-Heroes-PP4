@@ -40,8 +40,15 @@ a {
 }
 
 .page-link:focus {
+    color:#1f102ad1 ;
     background-color: #ffffff;
-    box-shadow: 0 0 0 .1rem rgb(#1f102a/ 56%);
+        box-shadow: 0px 2px 8px rgb(0 0 0 / 50%);
+}
+.page-link:hover {
+    z-index: 2;
+    color: #5235f1;
+    background-color: #d1ccf100;
+    border-color: #7c71bc82;
 }
 
 .brand {
@@ -114,9 +121,9 @@ a {
 
 .callout-container {
     max-height: 400px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background-size: cover;
+    background-size: cover;
+    background-size: cover;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -126,7 +133,6 @@ a {
 
 .cards-row {
     margin:0 0.3em;
-    /* margin: 0; */
 }
 
 .card {
