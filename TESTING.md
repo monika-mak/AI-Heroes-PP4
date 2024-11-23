@@ -41,19 +41,20 @@ I have had to follow a different approach for validating my HTML for this projec
 
 All HTML pages were validated and received a 'No errors or warning to show' result as shown above.
 
-Initially my Profile and Article Page HTML were receiving [validator errors](documentation/testing/artview_p_error.png), [error code generated from Summernote code](documentation/testing/extra_p_tag.png) of having an extra p tag due to Summernotes rendering. I fixed this issue by replacing the p tags with divs, redeployed and checked for any styling issues. All clear on re-validation thankfully.
+Initially my Home page had 2 errors I had trouble to solve, It had to do with the div closing tags, but they were quite tricky since using forloop made it less clear. Aloso many try and errors leading to layout change. Thankfully looking deeply into a code with some breaks I was able to allocate it. 
+Next errors were connected to the blog post and it's rendering. Since I had used chat gpt to generate blog post info the format was not acceptable by the validator, i had removed the psot and this time prompted gpt giving it correct format. Page HTML were receiving [validator errors](documentation/testing/sample_error.png), [error code](documentation/testing/extra_p_tag.png) of having an extra p tag, but thankfuly I was anicipating it as I came across this in our walktrough videos. Replacing it with a div solved the problem.  All valiadations were sucessfull on re-validation. 
 
 
 | HTML Source Code/Page | NO Errors | Warnings |
 | ---- | ------ | -------- | 
 | Home | Yes | 0 |
 | Post Detail only text | Yes | 0 |
-| Post Detail with emojis| ERRORS | 0 |
 | Leaderboard | Yes | 0 |
 | About & Contact| Yes | 0 |
 | Log In | Yes| 0 |
 | Sign out | Yes | 0 |
-| Register | ERRORS | 0 |
+
+| Sing Up | ERRORS | 0 |
 | Edit Article | 0 | 0 |
 | Delete Article | 0 | 0 |
 | Delete Comment | 0 | 0 |
