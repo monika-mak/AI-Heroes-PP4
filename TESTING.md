@@ -26,9 +26,11 @@ Return back to the [README.md](README.md) file.
 
 ## Validators
 - HTML
-    - No errors were returned when passing through the official[W3C validator](https://validator.w3.org/#validate_by_input).
+    - Results of HTML official[W3C validator](https://validator.w3.org/#validate_by_input).
+      
+      *<i>note</i> - When validating the sign-up page the validator throws errors. These errors are caused by the installed Summernote library which runs when using the form on these pages, and as such are unable to be rectified.
 
-    ![HTML Validator](assets/images/css_validator.png)
+      ![HTML Validator](/documentation/testing/html_validator.png)
 
     | HTML Source Code/Page | Pass | Errors| Warnings
     | ---- | ------ | -------- | -------- |
@@ -44,47 +46,20 @@ Return back to the [README.md](README.md) file.
     | Error 404 | 0 | 0 |
     | Error 500 | 0  | 0 |
 
-    *<i>note</i> - When validating the sign-up page the validator throws a host of errors. These errors are caused by the installed Summernote library which runs when using the form on these pages, and as such are unable to be rectified.
   <hr>  
 
 - CSS 
      - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/) validator.
 
-    ![CSS Validator ](assets/images/css_validator.png)
+    ![CSS Validator ](/documentation/testing/css_validator_pass.png)
 
 - JavaScript
     - No errors were found when passing through [Jshint](https://jshint.com/) validator.
 
-    ![jshint](assets/images/jshint.png)
+    ![jshint](/documentation/testing/jshint_pass_.png)
 
 - Python
     - No errors were found when passing through [CI Python Linter](https://pep8ci.herokuapp.com/#)validator.
-
-    ![CSS Validator ](assets/images/css_validator.png)
-
-- Lighthouse
-
-    ![lighthouse](assets/images/lighthouse.png)
-
-
-Initially my Home page had 2 errors I had trouble to solve, It had to do with the div closing tags, but they were quite tricky since using forloop made it less clear. Aloso many try and errors leading to layout change. Thankfully looking deeply into a code with some breaks I was able to allocate it. 
-Next errors were connected to the blog post and it's rendering. Since I had used chat gpt to generate blog post info the format was not acceptable by the validator, i had removed the psot and this time prompted gpt giving it correct format. Page HTML were receiving [validator errors](documentation/testing/sample_error.png), [error code](documentation/testing/extra_p_tag.png) of having an extra p tag, but thankfuly I was anicipating it as I came across this in our walktrough videos. Replacing it with a div solved the problem.  All valiadations were sucessfull on re-validation. 
-
-
-
-### JavaScript Validation
-
-<!-- [JSHint](https://jshint.com/) was used to validate the small amount of JavaScript code added to the project. External JS, for Bootstrap purposes, obtained via [CDN](https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js) was not validated through JSHint
-
-| Page | Screenshot | Errors | Warnings |
-| ---- | ---------- | ------ | -------- |
-| base.html | ![js from base.html](documentation/testing/base_js.png) | none | none |
-| gallery.html | ![js from gallery.html](documentation/testing/gallery_js.png) | none | none |
-| profile.html | ![js from profile.html](documentation/testing/profile_js.png) | none | none | -->
-
-<hr>
-
-### Python Validation
 
 [CI Python Linter](https://pep8ci.herokuapp.com/#) was used to validate the Python files that were created or edited by myself. No issues presented and line lengths were double checked. I have included some screenshots with the results below.
 
@@ -94,12 +69,6 @@ Next errors were connected to the blog post and it's rendering. Since I had used
 | ai_heroes | n/a |n/a|n/a | [no errors](documentation/testing/ai_heroes_pep8.png)|n/a  |
 | Blog | [no errors](documentation/testing/gallery_admin.png) | [no errors](documentation/testing/gallery_form.png) | [no errors](documentation/testing/gallery_models.png) | [no errors](documentation/testing/gallery_urls.png) | [no errors](documentation/testing/gallery_views.png) |
 <hr>
-
-### CSS Validation 
-
-[W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate my CSS file. External CSS for Bootstrap, provided by [CDN](https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css) was not tested. Warnings were present, these were related to my use of variables for colors and fonts in my CSS file.
-
-![css validation](documentation/testing/css_valid.png)
   
 <hr> 
    
@@ -279,3 +248,8 @@ From reading through the linked lines of JS, it seems that the error stems from 
 - The scrollbar redesign did not translate over to Mozilla and Safari browsers, further learning about webkits is needed to push the design across all browsers.
 
 There are currently no other known bugs, if you find one then please do let me know :smile:
+
+Initially my Home page had 2 errors I had trouble to solve, It had to do with the div closing tags, but they were quite tricky since using forloop made it less clear. Aloso many try and errors leading to layout change. Thankfully looking deeply into a code with some breaks I was able to allocate it. 
+Next errors were connected to the blog post and it's rendering. Since I had used chat gpt to generate blog post info the format was not acceptable by the validator, i had removed the psot and this time prompted gpt giving it correct format. Page HTML were receiving [validator errors](documentation/testing/sample_error.png), [error code](documentation/testing/extra_p_tag.png) of having an extra p tag, but thankfuly I was anicipating it as I came across this in our walktrough videos. Replacing it with a div solved the problem.  All valiadations were sucessfull on re-validation. 
+
+<hr>
