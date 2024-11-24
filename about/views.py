@@ -3,24 +3,24 @@ from django.contrib import messages
 from .models import About
 from .forms import CommunicationForm
 
-# Create your views here.
-
-
 def about_me(request, *args, **kwargs):
     """
-    About page rendering
+    Renders the About page with optional form to submit collaboration requests.
     """
     if request.method == "POST":
+        # Handle form submission
         communication_form = CommunicationForm(data=request.POST)
         if communication_form.is_valid():
+            # Save the form data and display a success message
             communication_form.save()
             messages.add_message(
                 request, messages.SUCCESS,
                 "Collaboration request received!"
                 "Please expect resonase within next 2 working days."
             )
-
+    # Save the form data and display a success message
     about = About.objects.all().order_by('-updated_on').first()
+    # Initialize an empty CommunicationForm for display
     communication_form = CommunicationForm()
 
     return render(

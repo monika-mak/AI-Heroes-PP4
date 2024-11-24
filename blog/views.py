@@ -6,48 +6,51 @@ from .models import Post, Comment, Vote
 from .forms import CommentForm
 from django.db.models import Count, Q, Value, BooleanField
 
+
 class PostList(generic.ListView):
-    queryset = Post.objects.filter(status=1).annotate(comment_count=Count('comments'))
+    """
+    View to display a paginated list of published posts.
+    Annotates each post with the number of comments and whether the user has voted on it.
+    """
+    queryset = Post.objects.filter(status=1).annotate(comment_count=Count(
+        'comments'))
     template_name = "blog/index.html"
     paginate_by = 6
 
     def get_queryset(self):
+        """
+        Customizes the queryset to include vote annotations for authenticated users.
+        """
         queryset = super().get_queryset()
         if self.request.user.is_authenticated:
             # Annotate whether the user has voted on the post
             queryset = queryset.annotate(
-                voted=Count('post_votes', filter=Q(post_votes__author=self.request.user))
+                voted=Count('post_votes', filter=Q(
+                    post_votes__author=self.request.user))
             )
         else:
             # Add a default value for non-authenticated users
-            queryset = queryset.annotate(voted=Value(False, output_field=BooleanField()))
+            queryset = queryset.annotate(
+                voted=Value(False, output_field=BooleanField()))
         return queryset
 
 
 def post_detail(request, slug):
     """
-    Display an individual :model:`blog.Post`.
-
-    **Context**
-
-    ``post``
-        An instance of :model:`blog.Post`.
-
-    **Template:**
-
-    :template:`blog/post_detail.html`
+    Displays an individual post along with its comments.
+    Handles comment form submission and checks whether the user has voted on the post.
     """
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
 
-    #check if user has already voted on a post
+    # check if user has already voted on a post
     voted = False
     if request.user.is_authenticated:
         voted = Vote.objects.filter(post=post, author=request.user).exists()
 
-    #handle comment form submission 
+    # handle comment form submission
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
@@ -59,7 +62,7 @@ def post_detail(request, slug):
                 request, messages.SUCCESS,
                 'Comment submitted and awaiting approval'
             )
-    
+
     comment_form = CommentForm()
 
     return render(
@@ -70,13 +73,14 @@ def post_detail(request, slug):
             "comments": comments,
             "comment_count": comment_count,
             "comment_form": comment_form,
-            "voted": voted, 
+            "voted": voted,
         },
     )
 
+
 def comment_edit(request, slug, comment_id):
     """
-    view to edit comments
+    Allows users to edit their comments on a specific post.
     """
     if request.method == "POST":
 
@@ -92,14 +96,16 @@ def comment_edit(request, slug, comment_id):
             comment.save()
             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+            messages.add_message(
+                request, messages.ERROR, 'Error updating comment!'
+                )
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
 def comment_delete(request, slug, comment_id):
     """
-    view to delete comment
+    Allows users to delete their comments on a specific post.
     """
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
@@ -109,52 +115,55 @@ def comment_delete(request, slug, comment_id):
         comment.delete()
         messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+        messages.add_message(
+            request, messages.ERROR, 'You can only delete your own comments!'
+            )
 
-    return HttpResponseRedirect(reverse('post_detail', args=[slug]))   
+    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
-# Leaderboard view to display posts ordered by the number of votes     
+# Leaderboard view to display posts ordered by the number of votes
 def leaderboard(request):
-    posts = ( 
+    """
+    Displays the top 5 posts ranked by the number of votes.
+    """
+    posts = (
         Post.objects.filter(status=1)
         .annotate(vote_count=Count('post_votes'))
-        .order_by('-vote_count')[:5] # ensure only top 5 positions are displayed
+        .order_by('-vote_count')[:5]  # only top 5 positions are displayed
         )
     return render(request, 'blog/leaderboard.html', {'posts': posts})
 
 
 def vote_on_a_post(request, post_id):
-    '''
-    view to handle all the votes given to individual posts
-    no one post can recieve more than one vote from the same user
-    '''
+    """
+    Allows authenticated users to vote on a post.
+    A user can vote on up to 3 posts and cannot vote multiple times on the same post.
+    """
 
     post = get_object_or_404(Post, id=post_id)
     voted = False
     if request.user.is_authenticated:
         voted = Vote.objects.filter(post=post, author=request.user).exists()
 
-    
-    # Check if user is logged in 
     if not request.user.is_authenticated:
+        # Redirect unauthenticated users to the login page
         messages.info(request, "You need to log in to cast a vote")
         return redirect('account_login')
-    # if user already voted on this blog, remove vote
+
     if Vote.objects.filter(post=post, author=request.user).exists():
+        # Remove vote if the user has already voted
         Vote.objects.filter(post=post, author=request.user).delete()
         messages.info(request, 'Vote cancelled')
     else:
-        # get the total amount of votes per user and check if not exceeding 3
+        # Inform user if a maximum of 3 votes limit was reached
         if request.user.user_votes.count() >= 3:
             messages.info(request, "You've reached the maximum votes limit")
         else:
-            # create vote if no previous restrictions are valid
+            # create vote if user is eligible
             Vote.objects.create(post=post, author=request.user)
             messages.success(request, "Thank you for your vote")
-   
     # Redirect back to the referring page
     # https://docs.djangoproject.com/en/5.1/ref/request-response/#django.http.HttpRequest.META
     referrer = request.META.get('HTTP_REFERER', '/')
     return HttpResponseRedirect(referrer)
-
