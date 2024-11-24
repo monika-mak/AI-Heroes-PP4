@@ -90,11 +90,9 @@ Next errors were connected to the blog post and it's rendering. Since I had used
 
 | Feature | admin.py | forms.py | models.py | urls.py | views.py |
 |---------|----------|----------|-----------|---------|----------|
-| About | [no errors](documentation/testing/art_admin.png) | [no errors](documentation/testing/art_forms.png) | [no errors](documentation/testing/art_models.png) | [no errors](documentation/testing/art_urls.png) | [no errors](documentation/testing/art_views.png) |
-| ai_heroes | [no errors](documentation/testing/book_admion.png) | [no errors](documentation/testing/book_forms.png) | [no errors](documentation/testing/book_models.png) | [no errors](documentation/testing/book_urls.png) | [no errors](documentation/testing/book_views.png) |
+| About | [no errors](documentation/testing/about_admin.png) | [no errors](documentation/testing/about_forms.png) | [no errors](documentation/testing/about_models.png) | [no errors](documentation/testing/about_urls.png) | [no errors](documentation/testing/about_views.png) |
+| ai_heroes | n/a |n/a|n/a | [no errors](documentation/testing/ai_heroes_pep8.png)|n/a  |
 | Blog | [no errors](documentation/testing/gallery_admin.png) | [no errors](documentation/testing/gallery_form.png) | [no errors](documentation/testing/gallery_models.png) | [no errors](documentation/testing/gallery_urls.png) | [no errors](documentation/testing/gallery_views.png) |
-
-
 <hr>
 
 ### CSS Validation 
