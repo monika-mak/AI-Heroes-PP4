@@ -1,6 +1,6 @@
 # Testing
 
-This is the TESTING file for the [FreeFido](https://freefido.herokuapp.com/) website.
+This is the TESTING file for the [AI Heroes](https://ai-heroes-blog-d4716b80dc08.herokuapp.com/) website.
 
 Return back to the [README.md](README.md) file.
 
@@ -23,61 +23,64 @@ Return back to the [README.md](README.md) file.
   - [Bugs](#bugs)
     - [Known Bugs](#known-bugs)
 
-## Validation
 
-### HTML Validation
+## Validators
+- HTML
+    - No errors were returned when passing through the official[W3C validator](https://validator.w3.org/#validate_by_input).
 
-For my HTML files I have used [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
+    ![HTML Validator](assets/images/css_validator.png)
 
-I have had to follow a different approach for validating my HTML for this project as the majority of my pages are developed using Jinja syntax such as '{% extends "base.html" %}' and '{{ form|crispy }}' and most require user authentication. The HTML validator will throw errors if I were to use my website's URL so I have had to follow the below approach for every page:
+    | HTML Source Code/Page | Pass | Errors| Warnings
+    | ---- | ------ | -------- | -------- |
+    | Home | Yes | 0 |
+    | Post Detail only text | Yes | 0 |
+    | Leaderboard | Yes | 0 |
+    | About & Contact| Yes | 0 |
+    | Log In | Yes| 0 |
+    | Sign out | Yes | 0 |
+    | Sing Up | NO | 1 |
+    | Delete Comment | 0 | 0 |
+    | Error 403 | 0 | 0 |
+    | Error 404 | 0 | 0 |
+    | Error 500 | 0  | 0 |
 
-- Via the deployed Heroku app link, I have navigated to each individual page.
-- Right clicking on the screen/CTRL+U/⌘+U on Mac, allows a menu to appear, giving me the option to 'View page source'.
-- The complete HTML code for the deployed page will appear, allowing you to select the entire code using CTRL+A/⌘+A on Mac.
-- Paste the copied code into the [validate by input](https://validator.w3.org/#validate_by_input) option.
-- Check for errors and warnings, fix any issues, revalidate by following the above steps and record the results.
+    *<i>note</i> - When validating the sign-up page the validator throws a host of errors. These errors are caused by the installed Summernote library which runs when using the form on these pages, and as such are unable to be rectified.
+  <hr>  
 
-![html validation](documentation/testing/html_valid.png)  
+- CSS 
+     - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/) validator.
 
-All HTML pages were validated and received a 'No errors or warning to show' result as shown above.
+    ![CSS Validator ](assets/images/css_validator.png)
+
+- JavaScript
+    - No errors were found when passing through [Jshint](https://jshint.com/) validator.
+
+    ![jshint](assets/images/jshint.png)
+
+- Python
+    - No errors were found when passing through [CI Python Linter](https://pep8ci.herokuapp.com/#)validator.
+
+    ![CSS Validator ](assets/images/css_validator.png)
+
+- Lighthouse
+
+    ![lighthouse](assets/images/lighthouse.png)
+
 
 Initially my Home page had 2 errors I had trouble to solve, It had to do with the div closing tags, but they were quite tricky since using forloop made it less clear. Aloso many try and errors leading to layout change. Thankfully looking deeply into a code with some breaks I was able to allocate it. 
 Next errors were connected to the blog post and it's rendering. Since I had used chat gpt to generate blog post info the format was not acceptable by the validator, i had removed the psot and this time prompted gpt giving it correct format. Page HTML were receiving [validator errors](documentation/testing/sample_error.png), [error code](documentation/testing/extra_p_tag.png) of having an extra p tag, but thankfuly I was anicipating it as I came across this in our walktrough videos. Replacing it with a div solved the problem.  All valiadations were sucessfull on re-validation. 
 
 
-| HTML Source Code/Page | Pass | Errors| Warnings
-| ---- | ------ | -------- | -------- |
-| Home | Yes | 0 |
-| Post Detail only text | Yes | 0 |
-| Leaderboard | Yes | 0 |
-| About & Contact| Yes | 0 |
-| Log In | Yes| 0 |
-| Sign out | Yes | 0 |
-| Sing Up | NO | 1 |
-| Delete Comment | 0 | 0 |
-| Booking | 0 | 0 |
-| Create Booking | 0 | 0 |
-| Edit Booking | 0 | 0 |
-| Delete Booking| 0 | 0 |
-| Gallery | 0 | 0 |
-| Add Photo | 0 | 0 |
-| Delete Photo Modal | 0 | 0 |
-
-| Error 403 | 0 | 0 |
-| Error 404 | 0 | 0 |
-| Error 500 | 0  | 0 |
-  
-<hr>  
 
 ### JavaScript Validation
 
-[JSHint](https://jshint.com/) was used to validate the small amount of JavaScript code added to the project. External JS, for Bootstrap purposes, obtained via [CDN](https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js) was not validated through JSHint
+<!-- [JSHint](https://jshint.com/) was used to validate the small amount of JavaScript code added to the project. External JS, for Bootstrap purposes, obtained via [CDN](https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js) was not validated through JSHint
 
 | Page | Screenshot | Errors | Warnings |
 | ---- | ---------- | ------ | -------- |
 | base.html | ![js from base.html](documentation/testing/base_js.png) | none | none |
 | gallery.html | ![js from gallery.html](documentation/testing/gallery_js.png) | none | none |
-| profile.html | ![js from profile.html](documentation/testing/profile_js.png) | none | none |
+| profile.html | ![js from profile.html](documentation/testing/profile_js.png) | none | none | -->
 
 <hr>
 
@@ -87,13 +90,10 @@ Next errors were connected to the blog post and it's rendering. Since I had used
 
 | Feature | admin.py | forms.py | models.py | urls.py | views.py |
 |---------|----------|----------|-----------|---------|----------|
-| Articles | [no errors](documentation/testing/art_admin.png) | [no errors](documentation/testing/art_forms.png) | [no errors](documentation/testing/art_models.png) | [no errors](documentation/testing/art_urls.png) | [no errors](documentation/testing/art_views.png) |
-| Booking  | [no errors](documentation/testing/book_admion.png) | [no errors](documentation/testing/book_forms.png) | [no errors](documentation/testing/book_models.png) | [no errors](documentation/testing/book_urls.png) | [no errors](documentation/testing/book_views.png) |
-| FreeFido main app | na | na | na | [no errors](documentation/testing/freefido_urls.png) | na |
-| Gallery | [no errors](documentation/testing/gallery_admin.png) | [no errors](documentation/testing/gallery_form.png) | [no errors](documentation/testing/gallery_models.png) | [no errors](documentation/testing/gallery_urls.png) | [no errors](documentation/testing/gallery_views.png) |
-| Home | na | na | na | [no errors](documentation/testing/home_urls.png) | [no errors](documentation/testing/home_views.png) |
-| Profiles | [no errors](documentation/testing/profile_admin.png) | [no errors](documentation/testing/profile_forms.png) | [no errors](documentation/testing/profile_models.png) | [no errors](documentation/testing/profile_urls.png) | [no errors](documentation/testing/profile_views.png) |
-| Visit | na | na | na | [no errors](documentation/testing/visit_urls.png) | [no errors](documentation/testing/visit_views.png) |
+| About | [no errors](documentation/testing/art_admin.png) | [no errors](documentation/testing/art_forms.png) | [no errors](documentation/testing/art_models.png) | [no errors](documentation/testing/art_urls.png) | [no errors](documentation/testing/art_views.png) |
+| ai_heroes | [no errors](documentation/testing/book_admion.png) | [no errors](documentation/testing/book_forms.png) | [no errors](documentation/testing/book_models.png) | [no errors](documentation/testing/book_urls.png) | [no errors](documentation/testing/book_views.png) |
+| Blog | [no errors](documentation/testing/gallery_admin.png) | [no errors](documentation/testing/gallery_form.png) | [no errors](documentation/testing/gallery_models.png) | [no errors](documentation/testing/gallery_urls.png) | [no errors](documentation/testing/gallery_views.png) |
+
 
 <hr>
 
