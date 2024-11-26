@@ -1,7 +1,7 @@
 
 # AI Heroes
 
-Here is a link to the live project: [AI Heroes](https://8000-monikamak-aiheroespp4-y4ys4ixf98g.ws.codeinstitute-ide.net/)
+Here is a link to the live project: [AI Heroes](https://ai-heroes-blog-d4716b80dc08.herokuapp.com/)
 
 AI Heroes is a platform designed to demystify AI by showcasing powerful, user-friendly AI tools that improve daily life efficiency and productivity. The website aims to bridge the gap for users familiar with the term "AI" but seeking practical, accessible examples of its use.
 
@@ -88,35 +88,39 @@ A list of user stories grouped into epics for better structure and clarity.
 ### EPIC | Deployment and Testing
 - As an admin, I want to deploy the website successfully so that it is accessible to users and can be included in my portfolio.
 
+
+- ![user_story_1](documentation/user_story_1.png)
+- ![user_story_2](documentation/user_story_2.png)
+
 [Back to top ⇧](#ai-heroes)
 
 
 ## Design
 
-The look of this website was based loosely around The Code Institute's 'Codestar' wlakthorguh project as well as [EatME](https://eatme-production.up.railway.app/), project that cought my attention due to it's classy and clean looking style, felt very inspired. 
+The look of this website was based loosely around The Code Institute's 'Codestar' wlakthorguh project as well as canva's  AI template - ![canva template](documentation/canva_template.png)
 
 ### Color Scheme
 
-![Color Scheme](assets/images/colors.png)
+![Color Scheme](documantation/design_colors.png)
 - **Primary Colors**:  
   The website uses a futuristic combination of deep blues, red and whites, and blacks to create a clean and modern aesthetic. These colors reflect the technological theme while maintaining readability and simplicity.
 
 - **Accent Colors**:  
-  Bright accents like orange and purple are used to draw attention to interactive elements, such as buttons and links, enhancing the user experience and reinforcing the AI theme.
+  Bright accents like orange purple and red  are used to draw attention to interactive elements, such as buttons and links, enhancing the user experience and reinforcing the AI theme.
 
 
 ### Typography
-![Fonts](assets/images/fonts.png)
+![Fonts](documentation/font.png)
 - The **Audiowide** font is used as the primary typeface, chosen for its retro style that complements the futuristic and technological concept of AI Heroes. It gives the site a unique personality while remaining readable and visually appealing
 
 ### Imagery
 - The **main image** features a matrix-style blue background with a superhero robot flying across, representing the fusion of futuristic ideas and AI technology.
-![Main Image](assets/images/main-hero-image.png)
+![Main Image](documentation/main_hero_bg.png)
 
 - **Illustrative Elements**:  
   Additional robot-themed images are used throughout the site to emphasize the blog's core theme. For example:
   - A robot holding a trophy symbolizes the leaderboard and the ranking of AI tools, highlighting hierarchy and competition. 
-    -![Robot with Trophy](assets/images/robot-trophy.png)
+    -![Robot with Trophy](static/images/robot-trophy.png)
   - Futuristic visuals and icons help maintain consistency with the blog's modern AI narrative.
   
 These design choices work together to immerse visitors in the world of AI while keeping the interface clean and engaging.
