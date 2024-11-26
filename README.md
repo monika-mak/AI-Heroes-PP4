@@ -256,15 +256,53 @@ The **About & Contact page** is designed to foster meaningful connections and en
   After submitting the form, users receive clear feedback with success or error messages, ensuring they understand the outcome of their inquiry and feel reassured their communication has been handled properly.
 ![Colaboration Message](/documentation/colaboration_message_success.png)
 
-### Features to Add
-- **Tool Recommendations**:  
-  A recommendation engine to suggest AI tools based on user preferences or browsing history.
+### Register Page
+![Sign up](/documentation/sign_up.png)
+- **User-Friendly Design:**
+  - Input Fields: Includes fields for entering:
+    - Username: A unique identifier for the user.
+    - Email Address: For account creation and communication.
+    - Password and Confirm Password: Ensures user-entered passwords match.
+  - Placeholder Text: Provides guidance within input fields (e.g., "Enter your email address").
+- **Error Feedback:**
+  - Real-Time Validation: Alerts users if fields are left empty or passwords do not match.
 
-- **User Profiles**:  
-  Allow users to create accounts, save their favorite tools, and manage their interactions on the site.
+  - Clear Error Messages: Displays why registration failed, such as an already registered email.
+  ![User Exists](/documentation/user_exists_reg.png)
+- **Action Items:**
+  - Register Button: Submits the form after all fields are validated.
+  - Redirect Option: A link to the Login Page for existing users.
+  - Users are redirected to the Login Page upon successful registration.
+
+### Login Page
+![Log in](/documentation/login.png)
+- **Simple and Intuitive Interface:**
+  - Input Fields:
+    - Username
+    - Password: Securely entered in a hidden field.
+    - Remember Me, checkbox for easy return access.
+
+- **Error Feedback:**
+  - Displays error messages for incorrect credentials:
+    - ![Inncorrect info](/documentation/login_innocrrect-info.png)
+  - Clear Error Messages: Displays why registration failed, such as an already registered email.
+
+### Sign out 
+![Sing Out](/documentation/sign_out.png)
+- **Simple and Staright Forward** 
+  - Gives user to option to confirm to sign out instead of immediately logging them out in case of an accidental access. 
+
+
+### Features to Add
+
+- **Forgot Password Link:** 
+  Redirects users to the password recovery page.
 
 - **Password Reset** 
   Allow user to reset password from the dashboard. 
+
+- **User Profiles**:  
+  Allow users to create accounts, save their favorite tools, and manage their interactions on the site.
 
 - **Search and Filtering**:  
   Enhanced search functionality with filtering options to sort tools by categories, popularity, or user ratings.
@@ -275,17 +313,21 @@ The **About & Contact page** is designed to foster meaningful connections and en
 [Back to top ⇧](#ai-heroes)
 
 ## Responsiveness (Main Pages)
-
+- ### Home 
+![Home Large](/documentation/home_responsive.png)
   <details>
-  <summary>Home Page</summary>
+  <summary>Home Page Full View</summary>
 
   ![Home Large](/documentation/logged_in_lrg_home.jpeg)
   ![Home Medium](/documentation/logged_in_md_home.jpeg)
   ![Home Small](/documentation/logged_in_sm_home.jpeg)
   </details>
 
+- ### Post Detail
+![Post Detail ](/documentation/detail_responsive.png)
+
   <details>
-  <summary>Post Detail Page</summary>
+  <summary>Post Detail Full View</summary>
 
   - ![Post Detail Large ](/documentation/detail_page_lrg.jpeg)
   - ![Post Detail Medium](/documentation/detail_page_md.jpeg)
@@ -293,6 +335,9 @@ The **About & Contact page** is designed to foster meaningful connections and en
   </details>
 
   <details>
+
+### Leaderboard
+![Leaderboard](/documentation/leaderboard_responsive.png)
   <summary>Leaderboard</summary>
 
   - ![Leaderboard Large](/documentation/lrg_leaderboard.jpeg)
@@ -321,7 +366,7 @@ The **About & Contact page** is designed to foster meaningful connections and en
 ### Libraries and Programs Used
 
 - [Git](https://git-scm.com/)
-- Version control.
+  - Version control.
 - [GitHub](https://github.com/)
     - For storing code and deploying the site.
 - [Gitpod](https://www.gitpod.io/)
@@ -364,8 +409,10 @@ The **About & Contact page** is designed to foster meaningful connections and en
     - Used for robot and  background images as well as wireframes and inspiration
 - [ChatGPT](https://chatgpt.com/)
     - Used for general queries and quick help.
-- [ YouTube](https://www.youtube.com/) for tutorials and other learnigs. 
-- [remove.bg](https://www.remove.bg/) to remove background
+- [ YouTube](https://www.youtube.com/) 
+  - For tutorials and other learnigs. 
+- [Remove.bg](https://www.remove.bg/)
+  - Used to remove background from the images. 
 
 [Back to top ⇧](#ai-heroes)
 
@@ -396,7 +443,7 @@ This project was deployed using Github and Heroku.
 - ### Forking
 
     To fork my project you must;
-    1. Sign in to Github and go to my [repository](https://github.com/monika-mak/AI-Heroes-PP4)
+    1. Sign in to Github and go to my [AI Heroes repository](https://github.com/monika-mak/AI-Heroes-PP4)
     2. Locate the Fork button at the top right of the page.
     3. Select this. 
     4. The fork is now in your repositories.
@@ -404,7 +451,7 @@ This project was deployed using Github and Heroku.
 - ### Clone
     To clone my project you must;
 
-    1. Sign in to Github and go to my [repository](https://github.com/monika-mak/AI-Heroes-PP4)
+    1. Sign in to Github and go to my [AI Heroes repository](https://github.com/monika-mak/AI-Heroes-PP4)
     2. Above the list of files click the green ‘code’ button.
     3. This will bring up a few options as to how you would like to clone. You can select HTTPS, SSH or Github CLI, then click the clipboard icon to copy the URL.
     4. Open git bash
@@ -412,12 +459,16 @@ This project was deployed using Github and Heroku.
 
     For more information on cloning check out the github documentation [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 
-## Credits
 
+## Credits
 
 ### Code
 
- -  I learnt how to ..... [youtube](link).
+  - [Django documentation](https://docs.djangoproject.com/en/4.0/)
+  - [Bootstrap Documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+  - [Django Tutorial](https://www.youtube.com/watch?v=UmljXZIypDc&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p)
+  - [Complete Django Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9iqfAag3a_BKEX1N43uJutw)
+
 
  ### Media
 
@@ -428,13 +479,18 @@ This project was deployed using Github and Heroku.
     - [Eat-Me](https://github.com/Delboy/EatMe/blob/main/README.md)
     - [FreeFido](https://github.com/amylour/FreeFido_v2/blob/main/TESTING.md)
 
- ### Other
- - The [Django documentation](https://docs.djangoproject.com/en/4.0/)
 
 ### Acknowledgments:
-Since I wanted to make this for the users, I made a social post on linked in asking people for opinion on their best AI tool. I got some amazing tool ideas which I had included in my project. Thank you : 
-Linked-in users [ a] [b] [c] for support and involvement in my project.
-Peter ... 
-My mentor... 
+
+A massive thank you to my course colegue **Peter**, who jumped in and help when needed.  Also for overall motivation and encouregement, it always feels great when you know you are not by yourself.
+
+Since I wanted to make this for the users, I made a social post on linked in asking people for opinion on their best AI tool. I got some amazing tool ideas which I had included in my project. Thank you for support and involvement in my project. : 
+- Norbert Tiborcz
+- Laurie Crean
+- Annamaria Berek
+
+My mentor **Femi** for guiding me through the process and sharing great tips. 
+My cohort facilitator **Lewis** for insights and advices throughout the course. 
+
 
 [Back to top ⇧](#eat-me)
