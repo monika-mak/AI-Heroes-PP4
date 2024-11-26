@@ -3,6 +3,7 @@ from django.contrib import messages
 from .models import About
 from .forms import CommunicationForm
 
+
 def about_me(request, *args, **kwargs):
     """
     Renders the About page with optional form to submit collaboration requests.

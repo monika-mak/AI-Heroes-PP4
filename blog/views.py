@@ -10,7 +10,8 @@ from django.db.models import Count, Q, Value, BooleanField
 class PostList(generic.ListView):
     """
     View to display a paginated list of published posts.
-    Annotates each post with the number of comments and whether the user has voted on it.
+    Annotates each post with the number of comments
+    and whether the user has voted on it.
     """
     queryset = Post.objects.filter(status=1).annotate(comment_count=Count(
         'comments'))
@@ -19,7 +20,8 @@ class PostList(generic.ListView):
 
     def get_queryset(self):
         """
-        Customizes the queryset to include vote annotations for authenticated users.
+        Customizes the queryset to include vote annotations
+        for authenticated users.
         """
         queryset = super().get_queryset()
         if self.request.user.is_authenticated:
@@ -38,7 +40,8 @@ class PostList(generic.ListView):
 def post_detail(request, slug):
     """
     Displays an individual post along with its comments.
-    Handles comment form submission and checks whether the user has voted on the post.
+    Handles comment form submission and checks
+    whether the user has voted on the post.
     """
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
@@ -138,7 +141,8 @@ def leaderboard(request):
 def vote_on_a_post(request, post_id):
     """
     Allows authenticated users to vote on a post.
-    A user can vote on up to 3 posts and cannot vote multiple times on the same post.
+    A user can vote on up to 3 posts
+    and cannot vote multiple times on the same post.
     """
 
     post = get_object_or_404(Post, id=post_id)

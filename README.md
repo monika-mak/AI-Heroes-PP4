@@ -313,8 +313,8 @@ The **About & Contact page** is designed to foster meaningful connections and en
 [Back to top ⇧](#ai-heroes)
 
 ## Responsiveness (Main Pages)
-- ### Home 
-![Home Large](/documentation/home_responsive.png)
+
+### Home 
   <details>
   <summary>Home Page Full View</summary>
 
@@ -323,9 +323,10 @@ The **About & Contact page** is designed to foster meaningful connections and en
   ![Home Small](/documentation/logged_in_sm_home.jpeg)
   </details>
 
-- ### Post Detail
-![Post Detail ](/documentation/detail_responsive.png)
+![Home Large](/documentation/home_responsive.png)
 
+
+### Post Detail
   <details>
   <summary>Post Detail Full View</summary>
 
@@ -334,17 +335,21 @@ The **About & Contact page** is designed to foster meaningful connections and en
   - ![Post Detail Small](/documentation/detail_page_sm.jpeg)
   </details>
 
-  <details>
+![Post Detail ](/documentation/detail_responsive.png)
+
 
 ### Leaderboard
-![Leaderboard](/documentation/leaderboard_responsive.png)
-  <summary>Leaderboard</summary>
+  <details>
+  <summary>Leaderboard Full View</summary>
 
   - ![Leaderboard Large](/documentation/lrg_leaderboard.jpeg)
   - ![Leaderboard Medium](/documentation/md_leaderboard.jpeg)
   - ![Leaderboard Small](/documentation/sm_leaderboard.jpeg)
   </details>
 
+![Leaderboard](/documentation/leaderboard_responsive.png)
+
+### About & Contact
   <details>
   <summary>About & Contact Page</summary>
 
@@ -353,7 +358,7 @@ The **About & Contact page** is designed to foster meaningful connections and en
   - ![About & Contact Small](/documentation/sm_about.jpeg)
   </details>
 
- 
+![About & Contact Full View](/documentation/about_responsive.png)
 ## Technologies
 
 ### Languages used

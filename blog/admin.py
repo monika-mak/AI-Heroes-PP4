@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import Post, Comment, Vote
 from django_summernote.admin import SummernoteModelAdmin
 
+
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
 
@@ -12,6 +13,7 @@ class PostAdmin(SummernoteModelAdmin):
     summernote_fields = ('content',)
 
 
-# Register your models here to allow you to create, update and delete blog posts from the admin panel
+# Register your models here to allow you to create,
+# update and delete blog posts from the admin panel
 admin.site.register(Comment)
 admin.site.register(Vote)

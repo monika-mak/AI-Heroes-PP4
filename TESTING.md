@@ -41,11 +41,10 @@ Return back to the [README.md](README.md) file.
     | Log In | Yes| 0 |
     | Sign out | Yes | 0 |
     | Sing Up | NO | 1 |
-    | Delete Comment | 0 | 0 |
     | Error 403 | 0 | 0 |
     | Error 404 | 0 | 0 |
     | Error 500 | 0  | 0 |
-
+    
   <hr>  
 
 - CSS 
@@ -65,9 +64,9 @@ Return back to the [README.md](README.md) file.
 
 | Feature | admin.py | forms.py | models.py | urls.py | views.py |
 |---------|----------|----------|-----------|---------|----------|
-| About | [no errors](documentation/testing/about_admin.png) | [no errors](documentation/testing/about_forms.png) | [no errors](documentation/testing/about_models.png) | [no errors](documentation/testing/about_urls.png) | [no errors](documentation/testing/about_views.png) |
-| ai_heroes | n/a |n/a|n/a | [no errors](documentation/testing/ai_heroes_pep8.png)|n/a  |
-| Blog | [no errors](documentation/testing/gallery_admin.png) | [no errors](documentation/testing/gallery_form.png) | [no errors](documentation/testing/gallery_models.png) | [no errors](documentation/testing/gallery_urls.png) | [no errors](documentation/testing/gallery_views.png) |
+| About | ![no errors](documentation/testing/about_admin.png) | ![no errors](documentation/testing/about_forms.png) | ![no errors](documentation/testing/about_models.png) | ![no errors](documentation/testing/about_urls.png) | ![no errors](documentation/testing/about_views.png) |
+| ai_heroes | n/a |n/a|n/a | ![no errors](documentation/testing/ai_heroes_urls.png)|n/a  |
+| Blog | ![no errors](documentation/testing/gallery_admin.png) | ![no errors](documentation/testing/gallery_form.png) | ![no errors](documentation/testing/gallery_models.png) | ![no errors](documentation/testing/gallery_urls.png) | ![no errors](documentation/testing/gallery_views.png) |
 <hr>
   
 <hr> 
