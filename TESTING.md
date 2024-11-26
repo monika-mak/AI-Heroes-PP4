@@ -44,7 +44,7 @@ Return back to the [README.md](README.md) file.
     | Error 403 | 0 | 0 |
     | Error 404 | 0 | 0 |
     | Error 500 | 0  | 0 |
-    
+
   <hr>  
 
 - CSS 
@@ -66,7 +66,7 @@ Return back to the [README.md](README.md) file.
 |---------|----------|----------|-----------|---------|----------|
 | About | ![no errors](documentation/testing/about_admin.png) | ![no errors](documentation/testing/about_forms.png) | ![no errors](documentation/testing/about_models.png) | ![no errors](documentation/testing/about_urls.png) | ![no errors](documentation/testing/about_views.png) |
 | ai_heroes | n/a |n/a|n/a | ![no errors](documentation/testing/ai_heroes_urls.png)|n/a  |
-| Blog | ![no errors](documentation/testing/gallery_admin.png) | ![no errors](documentation/testing/gallery_form.png) | ![no errors](documentation/testing/gallery_models.png) | ![no errors](documentation/testing/gallery_urls.png) | ![no errors](documentation/testing/gallery_views.png) |
+| Blog | ![no errors](documentation/testing/blog_admin.png) | ![no errors](documentation/testing/blog_forms.png) | ![no errors](documentation/testing/blog_models.png) | ![no errors](documentation/testing/blog_urls.png) | ![no errors](documentation/testing/blog_views.png) |
 <hr>
   
 <hr> 
