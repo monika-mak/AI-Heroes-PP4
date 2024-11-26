@@ -296,6 +296,8 @@ a {
 }
 
 .image-container img {
+    max-width: 610px;
+    height: auto;
     border: 2px solid #ffffff;
     padding: 3px;
     border-radius: 2px;
