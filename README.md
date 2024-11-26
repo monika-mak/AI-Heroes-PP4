@@ -89,29 +89,33 @@ A list of user stories grouped into epics for better structure and clarity.
 - As an admin, I want to deploy the website successfully so that it is accessible to users and can be included in my portfolio.
 
 
-- ![user_story_1](documentation/user_story_1.png)
-- ![user_story_2](documentation/user_story_2.png)
+   ![user_story_1](documentation/user_story_1.png)
+   ![user_story_2](documentation/user_story_2.png)
 
 [Back to top ⇧](#ai-heroes)
 
 
 ## Design
 
-The look of this website was based loosely around The Code Institute's 'Codestar' wlakthorguh project as well as canva's  AI template - ![canva template](documentation/canva_template.png)
+- The look of this website was based loosely around The Code Institute's 'Codestar' wlakthorguh project as well as canva's  AI template.
+
+    ![canva template](documentation/canva_template.png)
 
 ### Color Scheme
 
-![Color Scheme](documantation/design_colors.png)
 - **Primary Colors**:  
-  The website uses a futuristic combination of deep blues, red and whites, and blacks to create a clean and modern aesthetic. These colors reflect the technological theme while maintaining readability and simplicity.
+  The website uses a futuristic combination of deep blues, purple and  grey on a white background to create a clean and modern aesthetic. These colors reflect the technological theme while maintaining readability and simplicity.
 
 - **Accent Colors**:  
-  Bright accents like orange purple and red  are used to draw attention to interactive elements, such as buttons and links, enhancing the user experience and reinforcing the AI theme.
+  Bright accents like orange and purple are used to draw attention to interactive elements, such as buttons and links, enhancing the user experience and reinforcing the AI theme.
+
+  ![Design Colors](documentation/design_colors.png)
 
 
 ### Typography
-![Fonts](documentation/font.png)
 - The **Audiowide** font is used as the primary typeface, chosen for its retro style that complements the futuristic and technological concept of AI Heroes. It gives the site a unique personality while remaining readable and visually appealing
+
+    ![Fonts](documentation/font.png)
 
 ### Imagery
 - The **main image** features a matrix-style blue background with a superhero robot flying across, representing the fusion of futuristic ideas and AI technology.
@@ -120,68 +124,59 @@ The look of this website was based loosely around The Code Institute's 'Codestar
 - **Illustrative Elements**:  
   Additional robot-themed images are used throughout the site to emphasize the blog's core theme. For example:
   - A robot holding a trophy symbolizes the leaderboard and the ranking of AI tools, highlighting hierarchy and competition. 
-    -![Robot with Trophy](static/images/robot-trophy.png)
+  
   - Futuristic visuals and icons help maintain consistency with the blog's modern AI narrative.
+
+  ![Robot with Trophy](/static/images/trophy_robot.png)
   
 These design choices work together to immerse visitors in the world of AI while keeping the interface clean and engaging.
 
 ### Wireframes
-- # *PLACEHOLDER*
-Wireframes for each page are linked here:
-<!-- 
-* [Home Page](assets/documents/home_page.pdf)
-* [All Recipes](assets/documents/all_recipes.pdf)
-* [Detailed Recipe](assets/documents/detailed_recipe.pdf)
-* [Your Recipes](assets/documents/your_recipes.pdf)
-* [Favourite Recipes](assets/documents/favourite_recipes.pdf)
-* [Searched Recipes](assets/documents/searched_recipes.pdf)
-* [Add Recipe](assets/documents/add_recipe.pdf)
-* [Register, log in/out](assets/documents/register_log_in_out.pdf) -->
+
+![Home Page](/documentation/wireframes/home_wireframe.png)
+![Leaderboard](/documentation/wireframes/leaderboard_wireframe.png)
+![About& Contact](/documentation/wireframes/about_contact_wireframe.png)
+![Post Detail](/documentation/wireframes/detail_wireframe.png)
+![Login](/documentation/wireframes/login_wireframe.png)
+![Register](/documentation/wireframes/register_wireframe.png)
 
 
 ### Database Schema 
-- # *PLACEHOLDER*
 
-![Database Schemas can be found here](assets/images/ai-heroes-schema.png)
+[Database Schemas](/documentation/erd_schema.png)
 
 [Back to top ⇧](#ai-heroes)
 
 ## Features
 
 ### Home Page
+![Home Page ](/documentation/logged_in_lrg_home.jpeg)
 
 - **Navigation Bar**:  
   A responsive navigation bar is present across all pages, providing easy access to key sections such as Home, Leaderboard, About, and Contact. The navigation bar includes links to login and register for imediate action and engagement.
-  ![Navbar](assets/images/navbar.png)
 
 - **Welcome Back message**
-  A short message welcoming user back once they had logged in, to add personal touch and friendly manner.
-  ![Welcome Back](assets/images/welcome-back.png)
+  A short message welcoming user back once they had logged in is displayed on the right side of the screen, to add personal touch and friendly manner.
 
 
 - **Hero Section**:  
   A visually striking hero section welcomes users with a title and a brief explanation of the website's purpose. This section draws attention to AI Heroes' mission of making AI accessible and practical for everyday use.
-  ![Hero Intro](assets/images/hero-intro.png)
 
 - **Introductory Content**:  
   A dedicated section introduces users to the voting feature and invites them to explore the leaderboard. This section explains the purpose of voting and encourages users to participate by casting votes for their favorite AI tools.
-  ![Vote Introduction](assets/images/vote-intro.png)
 
 - **Card Display Format**:  
   AI tools are presented in a card format, each card featuring:
   - Tool Name
   - A brief description
   - Created date
-  - Voting buttons to express user preference.![Cards Home](assets/images/home-cards.png)
+  - Voting buttons to express user preference.
 
 - **Pagination**:  
   Tools are paginated, with six tools on each page displayed making it a manageable isplayed , ensuring optimal readability and navigation.
-  ![Pagination](assets/images/pagination.png)
-
 
 - **Footer**:
   The footer rests at the bottom of each page and has links to all social media accounts.Clicking the links in the footer opens a separate browser to avoid pulling the user away from the site.
-![Footer](assets/images/footer.png)
 
 ### Voting and Ranking
 
@@ -194,20 +189,15 @@ Wireframes for each page are linked here:
 - **Vote Monitoring**:  
   Admin can monitor and manage votes to ensure fair play and prevent misuse.
 
---- 
-
-# *PLACEHOLDER--- done uptil here *
----
-
 ### Tools Details Page
-
+![Detail Page ](/documentation/detail_page_lrg.jpeg)
 The **Tools Details Page** provides users with in-depth information about each AI tool, showcasing its unique features, capabilities, and impact. This page is designed to engage users by presenting a clean and intuitive interface, encouraging interaction through comments and voting.
 
 - **Card Layout**:  
   Each tool is displayed in a well-organized card format, including the following details:
   - **Tool Logo Card**: Highlighted prominently at the top for easy identification.
-  - **Displayed Voting Count**: Allows users to upvote their favorite tools, with the total votes displayed clearly.
-  - **Displayed Comment Count**
+  - **Displayed Voting Count**: Allows users to upvote their favorite tools, with the total votes displayed clearly. This icon is clickable and brings user to the voting sector in home page. 
+  - **Displayed Comment Count**: This icon is also clickable and brings user to the commnet section. 
   - **Creation Date**: Provides transparency about when the tool was added to the platform.
   - **Description**: Includes a detailed overview of the tool’s capabilities, focusing on its unique impact and use cases.
   - **Key Features**:
@@ -222,6 +212,9 @@ The **Tools Details Page** provides users with in-depth information about each A
   - **Comments Section**: Enables users to leave feedback or insights about their experience with the tool. 
     - Users can post comments after logging in, fostering community engagement and discussions.
     - Comments include success/error messages for transparency.
+    ![Comment Success ](/documentation/comment_success.png)
+    - once commented, message"awaiting approval" is displayed. 
+    ![Awaiting approval](/documentation/awaiting_aproval.png)
   - **Voting Feature**: Allows logged-in users to vote directly for their favorite tools, influencing the leaderboard rankings.
 
 - **Footer**:
@@ -231,10 +224,22 @@ The **Tools Details Page** provides users with in-depth information about each A
 This page emphasizes user interaction and engagement by combining informative content with intuitive, user-friendly features.
 
 
-
 ### Leaderboard
+![Leaderboard](/documentation/lrg_leaderboard.jpeg)
+
+The Leaderboard feature in AI Heroes serves as an engaging and dynamic way to showcase the most popular AI tools based on user votes. This functionality encourages user participation and provides valuable insights into community preferences.
+
+- **Purpose:**
+  - Highlight Popularity: The leaderboard ranks AI tools by the number of votes they receive, making it easy for visitors to identify top-rated and impactful tools.
+  - Encourage Engagement: Visitors are motivated to explore, vote for, and interact with AI tools to influence the rankings.
+  - Transparency: The voting mechanism ensures that rankings reflect genuine user interest and enthusiasm.
+- **Key Features:**
+  - Real-Time Updates: The leaderboard dynamically adjusts as votes are cast, providing up-to-date rankings of AI tools.
+  - Clear Display: The tools are ranked in descending order of votes, with the most popular tools appearing at the top.
+
 
 ### About & Contact Page
+![About&Contact Page](/documentation/lrg_about.jpeg)
 The **About & Contact page** is designed to foster meaningful connections and encourage user engagement by combining two essential sections: the introduction of the blog owner and an easy way to reach out. By merging these sections, users who visit to learn more about the blog are naturally presented with the opportunity to communicate, and those seeking to contact the owner are more likely to read the "About" section, creating a stronger sense of connection.
 - **Purpose Highlight**: 
   The page introduces the blog owner and outlines the mission and vision of AI Heroes, highlighting the importance of making AI tools accessible and useful to everyone. Immediately below the "About" section, users can find the contact form, simplifying the process of reaching out.
@@ -249,7 +254,7 @@ The **About & Contact page** is designed to foster meaningful connections and en
 
 - **Feedback Messages**:  
   After submitting the form, users receive clear feedback with success or error messages, ensuring they understand the outcome of their inquiry and feel reassured their communication has been handled properly.
-
+![Colaboration Message](/documentation/colaboration_message_success.png)
 
 ### Features to Add
 - **Tool Recommendations**:  
@@ -258,18 +263,52 @@ The **About & Contact page** is designed to foster meaningful connections and en
 - **User Profiles**:  
   Allow users to create accounts, save their favorite tools, and manage their interactions on the site.
 
+- **Password Reset** 
+  Allow user to reset password from the dashboard. 
+
 - **Search and Filtering**:  
   Enhanced search functionality with filtering options to sort tools by categories, popularity, or user ratings.
-
-- **Tool Reviews and Ratings**:  
-  Enable users to leave reviews and rate tools for more detailed feedback.
 
 - **Social Media Integration**:  
   Options to share AI tools directly on social media platforms.
 
 [Back to top ⇧](#ai-heroes)
 
+## Responsiveness (Main Pages)
 
+  <details>
+  <summary>Home Page</summary>
+
+  ![Home Large](/documentation/logged_in_lrg_home.jpeg)
+  ![Home Medium](/documentation/logged_in_md_home.jpeg)
+  ![Home Small](/documentation/logged_in_sm_home.jpeg)
+  </details>
+
+  <details>
+  <summary>Post Detail Page</summary>
+
+  - ![Post Detail Large ](/documentation/detail_page_lrg.jpeg)
+  - ![Post Detail Medium](/documentation/detail_page_md.jpeg)
+  - ![Post Detail Small](/documentation/detail_page_sm.jpeg)
+  </details>
+
+  <details>
+  <summary>Leaderboard</summary>
+
+  - ![Leaderboard Large](/documentation/lrg_leaderboard.jpeg)
+  - ![Leaderboard Medium](/documentation/md_leaderboard.jpeg)
+  - ![Leaderboard Small](/documentation/sm_leaderboard.jpeg)
+  </details>
+
+  <details>
+  <summary>About & Contact Page</summary>
+
+  - ![About & Contact Large](/documentation/lrg_about.jpeg)
+  - ![About & Contact Medium](/documentation/md_about.jpeg)
+  - ![About & Contact Small](/documentation/sm_about.jpeg)
+  </details>
+
+ 
 ## Technologies
 
 ### Languages used
@@ -305,10 +344,8 @@ The **About & Contact page** is designed to foster meaningful connections and en
     - Used when performing unit tests.
 - [PostgreSQL](https://www.postgresql.org/)
     - Database used through heroku.
-<!-- - [SmartDraw](https://cloud.smartdraw.com/)
-    - To draw out the database schema. -->
-- [Balsamiq](https://balsamiq.com/)
-    - To create the wireframes.
+- [Lucidchart](https://www.lucidchart.com/)
+    - To draw out the database schema.
 - [W3C Markup Validation Service](https://validator.w3.org/) 
     - Used to validate HTML code.
 - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input)
@@ -319,18 +356,16 @@ The **About & Contact page** is designed to foster meaningful connections and en
     - Used to validate JS code.
 - [Summernote](https://summernote.org/)
     - Used to add a WYSIWYG text box to the add recipe page.
-<!-- - [Profanity Filter](https://github.com/ReconCubed/django-profanity-filter)
-    - App used to remove profanity from recipes and comments. -->
 - [Tinyjpg](https://tinyjpg.com/)
     - Used to compress images.
-- [Screen to Gif](https://www.screentogif.com/)
-    - Used to create gifs for my readme.
 - [Heroku](https://www.heroku.com/)
     - To deploy the project.
 - [Canva](https://www.canva.com/)
-    - Used for robot and  background images as well as inspiration.
+    - Used for robot and  background images as well as wireframes and inspiration
 - [ChatGPT](https://chatgpt.com/)
     - Used for general queries and quick help.
+- [ YouTube](https://www.youtube.com/) for tutorials and other learnigs. 
+- [remove.bg](https://www.remove.bg/) to remove background
 
 [Back to top ⇧](#ai-heroes)
 
@@ -386,17 +421,15 @@ This project was deployed using Github and Heroku.
 
  ### Media
 
- - All images were taken from [canva](https://www.canva.com/).
+ - Majority of the images were taken from [canva](https://www.canva.com/).
 
  ### README 
-
- - README was modeled from [Eat-Me](https://github.com/Delboy/EatMe/blob/main/README.md)
- - README testing mogdeled from [FreeFido](https://github.com/amylour/FreeFido_v2/blob/main/TESTING.md)
+ - README and Testing was modeled from: 
+    - [Eat-Me](https://github.com/Delboy/EatMe/blob/main/README.md)
+    - [FreeFido](https://github.com/amylour/FreeFido_v2/blob/main/TESTING.md)
 
  ### Other
-
- - [The code insitutes](https://codeinstitute.net/) 'I think therefore I blog' project which inspired the overall feel of the paginated and recipe detail pages.
- - The [Django documentation](https://docs.djangoproject.com/en/4.0/) which was instrumental in helping me solve problems.
+ - The [Django documentation](https://docs.djangoproject.com/en/4.0/)
 
 ### Acknowledgments:
 Since I wanted to make this for the users, I made a social post on linked in asking people for opinion on their best AI tool. I got some amazing tool ideas which I had included in my project. Thank you : 

@@ -7,7 +7,7 @@
     <div class=" g-0 ">
         <div class ="d-flex">
             {% if "placeholder" in post.featured_image.url %}
-            <img src="{% static 'images/robot_flying.png' %}" class="scale img-fluid custom-width" alt="placeholder">
+            <img src="{% static 'images/default.png' %}" class="scale img-fluid custom-width" alt="placeholder">
             {% else %}
             <img src="{{ post.featured_image.url }}" class="scale img-fluid custom-width"alt="{{ post.title }}">
             {% endif %}
