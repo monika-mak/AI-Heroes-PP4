@@ -22,8 +22,8 @@ from django.db.models import Count, Q, Value, BooleanField
 
 # from django.core.exceptions import PermissionDenied
 
-# def some_view(request):
-#     raise PermissionDenied
+def some_view(request):
+    raise PermissionDenied
 
     
 class PostList(generic.ListView):
