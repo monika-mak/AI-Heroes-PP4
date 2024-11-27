@@ -59,7 +59,8 @@ a {
 .brand {
     font-family: Audiowide, sans-serif;
     font-size: 1.5rem;
-    color: #1f102ad1;
+    /* color: #1f102ad1; */
+    color: #9939ddd1;
 }
 
 .text-end {
@@ -126,9 +127,6 @@ a {
 
 .callout-container {
     max-height: 400px;
-    background-size: cover;
-    background-size: cover;
-    background-size: cover;
     background-size: cover;
     display: flex;
     align-items: center;

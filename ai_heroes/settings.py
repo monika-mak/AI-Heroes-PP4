@@ -29,7 +29,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-monikamak-aiheroespp4-y4ys4ixf98g.ws.codeinstitute-ide.net','.herokuapp.com']
 
@@ -149,16 +149,15 @@ messages.SUCCESS: 'alert-success',
 messages.ERROR: 'alert-danger',
 }
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 # code modeled from  
 MEDIA_URL = '/media/'
