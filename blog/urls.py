@@ -3,6 +3,7 @@ from django.urls import path
 from .views import leaderboard
 from .views import vote_on_a_post
 
+
 urlpatterns = [
     path('', views.PostList.as_view(), name='home'),
     path('leaderboard/', views.leaderboard, name='leaderboard'),

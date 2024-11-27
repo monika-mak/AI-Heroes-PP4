@@ -5,8 +5,27 @@ from django.http import HttpResponseRedirect
 from .models import Post, Comment, Vote
 from .forms import CommentForm
 from django.db.models import Count, Q, Value, BooleanField
+# from django.shortcuts import render
 
 
+# def custom_404_view(request, exception):
+#     return render(request, 'errors/404.html', status=404)
+
+# def custom_500_view(request):
+#     return render(request, 'errors/500.html', status=500)
+
+# def custom_403_view(request, exception):
+#     return render(request, 'errors/403.html', status=403)
+
+# def custom_400_view(request, exception):
+#     return render(request, 'errors/400.html', status=400)
+
+# from django.core.exceptions import PermissionDenied
+
+# def some_view(request):
+#     raise PermissionDenied
+
+    
 class PostList(generic.ListView):
     """
     View to display a paginated list of published posts.
