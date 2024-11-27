@@ -2,22 +2,13 @@ body {
     background-color: #F9FAFC;
 }
 
-h1 {
+h1, h2 {
     margin-bottom:10px;
-    font-family: Audiowide, sans-serif;
-}
-
-
-h2 {
     font-family: Audiowide, sans-serif;
 }
 
 a {
     text-decoration: none;
-}
-
-.error_msg h1 {
-    color: #1f102ad1; 
 }
 
 .icon {
@@ -59,8 +50,7 @@ a {
 .brand {
     font-family: Audiowide, sans-serif;
     font-size: 1.5rem;
-    /* color: #1f102ad1; */
-    color: #9939ddd1;
+    color: #1f102ad1;
 }
 
 .text-end {
