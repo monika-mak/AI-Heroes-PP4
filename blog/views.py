@@ -23,7 +23,8 @@ class PostList(generic.ListView):
         Customizes the queryset to include vote annotations
         for authenticated users.
         """
-        queryset = super().get_queryset()
+        # Order posts by latest date 
+        queryset = super().get_queryset().order_by('-created_on')
         if self.request.user.is_authenticated:
             # Annotate whether the user has voted on the post
             queryset = queryset.annotate(
