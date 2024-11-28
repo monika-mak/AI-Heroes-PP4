@@ -111,6 +111,7 @@ User Stories detailed inforamtion with each feature checked and tested making su
 - Next errors were connected to the blog post and it's rendering. Since I had used chat gpt to generate blog post info, the format was not acceptable by the validator,![Post Errors](/documentation/testing/errors_post_detail.png) I had removed the post and this time prompted GPT giving it correct format.  
 - Page HTML were receiving a validator error of having an extra p tag, but thankfuly I was anicipating it as I came across this in our walktrough videos. Replacing it with a div solved the problem.  All valiadations were sucessfull on re-validation. 
 - css error encountered due to outdated web used ![CSS Fail](/documentation/testing/css_validator_fail.png)
+- I have confession to make, during the developmet I havent paid attention to the debug false/true. It came to my suprise that images were not loading and i spend 2 days rying to figure out what is happening, never realising that I had never collected static files. This mistake cost me a lot of confusion as not aware of it I was changing other things getting deeper and deeper into a hole. Afer reading a lot on documentation, still confused i used Claude3.5 to explain what was happenig and it gave me a really insightful understanding. Happy to repport images are working well now.  
 
 <hr>
 
