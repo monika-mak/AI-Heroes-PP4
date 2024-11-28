@@ -97,8 +97,9 @@ AI Heroes was tested on the following browsers via [Browser Stack](https://live.
 <hr>
 
 ### Testing User Stories
-For simplicity and DRY principle, I had attached the list of user stories screenshot that is divided into 6 Epics.
-User Stories detailed inforamtion with each feature checked and tested making sure acceptance criterie were met. can be acessed in the AI Heroes [GitHub Projects Board](https://github.com/users/monika-mak/projects/4/views/1).
+For simplicity and DRY principle, as the full list of user stories is already listed in the README [User Stories](README.md#user-stories). 
+
+The full list of User Stories detailed inforamtion with each feature checked and tested making sure acceptance criteria were met can be acessed via [Github Project Board](https://github.com/users/monika-mak/projects/4/views/1).
 
 ![User Stories1/2](/documentation/user_story_1.png)
 ![User Stories2/2](/documentation/user_story_2.png)
