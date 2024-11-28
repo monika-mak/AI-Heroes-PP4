@@ -73,10 +73,6 @@ a {
     margin-bottom: 10px;
 }
 
-.hero-bg {
-    background-image: url('{% static "images/matrix_blue_bg.webp" %}');
-}
-
 .hero-text {
     flex-grow: 2;
     padding: 10px 0px 10px 20px ;
@@ -188,7 +184,7 @@ a {
 }
 
 .leaderboard-background {
-    background: radial-gradient(circle, #67096d, #1a0242, #000000), url("{% static 'images/purple_dots_bg_3.webp' %}");
+    background: radial-gradient(circle, #67096d, #1a0242, #000000);
     background-repeat: repeat; /*Ensures the dots repeat */
     background-size: cover; /* Adjusts the dots size to cover the container */
 }
