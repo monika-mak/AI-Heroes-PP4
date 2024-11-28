@@ -1,0 +1,30 @@
+[33m8a77881[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m issue with staticfiles
+[33m4f1e821[m add image
+[33mee00e6c[m replaced bckg image with color  for page speed
+[33m50601e8[m change image format to compressed webp
+[33m473ca0e[m chnage images to webp
+[33m42e9055[m remove unnecesary css,change back the color font
+[33mb9d71ac[m update static files
+[33m3c2372c[m style error pages
+[33m55f4f5d[m image format change
+[33mc389109[m remove unnecesary code
+[33m3b4238a[m clean files for testing
+[33macb7537[m remove unnecasary image, adjusted path to the image
+[33m7ea81e8[m removed unused googlefont
+[33mdfcd00f[m removed redundant font awesome CDN
+[33ma92fbeb[m add context to testing file and remove unnecesary fields
+[33m21666dd[m add max width to image for testing
+[33mada6937[m revert back to working site, issues with images not displaying
+[33m662a57d[m reduce image files size
+[33m8df89e0[m fix python files for testing, reduce image sizes
+[33m47a7762[m replace compessed images
+[33mae005f6[m Add images, update info
+[33m589e137[m update img placeholder, add images to readme
+[33mcb3002b[m add ontent to readme files, rearange login page
+[33m6afa239[m remove unnecesary images, add wireframes, chnage images path to match
+[33md57a801[m removed unnecesary model field
+[33m85eaf39[m removedouble html testing info
+[33m8414488[m add images for testing
+[33mf5e3108[m add comments and doc str ,clean code , validated with pep8
+[33m44e85ae[m clean models.py for pep 8 validation
+[33m79f9c5f[m pass validation for html, css, js
