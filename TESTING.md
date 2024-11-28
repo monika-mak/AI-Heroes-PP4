@@ -38,9 +38,9 @@ Return back to the [README.md](README.md) file.
     | Log In | Yes| 0 |0
     | Sign out | Yes | 0 |0
     | Sing Up | NO | 1 |0
-    | Error 403 | 0 | 0 |0
-    | Error 404 | 0 | 0 |0
-    | Error 500 | 0  | 0 |0
+    | Error 403 | Yes | 0 |0
+    | Error 404 | Yes | 0 |0
+    | Error 500 |  | 0 |0
 
   <hr>  
 
@@ -69,16 +69,18 @@ Return back to the [README.md](README.md) file.
    
 ### Lighthouse Scores
 
-Lighthouse testing was carried out in Incognito mode to acheive the best result. 
+Lighthouse testing was carried out in Incognito mode to acheive the best results.
 
 **Desktop**  
 
-![Lighthouse scores desktop](documentation/testing/desktop_lh.png)  
-
-  
-**Mobile**  
-
-![Lighthouse scores mobile](documentation/testing/mobile_lh.png) 
+![Lighthouse About Desktop](documentation/testing/about_web_lh.png)
+![Lighthouse About Mobile](documentation/testing/about_mob_lh.png)
+![Lighthouse Home Desktop](documentation/testing/main_web_lh.png)  
+![Lighthouse Home Mobile](documentation/testing/main_mob_lh.png) 
+![Lighthouse Leaderboard Desktop](documentation/testing/leaderboard_web_lh.png)
+![Lighthouse Leaderboard Mobile](documentation/testing/leaderboard_mob_lh.png)
+![Lighthouse Detail Page Desktop](documentation/testing/post_detail_web_lh.png)  
+![Lighthouse Detail Page Mobile](documentation/testing/post_detail_mob_lh.png)  
 
 <hr>  
 

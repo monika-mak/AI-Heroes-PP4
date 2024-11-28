@@ -5,7 +5,7 @@ Here is a link to the live project: [AI Heroes](https://ai-heroes-blog-d4716b80d
 
 AI Heroes is a platform designed to demystify AI by showcasing powerful, user-friendly AI tools that improve daily life efficiency and productivity. The website aims to bridge the gap for users familiar with the term "AI" but seeking practical, accessible examples of its use.
 
-![responsive](assets/images/responsive.png)
+![responsive](/documentation/display.png)
 
 ## Contents
 
@@ -373,47 +373,51 @@ The **About & Contact page** is designed to foster meaningful connections and en
 - [Git](https://git-scm.com/)
   - Version control.
 - [GitHub](https://github.com/)
-    - For storing code and deploying the site.
+  - For storing code and deploying the site.
 - [Gitpod](https://www.gitpod.io/)
-    - Used for building and editing my code.
+  - Used for building and editing my code.
 - [Django](https://www.djangoproject.com/)
-    - A python based framework that was used to develop the site.
+  - A python based framework that was used to develop the site.
 - [Bootstrap](https://getbootstrap.com/)
-    - For help designing the html templates.
+  - For help designing the html templates.
 - [Google Fonts](https://fonts.google.com/)
-    - Used to style the website's logo.
+  - Used to style the website's logo.
 - [Font Awesome](https://fontawesome.com/)
-    - Used to obtain the icons used.
+  - Used to obtain the icons used.
 - [Google Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
-    - Used to help fix problem areas and identify bugs.
+  - Used to help fix problem areas and identify bugs.
 - [Cloudinary](https://cloudinary.com/)
-    - Used to store static files and images.
+  - Used to store static files and images.
 - [Favicon.io](https://favicon.io/)
-    - Used to generate the site's favicon.
+  - Used to generate the site's favicon.
 - [SQlite](https://www.sqlite.org/index.html)
-    - Used when performing unit tests.
+  - Used when performing unit tests.
 - [PostgreSQL](https://www.postgresql.org/)
-    - Database used through heroku.
+  - Database used through heroku.
 - [Lucidchart](https://www.lucidchart.com/)
-    - To draw out the database schema.
+  - To draw out the database schema.
 - [W3C Markup Validation Service](https://validator.w3.org/) 
-    - Used to validate HTML code.
+  - Used to validate HTML code.
 - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input)
-    - Used to validate CSS code.
+  - Used to validate CSS code.
 - [Pep8](http://pep8online.com/)
-    - Used to validate Python code.
+  - Used to validate Python code.
 - [JSHint](https://jshint.com/)
-    - Used to validate JS code.
+  - Used to validate JS code.
 - [Summernote](https://summernote.org/)
-    - Used to add a WYSIWYG text box to the add recipe page.
+  - Used to add a WYSIWYG text box to the add recipe page.
 - [Tinyjpg](https://tinyjpg.com/)
-    - Used to compress images.
+  - Used to compress images.
+- [Convertio](https://convertio.co/)
+  - To convert images to a webp format(better performance)
 - [Heroku](https://www.heroku.com/)
-    - To deploy the project.
+  - To deploy the project.
 - [Canva](https://www.canva.com/)
-    - Used for robot and  background images as well as wireframes and inspiration
+  - Used for robot and  background images as well as wireframes and inspiration
 - [ChatGPT](https://chatgpt.com/)
-    - Used for general queries and quick help.
+  - Used for general queries and quick help.
+- [Claude3.5](https://claude.ai/)
+  - For insightful explanations of topic. 
 - [ YouTube](https://www.youtube.com/) 
   - For tutorials and other learnigs. 
 - [Remove.bg](https://www.remove.bg/)
@@ -474,10 +478,9 @@ This project was deployed using Github and Heroku.
   - [Django Tutorial](https://www.youtube.com/watch?v=UmljXZIypDc&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p)
   - [Complete Django Tutorial](https://www.youtube.com/playlist?list=PL4cUxeGkcC9iqfAag3a_BKEX1N43uJutw)
 
-
  ### Media
 
- - Majority of the images were taken from [canva](https://www.canva.com/).
+ - All of the images were taken from [canva](https://www.canva.com/).
 
  ### README 
  - README and Testing was modeled from: 
