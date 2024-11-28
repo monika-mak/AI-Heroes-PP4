@@ -6,7 +6,7 @@ from .models import Post, Comment, Vote
 from .forms import CommentForm
 from django.db.models import Count, Q, Value, BooleanField
 
-    
+
 class PostList(generic.ListView):
     """
     View to display a paginated list of published posts.

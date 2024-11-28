@@ -23,7 +23,7 @@ class CommunicationRequest(models.Model):
     email = models.EmailField()
     message = models.TextField()
     # Track if the request has been addressed
-    read = models.BooleanField(default=False)  
+    read = models.BooleanField(default=False)
 
     def __str__(self):
         return f"Communication request from {self.name}"

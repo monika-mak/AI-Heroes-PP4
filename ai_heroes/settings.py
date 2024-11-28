@@ -28,7 +28,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-monikamak-aiheroespp4-y4ys4ixf98g.ws.codeinstitute-ide.net',
@@ -174,7 +174,11 @@ STATICFILES_STORAGE = (
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-
+# # Use local storage in development, Cloudinary in production
+# if DEBUG:
+#     STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+# else:
+#     STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 # code modeled from  https://github.com/amylour/FreeFido_v2
 # /blob/main/freefido/settings.py
 MEDIA_URL = '/media/'
