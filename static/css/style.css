@@ -90,10 +90,6 @@ a {
     font-weight: 300;
 }
 
-.bckg-img {
-    background-image: url("{% static 'images/matrix_blue_bg.webp' %}");
-}
-
 .custom-width {
     max-width:500px;
 }

@@ -6,8 +6,12 @@
 {% block content %}
 <!-- index.html content starts here -->
 <!--Hero section -->
-<section
-    class="container-fluid callout-container bckg-img">
+<section class="container-fluid callout-container bckg-img">
+    <style>
+        .bckg-img {
+            background-image: url("{% static 'images/matrix_blue_bg.webp' %}");
+        }
+    </style>
     <div class="hero-text">
         <h1 class="text-center text-white">WELCOME TO <br>AI HEROES!</h1>
         <h3 class="hero-message text-center">A place where we demystify artificial intelligence and showcase easy-to-use, 
