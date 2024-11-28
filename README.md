@@ -127,7 +127,7 @@ A list of user stories grouped into epics for better structure and clarity.
   
   - Futuristic visuals and icons help maintain consistency with the blog's modern AI narrative.
 
-  ![Robot with Trophy](/static/images/trophy_robot.png)
+  ![Robot with Trophy](/static/images/trophy_robot.webp)
   
 These design choices work together to immerse visitors in the world of AI while keeping the interface clean and engaging.
 

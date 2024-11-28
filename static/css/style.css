@@ -185,7 +185,9 @@ a {
 }
 
 .leaderboard-background {
-    background: radial-gradient(circle, #67096d, #1a0242, #000000);
+    background: radial-gradient(circle, #67096d, #1a0242, #000000), url("{% static 'images/purple_dots_bg_3.webp' %}");
+    background-repeat: repeat; /*Ensures the dots repeat */
+    background-size: cover; /* Adjusts the dots size to cover the container */
 }
 
 .leaderboard-post-card {
