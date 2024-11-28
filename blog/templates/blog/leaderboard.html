@@ -3,7 +3,8 @@
 {% load static %}
 {% block content %}
 
-<section class="leaderboard-background" style='background-image: url("/static/images/purple_dots_bg.webp")'>
+<!-- <section class="leaderboard-background" style='background-image: url("/static/images/purple_dots_bg2.webp")'> -->
+<section class="leaderboard-background" >
     <div>
         <h2 class="text-center leaderboard-title">LEADERBOARD</h2>
     </div>
@@ -17,24 +18,24 @@
                 {% for post in posts %}
                 <div class="card leaderboard-post-card">
                     <div class="card-body p-1 row align-items-center justify-content-center">
-                        <div class=" col-10 text-center image-container">
+                        <div class="col-10 text-center image-container">
                             <a href="{% url 'post_detail' post.slug %}" class="post-link">
                                 {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top" src="{% static 'images/default.webp' %}" alt="placeholder image">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="{{ post.title }}">
+                                <img class="card-img-top" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
                                 {% endif %}
                             </a>
                         </div>
-                        <div class = "col-9 text-start">
-                            <h3 class="card-title leaderboard-title ">{{ post.title }}</h3>
+                        <div class="col-9 text-start">
+                            <h3 class="card-title leaderboard-title">{{ post.title }}</h3>
                         </div>
                     </div>
                 </div>
                 {% endfor %}
             </div>
             <div class="col-sm-3">
-                <img class="image-block" src="/static/images/trophy_robot.webp" alt="futuristic cute robot holding a trophy">=
+                <img class="image-block" src="/static/images/trophy_robot.webp" alt="futuristic cute robot holding a trophy">
             </div>
         </div>
     </div>

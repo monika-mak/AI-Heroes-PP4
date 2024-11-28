@@ -185,12 +185,10 @@ a {
 }
 
 .leaderboard-background {
-    background-position: center; 
-    background-size: cover; 
+    background: radial-gradient(circle, #67096d, #1a0242, #000000);
 }
 
 .leaderboard-post-card {
-    
     margin: 0 15px 2em 15px;
     padding: 5px;
     border: 2px solid #FF9800;
