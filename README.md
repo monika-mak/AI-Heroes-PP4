@@ -143,7 +143,7 @@ These design choices work together to immerse visitors in the world of AI while 
 
 ### Database Schema 
 
-[Database Schemas](/documentation/erd_schema.png)
+![Database Schemas](/documentation/erd_schema.png)
 
 [Back to top ⇧](#ai-heroes)
 
@@ -480,7 +480,7 @@ This project was deployed using Github and Heroku.
 
  ### Media
 
- - All of the images were taken from [canva](https://www.canva.com/).
+ - All of the images were taken from [Canva](https://www.canva.com/).
 
  ### README 
  - README and Testing was modeled from: 
