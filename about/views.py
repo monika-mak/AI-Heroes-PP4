@@ -19,9 +19,11 @@ def about_me(request, *args, **kwargs):
                 "Collaboration request received!"
             )
         else:
-            messages.add_message(request,messages.ERROR,"Validation Error. Please check email format.")
-            
-    
+            messages.add_message(
+                request, messages.ERROR,
+                "Validation Error. Please check email format."
+                )
+
     # Save the form data and display a success message
     about = About.objects.all().order_by('-updated_on').first()
     # Initialize an empty CommunicationForm for display
