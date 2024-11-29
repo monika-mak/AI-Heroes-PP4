@@ -17,13 +17,15 @@ def about_me(request, *args, **kwargs):
             messages.add_message(
                 request, messages.SUCCESS,
                 "Collaboration request received!"
-                "Please expect resonase within next 2 working days."
             )
+        else:
+            messages.add_message(request,messages.ERROR,"Validation Error. Please check email format.")
+            
+    
     # Save the form data and display a success message
     about = About.objects.all().order_by('-updated_on').first()
     # Initialize an empty CommunicationForm for display
     communication_form = CommunicationForm()
-
     return render(
         request,
         "about/about.html",
